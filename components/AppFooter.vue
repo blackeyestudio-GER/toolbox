@@ -3,8 +3,14 @@
     <small>
       &copy; 2024 ToolBox. All rights reserved.
     </small>
+    <div class="flex ml-auto gap-4">
+        <a href="https://ko-fi.com/blackeyestudio" target="_blank" title="Link zu KoFi">Ko-fi</a>
+        <a href="https://patreon.com/Blackeyestudio_ger" target="_blank" title="Link zu Patreon">Patreon</a>
+    </div>
   </footer>
 </template>
 
 <style scoped>
 </style>
+<script setup lang="ts">
+</script>

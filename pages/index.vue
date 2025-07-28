@@ -12,15 +12,15 @@
 
             <!-- Mobile Description Button -->
             <div class="md:hidden w-full flex justify-center mb-4">
-                <button @click="showModal = true" class="w-24 h-24 overflow-hidden shadow-lg rounded-full">
-                    <img src="/logo.png" alt="Logo" class="w-full h-full object-cover" />
+                <button class="w-24 h-24 overflow-hidden shadow-lg rounded-full" @click="showModal = true">
+                    <img alt="Logo" class="w-full h-full object-cover" src="/logo.png" />
                 </button>
             </div>
 
             <!-- Modal for Mobile Description -->
             <div v-if="showModal" class="fixed inset-0 bg-black/60 flex items-center justify-center z-50 px-6">
                 <div class="bg-eerie-black text-white rounded-lg max-w-md w-full p-6 relative">
-                    <button @click="showModal = false" class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-gray-600 text-white hover:bg-gray-500 text-lg font-bold shadow">✕</button>
+                    <button class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-gray-600 text-white hover:bg-gray-500 text-lg font-bold shadow" @click="showModal = false">✕</button>
                     <h2 class="text-center text-lg font-semibold mb-4">Über diese Seite</h2>
                     <p class="text-sm whitespace-pre-line">{{ descriptionText }}</p>
                 </div>
@@ -29,10 +29,10 @@
             <!-- Search and Filter -->
             <div class="w-full max-w-5xl flex flex-wrap gap-4 mb-2">
                 <input
-                        v-model="searchQuery"
-                        type="text"
-                        placeholder="Suche nach Tools..."
-                        class="flex-1 p-2 rounded border border-gray-600 bg-eerie-black text-white placeholder-gray-400 shadow-sm"
+                    v-model="searchQuery"
+                    class="flex-1 p-2 rounded border border-gray-600 bg-eerie-black text-white placeholder-gray-400 shadow-sm"
+                    placeholder="Suche nach Tools..."
+                    type="text"
                 />
                 <select v-model="selectedTag" class="p-2 rounded border border-gray-600 bg-eerie-black text-white shadow-sm md:w-auto w-full">
                     <option value="">Alle Tags</option>
@@ -53,49 +53,51 @@
             </div>
 
             <!-- Tool Tiles -->
-            <div class="grid grid-cols-2 md:grid-cols-4 auto-rows-[minmax(100px,_auto)] gap-4 w-full max-w-7xl">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-5xl">
                 <a
                     v-for="tool in filteredTools"
                     :key="tool.title"
-                    :href="tool.link"
-                    target="_blank"
                     :class="[
-                        'p-4 rounded-lg shadow hover:shadow-xl transition duration-200 cursor-pointer text-white',
-                        tool.size,
                         categoryStyles[tool.category]?.bg || 'bg-gray-800',
                         categoryStyles[tool.category]?.border || 'border-gray-600',
-                  ]"
+                    ]"
+                    :href="tool.link"
+                    class="p-4 rounded-lg shadow hover:shadow-xl transition duration-200 cursor-pointer text-white border-4"
+                    target="_blank"
                 >
                     <h2 class="text-xl font-bold mb-1">{{ tool.title }}</h2>
                     <p class="text-sm mb-2">{{ tool.description }}</p>
                     <div class="flex flex-wrap gap-1">
-                        <span v-for="tag in tool.tags" :key="tag" class="bg-white/30 px-2 py-0.5 rounded text-xs">
-                          {{ tag }}
-                        </span>
+                    <span
+                            v-for="tag in tool.tags"
+                            :key="tag"
+                            class="bg-white/30 px-2 py-0.5 rounded text-xs"
+                    >
+                      {{ tag }}
+                    </span>
                     </div>
                 </a>
             </div>
 
-            <!-- Banner Ads at bottom -->
             <!-- Example banner inside the main content -->
             <div class="w-full max-w-5xl mt-10">
                 <ins class="adsbygoogle"
-                     style="display:block"
                      data-ad-client="ca-pub-4277903766631766"
-                     data-ad-slot="1234567890"
                      data-ad-format="auto"
-                     data-full-width-responsive="true"></ins>
+                     data-ad-slot="1234567890"
+                     data-full-width-responsive="true"
+                     style="display:block"></ins>
             </div>
         </div>
 
         <!-- Right vertical banner -->
         <div class="hidden lg:flex flex-col w-60 ml-6 bg-eerie-black rounded shadow p-4 text-center text-gray-400">
             <ins class="adsbygoogle"
-                 style="display:block; width:100%; height:600px;"
                  data-ad-client="ca-pub-4277903766631766"
-                 data-ad-slot="0987654321"
                  data-ad-format="vertical"
-                 data-full-width-responsive="false"></ins>
+                 data-ad-slot="0987654321"
+                 data-full-width-responsive="false"
+                 style="display:block; width:100%; height:600px;"></ins>
         </div>
     </div>
 </template>
@@ -123,11 +125,6 @@ import {computed, ref} from 'vue';
 const searchQuery = ref('');
 const selectedTag = ref('');
 
-const TILE_SIZES = Object.freeze({
-    LARGE: 'md:col-span-2 md:row-span-2',
-    MEDIUM: 'md:col-span-2',
-    NORMAL: '',
-});
 
 const categoryStyles = {
     Grafik: {
@@ -135,17 +132,17 @@ const categoryStyles = {
         text: 'text-blue-600',
         border: 'border-blue-600',
     },
-    Research: {
+    Audio: {
         bg: 'bg-green-600',
         text: 'text-green-600',
         border: 'border-green-600',
     },
-    Utility: {
+    Games: {
         bg: 'bg-purple-600',
         text: 'text-purple-600',
         border: 'border-purple-600',
     },
-    Produktivität: {
+    Utility: {
         bg: 'bg-red-600',
         text: 'text-red-600',
         border: 'border-red-600',
@@ -155,17 +152,17 @@ const categoryStyles = {
         text: 'text-yellow-600',
         border: 'border-yellow-600',
     },
-    Zeit: {
+    Merch: {
         bg: 'bg-pink-600',
         text: 'text-pink-600',
         border: 'border-pink-600',
     },
-    Mathematik: {
+    Finanzen: {
         bg: 'bg-teal-600',
         text: 'text-teal-600',
         border: 'border-teal-600',
     },
-    Schreiben: {
+    Ki: {
         bg: 'bg-indigo-600',
         text: 'text-indigo-600',
         border: 'border-indigo-600',
@@ -174,36 +171,116 @@ const categoryStyles = {
 
 const tools = [
     {
-        title: 'Converter',
-        description: 'Formate einfach und schnell konvertieren',
-        tags: ['Format', 'Utility'],
+        title: 'Merlin Image Converter',
+        description: 'Bilder in andere Fromate Convertieren',
+        tags: ['Grafik', 'Utility'],
         link: 'https://example.com/converter',
         category: 'Grafik',
-        size: TILE_SIZES.NORMAL,
     },
     {
-        title: 'Calculator',
-        description: 'Einfache und erweiterte Berechnungen durchführen',
-        tags: ['Mathematik', 'Utility'],
-        link: 'https://example.com/calculator',
-        category: 'Research',
-        size: TILE_SIZES.LARGE,
+        title: 'Thumbnail Previewer',
+        description: 'Dein Thumbnail im vergleich!',
+        tags: ['Grafik', 'Utility'],
+        link: 'https://thumbnail-preview.tebbe.dev/',
+        category: 'Grafik',
     },
     {
-        title: 'Timer',
-        description: 'Countdowns setzen und verwalten',
-        tags: ['Zeit', 'Produktivität'],
-        link: 'https://example.com/timer',
-        category: 'Produktivität',
-        size: TILE_SIZES.NORMAL,
-    },
-    {
-        title: 'Notepad',
-        description: 'Schnelle Notizen schreiben',
-        tags: ['Schreiben', 'Organisation'],
-        link: 'https://example.com/notepad',
+        title: 'Todoist',
+        description: 'Simple Todo liste',
+        tags: ['Organisation'],
+        link: 'https://www.todoist.com/de',
         category: 'Organisation',
-        size: TILE_SIZES.MEDIUM,
+    },
+    {
+        title: 'Sound Resource',
+        description: 'Freie Audioeffekte und Musik, auch etwas obscurer',
+        tags: ['Audio'],
+        link: 'https://www.sounds-resource.com/',
+        category: 'Audio',
+    },
+    {
+        title: 'Sub Calcultor',
+        description: 'Twitch Money Calculator',
+        tags: ['Finanzen', 'Organisation'],
+        link: 'https://gaming-tools.de/twitch-subs-rechner/',
+        category: 'Finanzen',
+    },
+    {
+        title: 'Suno',
+        description: 'Perfekt für Stream hintergrund musik',
+        tags: ['Organisation', 'Audio', 'Ki'],
+        link: 'https://suno.com/',
+        category: 'Audio',
+    },
+    {
+        title: 'Game Finder',
+        description: 'Beste Tool zum Suchen von Spielen',
+        tags: ['Organisation', 'Games'],
+        link: 'https://game-finder.app/',
+        category: 'Games',
+    },
+    {
+        title: 'Pixabay',
+        description: 'Freie Audioeffekte und Musik',
+        tags: ['Organisation', 'Audio'],
+        link: 'https://pixabay.com/de/',
+        category: 'Audio',
+    },
+    {
+        title: 'Sora',
+        description: 'Ki Bild generierung, Perfekt für shorts und für Ideen',
+        tags: ['Grafik', 'Ki'],
+        link: 'https://sora.chatgpt.com/explore',
+        category: 'Grafik',
+    },
+    {
+        title: '101Soundboards',
+        description: 'Soundboard + Download',
+        tags: ['Audio'],
+        link: 'https://www.101soundboards.com/',
+        category: 'Audio',
+    },
+    {
+        title: 'DiscoHook',
+        description: 'Webbhooks ganz einfach für Discord',
+        tags: ['Organisation'],
+        link: 'https://discohook.org/',
+        category: 'Organisation',
+    },
+    {
+        title: 'Amazon Affiliate Partnerseite',
+        description: 'Amazon affiliate partnerseite',
+        tags: ['Organisation', 'Finanzen'],
+        link: 'https://partnernet.amazon.de/home',
+        category: 'Finanzen',
+    },
+    {
+        title: 'Shopify',
+        description: 'guter Start bei Merch aber mit der Zeit teuer',
+        tags: ['Organisation', 'Finanzen', 'Merch'],
+        link: 'https://www.shopify.com/',
+        category: 'Merch',
+    },
+    {
+        title: 'MyInstants',
+        description: 'Soundboard + Download',
+        tags: ['Audio'],
+        link: 'https://www.myinstants.com/',
+        category: 'Audio',
+    },
+    {
+        title: 'ChatGpt',
+        description: 'Hilfstool, plane recherchiere, aber vertraue nicht drauf',
+        tags: ['Organisation', 'Ki'],
+        link: 'https://chatgpt.com/',
+        category: 'Ki',
+    },
+    {
+        title: 'Discords',
+        description: 'Emotes für deinen Discord',
+        tags: ['Organisation'],
+        link: 'https://discords.com/',
+        category: 'Organisation',
     },
 ];
 
@@ -212,7 +289,7 @@ const uniqueTags = computed(() => {
     tools.forEach((tool) => {
         tool.tags.forEach((tag) => tagSet.add(tag));
     });
-    return [...tagSet];
+    return [...tagSet].sort((a, b) => a.localeCompare(b));
 });
 
 const filteredTools = computed(() => {
