@@ -1,97 +1,121 @@
 <template>
-    <div class="min-h-screen flex flex-col items-center bg-night text-white p-4">
-        <!-- Header and Description Section -->
-        <div class="hidden md:grid md:grid-cols-3 gap-6 max-w-5xl w-full mb-6">
-            <div class="flex items-center justify-center shadow-lg bg-logo bg-cover bg-top"></div>
-            <div class="col-span-2 bg-eerie-black text-white p-4 rounded shadow flex items-center">
-                <p class="text-left whitespace-pre-line">{{ descriptionText }}</p>
+    <div class="min-h-screen flex bg-night text-white p-4">
+        <!-- Main content taking most of the width -->
+        <div class="flex-1 flex flex-col items-center">
+            <!-- Header and Description Section -->
+            <div class="hidden md:grid md:grid-cols-3 gap-6 max-w-5xl w-full mb-6">
+                <div class="flex h-full shadow-lg bg-logo bg-cover bg-top" />
+                <div class="col-span-2 bg-eerie-black text-white p-4 rounded shadow flex items-center">
+                    <p class="text-left whitespace-pre-line">{{ descriptionText }}</p>
+                </div>
             </div>
-        </div>
 
-        <!-- Mobile Description Button -->
-        <div class="md:hidden w-full flex justify-center mb-4">
-            <button class="w-24 h-24 overflow-hidden shadow-lg rounded-full" @click="showModal = true">
-                <img alt="Logo" class="w-full h-full object-cover" src="/logo.png"/>
-            </button>
-        </div>
-
-        <!-- Modal for Mobile Description -->
-        <div v-if="showModal" class="fixed inset-0 bg-black/60 flex items-center justify-center z-50 px-6">
-            <div class="bg-eerie-black text-white rounded-lg max-w-md w-full p-6 relative">
-                <h2 class="text-center text-xl font-semibold mb-4">Über diese Seite</h2>
-                <button class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full border-2 border-gray-700 text-white hover:border-gray-500 text-lg font-bold shadow"
-                        @click="showModal = false">
-                    ✕
+            <!-- Mobile Description Button -->
+            <div class="md:hidden w-full flex justify-center mb-4">
+                <button @click="showModal = true" class="w-24 h-24 overflow-hidden shadow-lg rounded-full">
+                    <img src="/logo.png" alt="Logo" class="w-full h-full object-cover" />
                 </button>
-                <p class="text-sm whitespace-pre-line">{{ descriptionText }}</p>
             </div>
-        </div>
 
-        <!-- Search and Filter -->
-        <div class="w-full max-w-5xl flex flex-wrap gap-4 mb-6">
-            <input
-                    v-model="searchQuery"
-                    class="flex-1 p-2 rounded border border-gray-600 bg-eerie-black text-white placeholder-gray-400 shadow-sm"
-                    placeholder="Suche nach Tools..."
-                    type="text"
-            />
-            <select
-                    v-model="selectedTag"
-                    class="p-2 rounded border border-gray-600 bg-eerie-black text-white shadow-sm w-full md:w-auto"
-            >
-                <option value="">Alle Tags</option>
-                <option v-for="tag in uniqueTags" :key="tag" :value="tag">{{ tag }}</option>
-            </select>
-        </div>
-        <!-- Legend -->
-        <div class="flex flex-wrap gap-4 max-w-5xl mb-6 text-xs text-gray-400">
-            <div
+            <!-- Modal for Mobile Description -->
+            <div v-if="showModal" class="fixed inset-0 bg-black/60 flex items-center justify-center z-50 px-6">
+                <div class="bg-eerie-black text-white rounded-lg max-w-md w-full p-6 relative">
+                    <button @click="showModal = false" class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-gray-600 text-white hover:bg-gray-500 text-lg font-bold shadow">✕</button>
+                    <h2 class="text-center text-lg font-semibold mb-4">Über diese Seite</h2>
+                    <p class="text-sm whitespace-pre-line">{{ descriptionText }}</p>
+                </div>
+            </div>
+
+            <!-- Search and Filter -->
+            <div class="w-full max-w-5xl flex flex-wrap gap-4 mb-2">
+                <input
+                        v-model="searchQuery"
+                        type="text"
+                        placeholder="Suche nach Tools..."
+                        class="flex-1 p-2 rounded border border-gray-600 bg-eerie-black text-white placeholder-gray-400 shadow-sm"
+                />
+                <select v-model="selectedTag" class="p-2 rounded border border-gray-600 bg-eerie-black text-white shadow-sm md:w-auto w-full">
+                    <option value="">Alle Tags</option>
+                    <option v-for="tag in uniqueTags" :key="tag" :value="tag">{{ tag }}</option>
+                </select>
+            </div>
+
+            <!-- Legend as small subtext -->
+            <div class="flex flex-wrap gap-4 max-w-5xl mb-6 text-xs text-gray-400">
+                <div
                     v-for="(style, category) in categoryStyles"
                     :key="category"
                     :class="[style.text]"
                     class="font-semibold"
-            >
-                {{ category }}
+                >
+                    {{ category }}
+                </div>
             </div>
-        </div>
 
-        <!-- Tool Tiles -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-5xl">
-            <a
-                v-for="tool in filteredTools"
-                :key="tool.title"
-                :class="[
+            <!-- Metro Tiles Grid -->
+            <!-- Tool Tiles -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-5xl">
+                <a
+                        v-for="tool in filteredTools"
+                        :key="tool.title"
+                        :class="[
                     categoryStyles[tool.category]?.bg || 'bg-gray-800',
                     categoryStyles[tool.category]?.border || 'border-gray-600',
                   ]"
-                :href="tool.link"
-                class="p-4 rounded-lg shadow hover:shadow-xl transition duration-200 cursor-pointer text-white border-4"
-                target="_blank"
-            >
-                <h2 class="text-xl font-bold mb-1">{{ tool.title }}</h2>
-                <p class="text-sm mb-2">{{ tool.description }}</p>
-                <div class="flex flex-wrap gap-1">
+                        :href="tool.link"
+                        class="p-4 rounded-lg shadow hover:shadow-xl transition duration-200 cursor-pointer text-white border-4"
+                        target="_blank"
+                >
+                    <h2 class="text-xl font-bold mb-1">{{ tool.title }}</h2>
+                    <p class="text-sm mb-2">{{ tool.description }}</p>
+                    <div class="flex flex-wrap gap-1">
                     <span
-                        v-for="tag in tool.tags"
-                        :key="tag"
-                        class="bg-white/30 px-2 py-0.5 rounded text-xs"
+                            v-for="tag in tool.tags"
+                            :key="tag"
+                            class="bg-white/30 px-2 py-0.5 rounded text-xs"
                     >
                       {{ tag }}
                     </span>
-                </div>
-            </a>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Banner Ads at bottom -->
+            <!-- Example banner inside the main content -->
+            <div class="w-full max-w-5xl mt-10">
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-4277903766631766"
+                     data-ad-slot="1234567890"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+            </div>
         </div>
 
-        <!-- Banner Ads -->
-        <div class="w-full max-w-5xl mt-10">
-            <div class="bg-eerie-black text-white rounded shadow p-4 text-center">
-                <p class="text-gray-500">Banner Ad Placeholder</p>
-            </div>
+        <!-- Right vertical banner -->
+        <div class="hidden lg:flex flex-col w-60 ml-6 bg-eerie-black rounded shadow p-4 text-center text-gray-400">
+            <ins class="adsbygoogle"
+                 style="display:block; width:100%; height:600px;"
+                 data-ad-client="ca-pub-4277903766631766"
+                 data-ad-slot="0987654321"
+                 data-ad-format="vertical"
+                 data-full-width-responsive="false"></ins>
         </div>
     </div>
 </template>
 
 <script setup>
+import { onMounted, watch } from 'vue';
+
+onMounted(() => {
+    if (window.adsbygoogle) {
+        try {
+            window.adsbygoogle.push({});
+        } catch(e) {
+            console.error(e);
+        }
+    }
+});
 const descriptionText = `Hey! Ich weiß aus eigener Erfahrung, wie frustrierend es sein kann, als Content Creator die richtigen Tools zu finden. Oft sind sie versteckt, unübersichtlich oder einfach viel zu teuer. Deshalb habe ich diese Seite ins Leben gerufen – aus Überzeugung und Leidenschaft für unsere kreative Community.
 
 Hier findest du eine stetig wachsende Sammlung nützlicher Helferlein – egal ob du gerade streamst, YouTube-Videos schneidest, Social-Media-Inhalte vorbereitest oder einfach nur deinen Workflow optimieren willst. Alle Tools sind komplett kostenlos und bleiben es auch. Keine versteckten Kosten, keine Premium-Tricks.
