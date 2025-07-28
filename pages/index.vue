@@ -5,7 +5,7 @@
             <!-- Header and Description Section -->
             <div class="hidden md:grid md:grid-cols-3 gap-6 max-w-5xl w-full mb-6">
                 <div class="flex h-full shadow-lg bg-logo bg-cover bg-top" />
-                <div class="col-span-2 bg-eerie-black text-white p-4 rounded shadow flex items-center">
+                <div class="col-span-2 bg-eerie-black text-white p-4 flex items-center">
                     <p class="text-left whitespace-pre-line">{{ descriptionText }}</p>
                 </div>
             </div>
@@ -62,7 +62,7 @@
                         categoryStyles[tool.category]?.border || 'border-gray-600',
                     ]"
                     :href="tool.link"
-                    class="p-4 rounded-lg shadow hover:shadow-xl transition duration-200 cursor-pointer text-white border-4"
+                    class="p-4 hover:saturate-150 transition duration-200 cursor-pointer text-white border-4"
                     target="_blank"
                 >
                     <h2 class="text-xl font-bold mb-1">{{ tool.title }}</h2>
@@ -91,7 +91,7 @@
         </div>
 
         <!-- Right vertical banner -->
-        <div class="hidden lg:flex flex-col w-60 ml-6 bg-eerie-black rounded shadow p-4 text-center text-gray-400">
+        <div class="hidden lg:flex flex-col w-60 ml-6 bg-eerie-black p-4 text-center text-gray-400">
             <ins class="adsbygoogle"
                  data-ad-client="ca-pub-4277903766631766"
                  data-ad-format="vertical"
