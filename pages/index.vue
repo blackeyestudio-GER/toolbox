@@ -52,30 +52,26 @@
                 </div>
             </div>
 
-            <!-- Metro Tiles Grid -->
             <!-- Tool Tiles -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-5xl">
+            <div class="grid grid-cols-2 md:grid-cols-4 auto-rows-[minmax(100px,_auto)] gap-4 w-full max-w-7xl">
                 <a
-                        v-for="tool in filteredTools"
-                        :key="tool.title"
-                        :class="[
-                    categoryStyles[tool.category]?.bg || 'bg-gray-800',
-                    categoryStyles[tool.category]?.border || 'border-gray-600',
+                    v-for="tool in filteredTools"
+                    :key="tool.title"
+                    :href="tool.link"
+                    target="_blank"
+                    :class="[
+                        'p-4 rounded-lg shadow hover:shadow-xl transition duration-200 cursor-pointer text-white',
+                        tool.size,
+                        categoryStyles[tool.category]?.bg || 'bg-gray-800',
+                        categoryStyles[tool.category]?.border || 'border-gray-600',
                   ]"
-                        :href="tool.link"
-                        class="p-4 rounded-lg shadow hover:shadow-xl transition duration-200 cursor-pointer text-white border-4"
-                        target="_blank"
                 >
                     <h2 class="text-xl font-bold mb-1">{{ tool.title }}</h2>
                     <p class="text-sm mb-2">{{ tool.description }}</p>
                     <div class="flex flex-wrap gap-1">
-                    <span
-                            v-for="tag in tool.tags"
-                            :key="tag"
-                            class="bg-white/30 px-2 py-0.5 rounded text-xs"
-                    >
-                      {{ tag }}
-                    </span>
+                        <span v-for="tag in tool.tags" :key="tag" class="bg-white/30 px-2 py-0.5 rounded text-xs">
+                          {{ tag }}
+                        </span>
                     </div>
                 </a>
             </div>
@@ -127,6 +123,11 @@ import {computed, ref} from 'vue';
 const searchQuery = ref('');
 const selectedTag = ref('');
 
+const TILE_SIZES = Object.freeze({
+    LARGE: 'md:col-span-2 md:row-span-2',
+    MEDIUM: 'md:col-span-2',
+    NORMAL: '',
+});
 
 const categoryStyles = {
     Grafik: {
@@ -178,6 +179,7 @@ const tools = [
         tags: ['Format', 'Utility'],
         link: 'https://example.com/converter',
         category: 'Grafik',
+        size: TILE_SIZES.NORMAL,
     },
     {
         title: 'Calculator',
@@ -185,6 +187,7 @@ const tools = [
         tags: ['Mathematik', 'Utility'],
         link: 'https://example.com/calculator',
         category: 'Research',
+        size: TILE_SIZES.LARGE,
     },
     {
         title: 'Timer',
@@ -192,6 +195,7 @@ const tools = [
         tags: ['Zeit', 'Produktivität'],
         link: 'https://example.com/timer',
         category: 'Produktivität',
+        size: TILE_SIZES.NORMAL,
     },
     {
         title: 'Notepad',
@@ -199,6 +203,7 @@ const tools = [
         tags: ['Schreiben', 'Organisation'],
         link: 'https://example.com/notepad',
         category: 'Organisation',
+        size: TILE_SIZES.MEDIUM,
     },
 ];
 
