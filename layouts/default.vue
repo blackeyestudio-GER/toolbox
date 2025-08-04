@@ -4,6 +4,9 @@
     <div class="mx-2 max-w-screen-2xl lg:mx-auto my-2">
       <slot />
     </div>
+      <div class="absolute right-0 top-0">
+          <AdBannerRight />
+      </div>
     <AppFooter />
   </div>
 </template>

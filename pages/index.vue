@@ -80,24 +80,10 @@
             </div>
 
             <!-- Example banner inside the main content -->
-            <div class="w-full max-w-5xl mt-10">
-                <ins class="adsbygoogle"
-                     data-ad-client="ca-pub-4277903766631766"
-                     data-ad-format="auto"
-                     data-ad-slot="1234567890"
-                     data-full-width-responsive="true"
-                     style="display:block"></ins>
+            <!-- Bottom Ad Banner -->
+            <div class="mt-8 max-w-5xl w-full">
+                <AdBannerBottom />
             </div>
-        </div>
-
-        <!-- Right vertical banner -->
-        <div class="hidden lg:flex flex-col w-60 ml-6 bg-eerie-black p-4 text-center text-gray-400">
-            <ins class="adsbygoogle"
-                 data-ad-client="ca-pub-4277903766631766"
-                 data-ad-format="vertical"
-                 data-ad-slot="0987654321"
-                 data-full-width-responsive="false"
-                 style="display:block; width:100%; height:600px;"></ins>
         </div>
     </div>
 </template>
@@ -199,10 +185,10 @@ const tools = [
         category: 'Audio',
     },
     {
-        title: 'Sub Calcultor',
+        title: 'Sub Calculator',
         description: 'Twitch Money Calculator',
         tags: ['Finanzen', 'Organisation'],
-        link: 'https://gaming-tools.de/twitch-subs-rechner/',
+        link: 'https://subcalculator.blackeyestudio.de/',
         category: 'Finanzen',
     },
     {
