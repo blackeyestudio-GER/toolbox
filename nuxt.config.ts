@@ -22,17 +22,8 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ["@nuxtjs/tailwindcss", "@nuxt/eslint"],
-    app: {
-        head: {
-            script: [
-                {
-                    src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4277903766631766'
-                },
-                {
-                    src: '/adsStart.js'
-                },
-            ]
-        }
-    }
+  modules: [
+    "@nuxtjs/tailwindcss",
+    "@nuxt/eslint"
+  ],
 })

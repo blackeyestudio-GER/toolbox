@@ -89,28 +89,16 @@
 </template>
 
 <script setup>
-import { onMounted, watch } from 'vue';
+import { ref, computed } from 'vue';
 
-onMounted(() => {
-    if (window.adsbygoogle) {
-        try {
-            window.adsbygoogle.push({});
-        } catch(e) {
-            console.error(e);
-        }
-    }
-});
 const descriptionText = `Hey! Ich weiß aus eigener Erfahrung, wie frustrierend es sein kann, als Content Creator die richtigen Tools zu finden. Oft sind sie versteckt, unübersichtlich oder einfach viel zu teuer. Deshalb habe ich diese Seite ins Leben gerufen – aus Überzeugung und Leidenschaft für unsere kreative Community.
 
 Hier findest du eine stetig wachsende Sammlung nützlicher Helferlein – egal ob du gerade streamst, YouTube-Videos schneidest, Social-Media-Inhalte vorbereitest oder einfach nur deinen Workflow optimieren willst. Alle Tools sind komplett kostenlos und bleiben es auch. Keine versteckten Kosten, keine Premium-Tricks.
 
 Mein Ziel ist es, dir das Leben ein kleines bisschen leichter zu machen. Damit du weniger Zeit mit Suchen und mehr Zeit mit deinem eigentlichen Content verbringst. Schau dich um, probier die Tools aus – und wenn du Feedback oder Wünsche hast, melde dich gern. Diese Plattform ist für uns alle.`;
 const showModal = ref(false);
-import {computed, ref} from 'vue';
-
 const searchQuery = ref('');
 const selectedTag = ref('');
-
 
 const categoryStyles = {
     Grafik: {
