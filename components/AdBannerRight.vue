@@ -1,6 +1,10 @@
 <template>
-    <div class="w-80 hidden md:block addRightHeight min-w-48">
-        <Adsbygoogle ad-slot="5443827893" analytics-domain-name="blackeyestudio.de"/>
+    <div class="w-80 md:block addRightHeight min-w-48">
+        <Adsbygoogle
+            ad-slot="5443827893"
+            analytics-domain-name="blackeyestudio.de"
+            class="w-80 md:block addRightHeight min-w-48"
+        />
     </div>
 </template>
 
