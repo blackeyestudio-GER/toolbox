@@ -13,7 +13,7 @@
 
 <script setup lang="ts">
 useHead({
-  titleTemplate: (title) => title ? `${title} - template` : 'template',
+  titleTemplate: (title) => title ? `${title} - Toolbox` : 'Toolbox',
 })
 </script>
 <style scoped>
