@@ -22,6 +22,15 @@ const initializeAd = () => {
       if (!adElement.value.getAttribute('data-ad-status')) {
         (window.adsbygoogle = window.adsbygoogle || []).push({});
         console.log('AdSense Bottom Banner initialized successfully');
+        
+        // Debug: Check ad status after 2 seconds
+        setTimeout(() => {
+          const status = adElement.value?.getAttribute('data-ad-status');
+          console.log('Bottom Ad Status:', status);
+          if (status === 'unfilled') {
+            console.warn('Bottom ad slot is unfilled - no ads available to show');
+          }
+        }, 2000);
       }
     } catch (e) {
       console.error('Error initializing bottom ad:', e);
