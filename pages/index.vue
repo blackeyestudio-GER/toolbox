@@ -120,8 +120,43 @@
                 </div>
             </div>
 
-            <!-- Bottom Ad Banner -->
-            <div class="mt-8 max-w-5xl w-full">
+            <!-- How to Use Section -->
+            <div class="w-full max-w-5xl mb-8 bg-eerie-black p-6 rounded-lg">
+                <h3 class="text-2xl font-semibold text-white mb-4">So nutzt du die Toolbox optimal</h3>
+                <div class="space-y-3 text-gray-300 text-sm leading-relaxed">
+                    <div class="flex items-start gap-3">
+                        <span class="text-2xl">🔍</span>
+                        <div>
+                            <h4 class="font-semibold text-white mb-1">Suche & Filter</h4>
+                            <p class="text-gray-400">Nutze die Suchfunktion oben, um schnell das passende Tool zu finden. Filter nach Tags wie "Audio", "Grafik" oder "KI" um gezielt zu suchen.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <span class="text-2xl">🎨</span>
+                        <div>
+                            <h4 class="font-semibold text-white mb-1">Farbcodierung</h4>
+                            <p class="text-gray-400">Jede Kategorie hat eine eigene Farbe. So erkennst du auf einen Blick, welche Art von Tool du vor dir hast - von Grafik (Blau) über Audio (Grün) bis hin zu KI (Lila).</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <span class="text-2xl">⭐</span>
+                        <div>
+                            <h4 class="font-semibold text-white mb-1">Lesezeichen setzen</h4>
+                            <p class="text-gray-400">Speichere diese Seite als Lesezeichen in deinem Browser. So hast du deine Tool-Sammlung immer schnell zur Hand, wenn du sie brauchst.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <span class="text-2xl">🔄</span>
+                        <div>
+                            <h4 class="font-semibold text-white mb-1">Regelmäßig vorbeischauen</h4>
+                            <p class="text-gray-400">Die Sammlung wird ständig erweitert. Schau regelmäßig vorbei, um neue Tools zu entdecken die deinen Workflow noch weiter verbessern können.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Ad Banner - only visible after substantial content -->
+            <div class="mt-12 max-w-5xl w-full">
                 <AdBannerBottom />
             </div>
         </div>

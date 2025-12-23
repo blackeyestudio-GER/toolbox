@@ -1,6 +1,6 @@
 <template>
   <ClientOnly>
-    <div class="w-80 md:block addRightHeight min-w-48 flex justify-center items-start">
+    <div class="w-80 flex justify-center items-start">
       <ins ref="adElement" class="adsbygoogle ad-banner-right"
         style="display:block;width:300px;height:600px"
         data-ad-client="ca-pub-4277903766631766"

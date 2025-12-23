@@ -1,18 +1,25 @@
 <template>
-  <div>
+  <div class="flex flex-col min-h-screen">
     <NuxtLoadingIndicator :throttle="0" :height="2" />
-    <div class="mx-2 max-w-screen-2xl lg:mx-auto my-2">
-      <slot />
-    </div>
-      <div class="absolute right-0 top-0">
-          <AdBannerRight />
+    
+    <!-- Main content area with proper flex layout -->
+    <div class="flex-1 flex flex-row max-w-screen-2xl mx-auto w-full">
+      <!-- Main content -->
+      <div class="flex-1 mx-2 my-2">
+        <slot />
       </div>
+      
+      <!-- Right sidebar ad - only on desktop, hidden on mobile/tablet -->
+      <div class="hidden xl:block sticky top-2 h-fit mt-2 mr-2">
+        <AdBannerRight />
+      </div>
+    </div>
+    
     <AppFooter />
   </div>
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue';
 useHead({
   titleTemplate: (title) => title ? `${title} - Toolbox` : 'Toolbox',
   script: [
