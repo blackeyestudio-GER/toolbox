@@ -2,27 +2,28 @@
     <div class="min-h-screen flex bg-night text-white p-4">
         <!-- Main content taking most of the width -->
         <div class="flex-1 flex flex-col items-center">
-            <!-- Header and Description Section -->
-            <div class="hidden md:grid md:grid-cols-3 gap-6 max-w-5xl w-full mb-6">
-                <div class="flex h-full shadow-lg bg-logo bg-cover bg-top" />
-                <div class="col-span-2 bg-eerie-black text-white p-4 flex items-center">
-                    <p class="text-left whitespace-pre-line">{{ descriptionText }}</p>
+            <!-- Header with Logo and Title -->
+            <div class="w-full max-w-5xl mb-8">
+                <div class="flex items-center justify-center gap-6 mb-6">
+                    <img alt="Toolbox Logo" class="w-24 h-24 object-cover rounded-full shadow-lg" src="/logo.png" />
+                    <div>
+                        <h1 class="text-4xl font-bold text-white">Content Creator Toolbox</h1>
+                        <p class="text-gray-400 mt-2">Deine kostenlose Sammlung nützlicher Tools für Streaming, YouTube & Social Media</p>
+                    </div>
                 </div>
-            </div>
-
-            <!-- Mobile Description Button -->
-            <div class="md:hidden w-full flex justify-center mb-4">
-                <button class="w-24 h-24 overflow-hidden shadow-lg rounded-full" @click="showModal = true">
-                    <img alt="Logo" class="w-full h-full object-cover" src="/logo.png" />
-                </button>
-            </div>
-
-            <!-- Modal for Mobile Description -->
-            <div v-if="showModal" class="fixed inset-0 bg-black/60 flex items-center justify-center z-50 px-6">
-                <div class="bg-eerie-black text-white rounded-lg max-w-md w-full p-6 relative">
-                    <button class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-gray-600 text-white hover:bg-gray-500 text-lg font-bold shadow" @click="showModal = false">✕</button>
-                    <h2 class="text-center text-lg font-semibold mb-4">Über diese Seite</h2>
-                    <p class="text-sm whitespace-pre-line">{{ descriptionText }}</p>
+                
+                <!-- Main Description - Always Visible -->
+                <div class="bg-eerie-black text-white p-6 rounded-lg shadow-lg mb-6">
+                    <h2 class="text-2xl font-semibold mb-4 text-center">Willkommen bei deiner Tool-Sammlung!</h2>
+                    <div class="space-y-4 text-gray-300 leading-relaxed">
+                        <p>Hey! Ich weiß aus eigener Erfahrung, wie frustrierend es sein kann, als Content Creator die richtigen Tools zu finden. Oft sind sie versteckt, unübersichtlich oder einfach viel zu teuer. Deshalb habe ich diese Seite ins Leben gerufen – aus Überzeugung und Leidenschaft für unsere kreative Community.</p>
+                        
+                        <p>Hier findest du eine stetig wachsende Sammlung nützlicher Helferlein – egal ob du gerade streamst, YouTube-Videos schneidest, Social-Media-Inhalte vorbereitest oder einfach nur deinen Workflow optimieren willst. Alle Tools sind komplett kostenlos und bleiben es auch. Keine versteckten Kosten, keine Premium-Tricks.</p>
+                        
+                        <p>Mein Ziel ist es, dir das Leben ein kleines bisschen leichter zu machen. Damit du weniger Zeit mit Suchen und mehr Zeit mit deinem eigentlichen Content verbringst. Schau dich um, probier die Tools aus – und wenn du Feedback oder Wünsche hast, melde dich gern. Diese Plattform ist für uns alle.</p>
+                        
+                        <p class="text-sm text-gray-400 italic mt-6">Alle hier aufgelisteten Tools wurden sorgfältig ausgewählt und getestet. Die Sammlung wird regelmäßig aktualisiert und erweitert, um dir stets die besten kostenlosen Ressourcen zur Verfügung zu stellen.</p>
+                    </div>
                 </div>
             </div>
 
@@ -40,15 +41,20 @@
                 </select>
             </div>
 
-            <!-- Legend as small subtext -->
-            <div class="flex flex-wrap gap-4 max-w-5xl mb-6 text-xs text-gray-400">
-                <div
-                    v-for="(style, category) in categoryStyles"
-                    :key="category"
-                    :class="[style.text]"
-                    class="font-semibold"
-                >
-                    {{ category }}
+            <!-- Category Guide -->
+            <div class="w-full max-w-5xl mb-8 bg-eerie-black p-6 rounded-lg">
+                <h3 class="text-xl font-semibold text-white mb-4">Tool-Kategorien im Überblick</h3>
+                <p class="text-gray-400 mb-4 text-sm">Unsere Tools sind in verschiedene Kategorien eingeteilt, damit du schnell findest was du brauchst:</p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm">
+                    <div
+                        v-for="(info, category) in categoryInfo"
+                        :key="category"
+                        :class="[categoryStyles[category]?.text]"
+                        class="font-semibold flex items-center gap-2"
+                    >
+                        <span class="w-3 h-3 rounded-full" :class="[categoryStyles[category]?.bg]"></span>
+                        <span>{{ category }}</span>
+                    </div>
                 </div>
             </div>
 
@@ -79,7 +85,41 @@
                 </a>
             </div>
 
-            <!-- Example banner inside the main content -->
+            <!-- Additional Info Section -->
+            <div class="w-full max-w-5xl mt-12 mb-8 bg-eerie-black p-6 rounded-lg">
+                <h3 class="text-2xl font-semibold text-white mb-4">Warum diese Tool-Sammlung?</h3>
+                <div class="space-y-4 text-gray-300 text-sm leading-relaxed">
+                    <p>
+                        Als Content Creator verbringt man oft mehr Zeit damit, nach den richtigen Tools zu suchen, als tatsächlich Content zu erstellen. 
+                        Diese Sammlung soll dir genau diese Zeit sparen. Jedes Tool wurde persönlich getestet und wird von Content Creators aktiv genutzt.
+                    </p>
+                    <p>
+                        Ob du gerade erst anfängst oder bereits etabliert bist - die richtigen Tools können deinen Workflow massiv verbessern. 
+                        Von der Content-Planung über die Produktion bis hin zur Monetarisierung findest du hier kostenlose Lösungen für jeden Schritt.
+                    </p>
+                    <div class="grid md:grid-cols-3 gap-4 mt-6 pt-4 border-t border-gray-700">
+                        <div>
+                            <h4 class="font-semibold text-white mb-2">📊 Für Anfänger</h4>
+                            <p class="text-xs text-gray-400">
+                                Starte mit den Basics: Organisation, Planung und erste Tools für deinen Content-Workflow.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-white mb-2">🚀 Für Fortgeschrittene</h4>
+                            <p class="text-xs text-gray-400">
+                                Optimiere deinen Workflow mit KI-Tools, erweiterten Audio-Lösungen und Monetarisierungs-Optionen.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-white mb-2">💼 Für Profis</h4>
+                            <p class="text-xs text-gray-400">
+                                Skaliere dein Business mit Shop-Lösungen, Affiliate-Programmen und professionellen Analyse-Tools.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Bottom Ad Banner -->
             <div class="mt-8 max-w-5xl w-full">
                 <AdBannerBottom />
@@ -143,115 +183,126 @@ const categoryStyles = {
     },
 };
 
+const categoryInfo = {
+    Grafik: 'Tools für Bildbearbeitung und Design',
+    Audio: 'Musik, Sounds und Audio-Effekte',
+    Games: 'Spiele-Ressourcen für Streamer',
+    Utility: 'Praktische Hilfsmittel',
+    Organisation: 'Planung und Verwaltung',
+    Merch: 'Merchandise und Shop-Lösungen',
+    Finanzen: 'Monetarisierung und Einnahmen',
+    Ki: 'KI-gestützte Tools',
+};
+
 const tools = [
     {
         title: 'Merlin Image Converter',
-        description: 'Bilder in andere Fromate Convertieren',
+        description: 'Konvertiere deine Bilder schnell und einfach in verschiedene Formate wie PNG, JPG, WEBP oder SVG. Perfekt für die Optimierung von Thumbnails und Social Media Grafiken.',
         tags: ['Grafik', 'Utility'],
         link: 'https://example.com/converter',
         category: 'Grafik',
     },
     {
         title: 'Thumbnail Previewer',
-        description: 'Dein Thumbnail im vergleich!',
+        description: 'Sieh dir an, wie dein YouTube-Thumbnail im direkten Vergleich zu anderen Videos aussieht. Teste verschiedene Designs und optimiere die Klickrate deiner Videos bevor du sie hochlädst.',
         tags: ['Grafik', 'Utility'],
         link: 'https://thumbnail-preview.tebbe.dev/',
         category: 'Grafik',
     },
     {
         title: 'Todoist',
-        description: 'Simple Todo liste',
+        description: 'Eine übersichtliche und benutzerfreundliche To-Do-Listen App. Perfekt um deine Content-Planung, Upload-Zeitpläne und Stream-Vorbereitung zu organisieren. Funktioniert auf allen Geräten.',
         tags: ['Organisation'],
         link: 'https://www.todoist.com/de',
         category: 'Organisation',
     },
     {
         title: 'Sound Resource',
-        description: 'Freie Audioeffekte und Musik, auch etwas obscurer',
+        description: 'Umfangreiche Bibliothek mit kostenlosen Soundeffekten und Musik aus Videospielen. Ideal für Streamer und YouTuber die nach lizenzfreien und einzigartigen Audio-Elementen suchen.',
         tags: ['Audio'],
         link: 'https://www.sounds-resource.com/',
         category: 'Audio',
     },
     {
         title: 'Sub Calculator',
-        description: 'Twitch Money Calculator',
+        description: 'Berechne deine Twitch-Einnahmen basierend auf Subs, Bits und Donations. Ein praktisches Tool um deine monatlichen Einnahmen zu planen und deine Ziele zu verfolgen.',
         tags: ['Finanzen', 'Organisation'],
         link: 'https://subcalculator.blackeyestudio.de/',
         category: 'Finanzen',
     },
     {
         title: 'Suno',
-        description: 'Perfekt für Stream hintergrund musik',
+        description: 'KI-gestützte Musik-Generierung für lizenzfreie Hintergrundmusik. Erstelle einzigartige Tracks für deine Streams, Videos oder Intros - perfekt abgestimmt auf deine Inhalte und Stimmung.',
         tags: ['Organisation', 'Audio', 'Ki'],
         link: 'https://suno.com/',
         category: 'Audio',
     },
     {
         title: 'Game Finder',
-        description: 'Beste Tool zum Suchen von Spielen',
+        description: 'Das beste Tool zum Entdecken neuer Spiele für deinen Stream oder Kanal. Filtere nach Genre, Plattform und Popularität um das perfekte Game für deinen Content zu finden.',
         tags: ['Organisation', 'Games'],
         link: 'https://game-finder.app/',
         category: 'Games',
     },
     {
         title: 'Pixabay',
-        description: 'Freie Audioeffekte und Musik',
+        description: 'Riesige Sammlung an kostenlosen, lizenzfreien Bildern, Videos und Musik. Über 4 Millionen Assets die du ohne Anmeldung in deinen Videos und auf Social Media nutzen kannst.',
         tags: ['Organisation', 'Audio'],
         link: 'https://pixabay.com/de/',
         category: 'Audio',
     },
     {
         title: 'Sora',
-        description: 'Ki Bild generierung, Perfekt für shorts und für Ideen',
+        description: 'OpenAIs KI-Tool zur Bild- und Video-Generierung. Ideal für kreative Shorts, Video-Intros oder um schnell visuelle Ideen für deinen Content zu entwickeln und zu testen.',
         tags: ['Grafik', 'Ki'],
         link: 'https://sora.chatgpt.com/explore',
         category: 'Grafik',
     },
     {
         title: '101Soundboards',
-        description: 'Soundboard + Download',
+        description: 'Riesige Sammlung an Soundboards mit tausenden Sounds aus Filmen, Serien und Memes. Alle Sounds können direkt abgespielt oder heruntergeladen werden für deinen Stream.',
         tags: ['Audio'],
         link: 'https://www.101soundboards.com/',
         category: 'Audio',
     },
     {
         title: 'DiscoHook',
-        description: 'Webbhooks ganz einfach für Discord',
+        description: 'Erstelle und verwalte Discord Webhooks ganz einfach im Browser. Perfekt um Benachrichtigungen für neue Uploads, Streams oder Community-Updates automatisch zu versenden.',
         tags: ['Organisation'],
         link: 'https://discohook.org/',
         category: 'Organisation',
     },
     {
         title: 'Amazon Affiliate Partnerseite',
-        description: 'Amazon affiliate partnerseite',
+        description: 'Das offizielle Amazon PartnerNet Dashboard. Verwalte deine Affiliate-Links, tracke deine Einnahmen und erstelle Werbelinks für Produkte die du in deinen Videos oder Streams empfiehlst.',
         tags: ['Organisation', 'Finanzen'],
         link: 'https://partnernet.amazon.de/home',
         category: 'Finanzen',
     },
     {
         title: 'Shopify',
-        description: 'guter Start bei Merch aber mit der Zeit teuer',
+        description: 'Professionelle E-Commerce Plattform für deinen eigenen Merch-Shop. Einfacher Einstieg mit Templates, Payment-Integration und Versandmanagement. Ideal für den Start ins Merch-Business.',
         tags: ['Organisation', 'Finanzen', 'Merch'],
         link: 'https://www.shopify.com/',
         category: 'Merch',
     },
     {
         title: 'MyInstants',
-        description: 'Soundboard + Download',
+        description: 'Beliebte Soundboard-Plattform mit Sounds aus Internet-Kultur, Memes und populären Medien. Alle Sounds können sofort abgespielt oder für deinen Stream heruntergeladen werden.',
         tags: ['Audio'],
         link: 'https://www.myinstants.com/',
         category: 'Audio',
     },
     {
-        title: 'ChatGpt',
-        description: 'Hilfstool, plane recherchiere, aber vertraue nicht drauf',
+        title: 'ChatGPT',
+        description: 'KI-Assistent von OpenAI für Brainstorming, Content-Planung und Recherche. Nutze es für Video-Ideen, Script-Entwürfe oder Social Media Posts - aber überprüfe immer die Fakten.',
         tags: ['Organisation', 'Ki'],
         link: 'https://chatgpt.com/',
         category: 'Ki',
     },
     {
         title: 'Discords',
-        description: 'Emotes für deinen Discord',
+        description: 'Große Sammlung an kostenlosen Discord-Emotes und Emojis. Perfekt um deinen Community-Server aufzuwerten und ihm eine persönliche Note zu geben.',
         tags: ['Organisation'],
         link: 'https://discords.com/',
         category: 'Organisation',
