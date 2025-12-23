@@ -15,17 +15,13 @@
 import { onMounted } from 'vue';
 useHead({
   titleTemplate: (title) => title ? `${title} - Toolbox` : 'Toolbox',
-});
-
-onMounted(() => {
-  if (!document.getElementById('adsbygoogle-js')) {
-    const script = document.createElement('script');
-    script.id = 'adsbygoogle-js';
-    script.async = true;
-    script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4277903766631766';
-    script.crossOrigin = 'anonymous';
-    document.head.appendChild(script);
-  }
+  script: [
+    {
+      src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4277903766631766',
+      async: true,
+      crossorigin: 'anonymous',
+    }
+  ]
 });
 </script>
 <style scoped>
