@@ -258,19 +258,19 @@
                         <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-yellow-500 transition">
                             <div class="flex justify-between items-start mb-3">
                                 <h3 class="text-xl font-semibold">💡 Beleuchtung</h3>
-                                <span class="text-yellow-400 font-bold">~40€</span>
+                                <span class="text-yellow-400 font-bold">~60-80€</span>
                             </div>
-                            <p class="text-lg font-semibold text-yellow-400 mb-2">Elgato Key Light Air</p>
+                            <p class="text-lg font-semibold text-yellow-400 mb-2">LED Streaming Light</p>
                             <p class="text-sm text-gray-400 mb-3">
-                                Professionelles LED-Panel. WiFi-gesteuert über App, perfekte Ausleuchtung.
+                                LED-Panel mit einstellbarer Helligkeit und Farbtemperatur. Deutlich besser als Ringlicht.
                             </p>
                             <ul class="text-sm text-gray-300 space-y-1 mb-3">
-                                <li>✓ 1400 Lumen</li>
-                                <li>✓ WiFi-Steuerung</li>
+                                <li>✓ Dimmbar</li>
                                 <li>✓ Farbtemperatur einstellbar</li>
-                                <li>✓ Tischklemme</li>
+                                <li>✓ Gute Ausleuchtung</li>
+                                <li>✓ Tischstativ oder Klemme</li>
                             </ul>
-                            <a href="https://www.amazon.de/s?k=Elgato+Key+Light+Air&tag=blackeye1980f-21" target="_blank" rel="nofollow sponsored" 
+                            <a href="https://www.amazon.de/s?k=LED+Streaming+Light&tag=blackeye1980f-21" target="_blank" rel="nofollow sponsored" 
                                class="inline-block px-4 py-2 bg-yellow-600 hover:bg-yellow-700 rounded text-sm transition">
                                 Auf Amazon ansehen →
                             </a>
@@ -396,20 +396,20 @@
                         <!-- Key Light -->
                         <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-blue-500 transition">
                             <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-xl font-semibold">💡 Key Light</h3>
-                                <span class="text-blue-400 font-bold">~2x 60€</span>
+                                <h3 class="text-xl font-semibold">💡 Beleuchtung</h3>
+                                <span class="text-blue-400 font-bold">~2x 130€</span>
                             </div>
-                            <p class="text-lg font-semibold text-blue-400 mb-2">2x Elgato Key Light Air</p>
+                            <p class="text-lg font-semibold text-blue-400 mb-2">2x LED Streaming Lights</p>
                             <p class="text-sm text-gray-400 mb-3">
-                                Zwei Lights für 3-Punkt-Beleuchtung. Professionelles Setup.
+                                Zwei Lights für 3-Punkt-Beleuchtung. Professionelles Setup wie bei Elgato Key Light Air.
                             </p>
                             <ul class="text-sm text-gray-300 space-y-1 mb-3">
                                 <li>✓ Perfekte Ausleuchtung</li>
-                                <li>✓ WiFi-gesteuert</li>
-                                <li>✓ 2800-7000K einstellbar</li>
-                                <li>✓ 1400 Lumen pro Light</li>
+                                <li>✓ Einstellbare Farbtemperatur</li>
+                                <li>✓ Dimmbar (0-100%)</li>
+                                <li>✓ 1000-1500 Lumen pro Light</li>
                             </ul>
-                            <a href="https://www.amazon.de/s?k=Elgato+Key+Light+Air&tag=blackeye1980f-21" target="_blank" rel="nofollow sponsored" 
+                            <a href="https://www.amazon.de/s?k=LED+Streaming+Light&tag=blackeye1980f-21" target="_blank" rel="nofollow sponsored" 
                                class="inline-block px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded text-sm transition">
                                 Auf Amazon ansehen →
                             </a>
@@ -601,20 +601,20 @@
                         <!-- Key Lights -->
                         <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-purple-500 transition">
                             <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-xl font-semibold">💡 Key Lights</h3>
+                                <h3 class="text-xl font-semibold">💡 Beleuchtung</h3>
                                 <span class="text-purple-400 font-bold">~2x 180€</span>
                             </div>
-                            <p class="text-lg font-semibold text-purple-400 mb-2">2x Elgato Key Light</p>
+                            <p class="text-lg font-semibold text-purple-400 mb-2">2x Premium Streaming Lights</p>
                             <p class="text-sm text-gray-400 mb-3">
-                                Die großen Key Lights. Noch mehr Power als die Air-Version.
+                                Professionelle LED-Panels wie Elgato Key Light. Broadcast-Qualität.
                             </p>
                             <ul class="text-sm text-gray-300 space-y-1 mb-3">
-                                <li>✓ 2800 Lumen pro Light</li>
-                                <li>✓ WiFi-gesteuert</li>
+                                <li>✓ 2500+ Lumen pro Light</li>
+                                <li>✓ App-gesteuert (WiFi/Bluetooth)</li>
                                 <li>✓ Multi-Mount System</li>
                                 <li>✓ Broadcast-Standard</li>
                             </ul>
-                            <a href="https://www.amazon.de/s?k=Elgato+Key+Light&tag=blackeye1980f-21" target="_blank" rel="nofollow sponsored" 
+                            <a href="https://www.amazon.de/s?k=Premium+Streaming+Light&tag=blackeye1980f-21" target="_blank" rel="nofollow sponsored" 
                                class="inline-block px-4 py-2 bg-purple-600 hover:bg-purple-700 rounded text-sm transition">
                                 Auf Amazon ansehen →
                             </a>
@@ -670,38 +670,28 @@
                         </div>
                     </div>
 
-                    <!-- Placeholder für dein Setup -->
-                    <div class="bg-yellow-900/20 border border-yellow-600 p-6 rounded-lg text-center">
-                        <p class="text-yellow-200 mb-3">
-                            <strong>🚧 Diese Sektion wird aktualisiert</strong>
-                        </p>
-                        <p class="text-gray-300 text-sm">
-                            Die Produkte werden automatisch von Kit.co importiert sobald das Update-Script läuft.
-                        </p>
-                    </div>
-
-                    <!-- Auto-generated from Kit.co on 2025-12-24T13:01:54.965Z -->
-                    <div class="grid md:grid-cols-2 gap-6">
-
-                        <div class="bg-red-900/20 border border-red-600 p-6 rounded-lg text-center col-span-2">
-                            <p class="text-red-200 mb-3">
-                                <strong>❌ Keine Produkte gefunden</strong>
+                    <!-- Template für deine Produkte (wird vom Script befüllt) -->
+                    <div class="bg-gradient-to-br from-cyan-900/20 to-blue-900/20 border border-cyan-700 p-8 rounded-lg text-center">
+                        <div class="max-w-2xl mx-auto">
+                            <div class="text-6xl mb-4">🔧</div>
+                            <h3 class="text-2xl font-semibold text-white mb-4">Mein persönliches Setup</h3>
+                            <p class="text-gray-300 mb-4">
+                                Hier findest du bald eine Übersicht über mein aktuelles Streaming-Setup. 
+                                Die Liste wird regelmäßig aktualisiert und zeigt dir genau welche Hardware ich verwende.
                             </p>
-                            <p class="text-gray-300 text-sm">
-                                Das Scraping konnte keine Produkte von Kit.co extrahieren. 
-                                Möglicherweise hat sich die Struktur der Website geändert.
-                            </p>
+                            <div class="bg-blue-900/30 border border-blue-600 p-4 rounded mt-6">
+                                <p class="text-blue-200 text-sm">
+                                    <strong>💡 Coming Soon:</strong> Diese Sektion wird in Kürze mit meiner echten Hardware-Liste befüllt. 
+                                    In der Zwischenzeit kannst du dir die anderen Setup-Kategorien ansehen!
+                                </p>
+                            </div>
+                            <div class="mt-6">
+                                <button @click="activeTab = 'bang-for-buck'" 
+                                        class="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition">
+                                    → Schau dir das "Bang for Buck" Setup an
+                                </button>
+                            </div>
                         </div>
-                    </div>
-                    
-                    <div class="bg-gray-800 p-5 rounded-lg mt-6">
-                        <div class="flex justify-between items-center">
-                            <h3 class="text-xl font-semibold">Letzte Aktualisierung:</h3>
-                            <span class="text-cyan-400 font-semibold">24.12.2025</span>
-                        </div>
-                        <p class="text-sm text-gray-400 mt-2">
-                            0 Produkte von Kit.co importiert
-                        </p>
                     </div>
                 </div>
             </div>
