@@ -3,22 +3,24 @@
         <!-- Main content taking most of the width -->
         <div class="flex-1 flex flex-col items-center">
             <!-- Navigation -->
-            <nav class="w-full max-w-5xl mb-6 flex justify-end gap-6 text-sm flex-wrap">
-                <NuxtLink to="/" class="text-gray-400 hover:text-white transition">
-                    Home
-                </NuxtLink>
-                <NuxtLink to="/obs-guide" class="text-gray-400 hover:text-white transition">
-                    OBS Guide
-                </NuxtLink>
-                <NuxtLink to="/hardware" class="text-gray-400 hover:text-white transition">
-                    Hardware
-                </NuxtLink>
-                <NuxtLink to="/impressum" class="text-gray-400 hover:text-white transition">
-                    Impressum
-                </NuxtLink>
-                <NuxtLink to="/datenschutz" class="text-gray-400 hover:text-white transition">
-                    Datenschutz
-                </NuxtLink>
+            <nav class="w-full max-w-5xl mb-8 bg-eerie-black rounded-lg p-4">
+                <div class="flex justify-center gap-8 text-base flex-wrap">
+                    <NuxtLink to="/" class="text-white font-semibold hover:text-blue-400 transition">
+                        🏠 Home
+                    </NuxtLink>
+                    <NuxtLink to="/obs-guide" class="text-gray-300 hover:text-blue-400 transition font-medium">
+                        📖 OBS Guide
+                    </NuxtLink>
+                    <NuxtLink to="/hardware" class="text-gray-300 hover:text-blue-400 transition font-medium">
+                        🔧 Hardware
+                    </NuxtLink>
+                    <NuxtLink to="/impressum" class="text-gray-400 hover:text-white transition text-sm">
+                        Impressum
+                    </NuxtLink>
+                    <NuxtLink to="/datenschutz" class="text-gray-400 hover:text-white transition text-sm">
+                        Datenschutz
+                    </NuxtLink>
+                </div>
             </nav>
             
             <!-- Header with Logo and Title -->

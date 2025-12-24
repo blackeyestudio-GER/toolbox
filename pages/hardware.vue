@@ -2,22 +2,24 @@
     <div class="min-h-screen bg-night text-white p-4">
         <div class="max-w-6xl mx-auto">
             <!-- Navigation -->
-            <nav class="mb-6 flex gap-6 text-sm flex-wrap">
-                <NuxtLink to="/" class="text-gray-400 hover:text-white transition">
-                    Home
-                </NuxtLink>
-                <NuxtLink to="/obs-guide" class="text-gray-400 hover:text-white transition">
-                    OBS Guide
-                </NuxtLink>
-                <NuxtLink to="/hardware" class="text-white font-semibold">
-                    Hardware
-                </NuxtLink>
-                <NuxtLink to="/impressum" class="text-gray-400 hover:text-white transition">
-                    Impressum
-                </NuxtLink>
-                <NuxtLink to="/datenschutz" class="text-gray-400 hover:text-white transition">
-                    Datenschutz
-                </NuxtLink>
+            <nav class="mb-8 bg-eerie-black rounded-lg p-4">
+                <div class="flex justify-center gap-8 text-base flex-wrap">
+                    <NuxtLink to="/" class="text-gray-300 hover:text-blue-400 transition font-medium">
+                        🏠 Home
+                    </NuxtLink>
+                    <NuxtLink to="/obs-guide" class="text-gray-300 hover:text-blue-400 transition font-medium">
+                        📖 OBS Guide
+                    </NuxtLink>
+                    <NuxtLink to="/hardware" class="text-white font-semibold hover:text-blue-400 transition">
+                        🔧 Hardware
+                    </NuxtLink>
+                    <NuxtLink to="/impressum" class="text-gray-400 hover:text-white transition text-sm">
+                        Impressum
+                    </NuxtLink>
+                    <NuxtLink to="/datenschutz" class="text-gray-400 hover:text-white transition text-sm">
+                        Datenschutz
+                    </NuxtLink>
+                </div>
             </nav>
 
             <h1 class="text-4xl font-bold mb-4">Streaming Hardware Guide</h1>
@@ -702,8 +704,9 @@
                         </p>
                     </div>
                 </div>
+            </div>
 
-                <!-- Back to home -->
+            <!-- Back to home -->
             <div class="mt-12 text-center">
                 <NuxtLink to="/" class="inline-block px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition">
                     ← Zurück zur Tool-Übersicht

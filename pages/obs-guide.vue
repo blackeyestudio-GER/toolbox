@@ -2,22 +2,24 @@
     <div class="min-h-screen bg-night text-white p-4">
         <div class="max-w-4xl mx-auto">
             <!-- Navigation -->
-            <nav class="mb-6 flex gap-6 text-sm flex-wrap">
-                <NuxtLink to="/" class="text-gray-400 hover:text-white transition">
-                    Home
-                </NuxtLink>
-                <NuxtLink to="/obs-guide" class="text-white font-semibold">
-                    OBS Guide
-                </NuxtLink>
-                <NuxtLink to="/hardware" class="text-gray-400 hover:text-white transition">
-                    Hardware
-                </NuxtLink>
-                <NuxtLink to="/impressum" class="text-gray-400 hover:text-white transition">
-                    Impressum
-                </NuxtLink>
-                <NuxtLink to="/datenschutz" class="text-gray-400 hover:text-white transition">
-                    Datenschutz
-                </NuxtLink>
+            <nav class="mb-8 bg-eerie-black rounded-lg p-4">
+                <div class="flex justify-center gap-8 text-base flex-wrap">
+                    <NuxtLink to="/" class="text-gray-300 hover:text-blue-400 transition font-medium">
+                        🏠 Home
+                    </NuxtLink>
+                    <NuxtLink to="/obs-guide" class="text-white font-semibold hover:text-blue-400 transition">
+                        📖 OBS Guide
+                    </NuxtLink>
+                    <NuxtLink to="/hardware" class="text-gray-300 hover:text-blue-400 transition font-medium">
+                        🔧 Hardware
+                    </NuxtLink>
+                    <NuxtLink to="/impressum" class="text-gray-400 hover:text-white transition text-sm">
+                        Impressum
+                    </NuxtLink>
+                    <NuxtLink to="/datenschutz" class="text-gray-400 hover:text-white transition text-sm">
+                        Datenschutz
+                    </NuxtLink>
+                </div>
             </nav>
 
             <h1 class="text-4xl font-bold mb-4">OBS Studio - Der ultimative Einsteigerguide</h1>
