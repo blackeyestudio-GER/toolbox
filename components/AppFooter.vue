@@ -43,13 +43,31 @@
       </div>
       
       <!-- Bottom Bar -->
-      <div class="border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
-        <small class="text-gray-400">
-          &copy; 2024 Content Creator Toolbox by Blackeye Studio. Alle Rechte vorbehalten.
-        </small>
-        <small class="text-gray-400 text-xs">
-          Made with ❤️ for the Creator Community
-        </small>
+      <div class="border-t border-gray-700 pt-6">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-4 mb-4">
+          <small class="text-gray-400">
+            &copy; 2024 Content Creator Toolbox by Blackeye Studio. Alle Rechte vorbehalten.
+          </small>
+          <div class="flex gap-4 text-sm flex-wrap justify-center">
+            <NuxtLink to="/obs-guide" class="text-gray-400 hover:text-white transition">
+              OBS Guide
+            </NuxtLink>
+            <NuxtLink to="/hardware" class="text-gray-400 hover:text-white transition">
+              Hardware
+            </NuxtLink>
+            <NuxtLink to="/impressum" class="text-gray-400 hover:text-white transition">
+              Impressum
+            </NuxtLink>
+            <NuxtLink to="/datenschutz" class="text-gray-400 hover:text-white transition">
+              Datenschutz
+            </NuxtLink>
+          </div>
+        </div>
+        <div class="text-center">
+          <small class="text-gray-400 text-xs">
+            Made with ❤️ for the Creator Community
+          </small>
+        </div>
       </div>
     </div>
   </footer>

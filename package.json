@@ -9,12 +9,14 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "update-hardware": "node scripts/update-hardware.js"
   },
   "dependencies": {
     "@nuxt/eslint": "^0.5.0",
     "@nuxtjs/google-adsense": "^3.0.0",
     "@nuxtjs/tailwindcss": "^6.12.1",
+    "cheerio": "^1.0.0-rc.12",
     "npm": "^10.9.4",
     "nuxt": "^3.12.4",
     "vue": "latest"

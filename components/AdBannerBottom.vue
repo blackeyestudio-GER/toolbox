@@ -1,7 +1,6 @@
 <template>
     <ClientOnly>
-        <!-- Only show on larger screens where there's enough content -->
-        <div class="hidden md:flex w-full justify-center mt-8 min-h-32">
+        <div class="w-full flex justify-center mt-8 min-h-32 min-w-full">
             <ins ref="adElement" class="adsbygoogle ad-banner-bottom"
                 style="display:block;width:728px;height:90px"
                 data-ad-client="ca-pub-4277903766631766"

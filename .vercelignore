@@ -1,0 +1,6 @@
+# Ignore scripts folder on deployment
+scripts/
+
+# Ignore debug files
+scripts/debug-*.html
+

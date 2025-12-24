@@ -2,6 +2,12 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
+  
+  // Scripts folder is for local development only and won't be deployed
+  ignore: [
+    'scripts/**/*',
+    'tools/**/*'
+  ],
   runtimeConfig: {
     public: {
       apiBase: '/api/',

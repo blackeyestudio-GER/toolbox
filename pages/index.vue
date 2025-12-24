@@ -2,6 +2,25 @@
     <div class="min-h-screen flex bg-night text-white p-4">
         <!-- Main content taking most of the width -->
         <div class="flex-1 flex flex-col items-center">
+            <!-- Navigation -->
+            <nav class="w-full max-w-5xl mb-6 flex justify-end gap-6 text-sm flex-wrap">
+                <NuxtLink to="/" class="text-gray-400 hover:text-white transition">
+                    Home
+                </NuxtLink>
+                <NuxtLink to="/obs-guide" class="text-gray-400 hover:text-white transition">
+                    OBS Guide
+                </NuxtLink>
+                <NuxtLink to="/hardware" class="text-gray-400 hover:text-white transition">
+                    Hardware
+                </NuxtLink>
+                <NuxtLink to="/impressum" class="text-gray-400 hover:text-white transition">
+                    Impressum
+                </NuxtLink>
+                <NuxtLink to="/datenschutz" class="text-gray-400 hover:text-white transition">
+                    Datenschutz
+                </NuxtLink>
+            </nav>
+            
             <!-- Header with Logo and Title -->
             <div class="w-full max-w-5xl mb-8">
                 <div class="flex items-center justify-center gap-6 mb-6">
@@ -40,6 +59,12 @@
                     <option v-for="tag in uniqueTags" :key="tag" :value="tag">{{ tag }}</option>
                 </select>
             </div>
+            
+            <!-- Info about upcoming tools -->
+            <div class="w-full max-w-5xl mb-4 text-sm text-gray-400 flex items-center gap-2">
+                <span class="bg-yellow-500 text-black px-2 py-1 rounded text-xs font-bold">Bald verfügbar</span>
+                <span>= Tool ist noch in Entwicklung und wird bald hinzugefügt</span>
+            </div>
 
             <!-- Category Guide -->
             <div class="w-full max-w-5xl mb-8 bg-eerie-black p-6 rounded-lg">
@@ -60,29 +85,36 @@
 
             <!-- Tool Tiles -->
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-5xl">
-                <a
+                <component
                     v-for="tool in filteredTools"
                     :key="tool.title"
+                    :is="tool.status === 'todo' ? 'div' : 'a'"
+                    :href="tool.status !== 'todo' ? tool.link : undefined"
+                    :target="tool.status !== 'todo' ? '_blank' : undefined"
                     :class="[
                         categoryStyles[tool.category]?.bg || 'bg-gray-800',
                         categoryStyles[tool.category]?.border || 'border-gray-600',
+                        tool.status === 'todo' ? 'opacity-75 cursor-default' : 'hover:saturate-150 cursor-pointer',
                     ]"
-                    :href="tool.link"
-                    class="p-4 hover:saturate-150 transition duration-200 cursor-pointer text-white border-4"
-                    target="_blank"
+                    class="p-4 transition duration-200 text-white border-4 relative"
                 >
+                    <!-- Coming Soon Badge -->
+                    <div v-if="tool.status === 'todo'" class="absolute top-2 right-2 bg-yellow-500 text-black px-2 py-1 rounded text-xs font-bold">
+                        Bald verfügbar
+                    </div>
+                    
                     <h2 class="text-xl font-bold mb-1">{{ tool.title }}</h2>
                     <p class="text-sm mb-2">{{ tool.description }}</p>
                     <div class="flex flex-wrap gap-1">
-                    <span
+                        <span
                             v-for="tag in tool.tags"
                             :key="tag"
                             class="bg-white/30 px-2 py-0.5 rounded text-xs"
-                    >
-                      {{ tag }}
-                    </span>
+                        >
+                            {{ tag }}
+                        </span>
                     </div>
-                </a>
+                </component>
             </div>
 
             <!-- Additional Info Section -->
@@ -120,43 +152,8 @@
                 </div>
             </div>
 
-            <!-- How to Use Section -->
-            <div class="w-full max-w-5xl mb-8 bg-eerie-black p-6 rounded-lg">
-                <h3 class="text-2xl font-semibold text-white mb-4">So nutzt du die Toolbox optimal</h3>
-                <div class="space-y-3 text-gray-300 text-sm leading-relaxed">
-                    <div class="flex items-start gap-3">
-                        <span class="text-2xl">🔍</span>
-                        <div>
-                            <h4 class="font-semibold text-white mb-1">Suche & Filter</h4>
-                            <p class="text-gray-400">Nutze die Suchfunktion oben, um schnell das passende Tool zu finden. Filter nach Tags wie "Audio", "Grafik" oder "KI" um gezielt zu suchen.</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start gap-3">
-                        <span class="text-2xl">🎨</span>
-                        <div>
-                            <h4 class="font-semibold text-white mb-1">Farbcodierung</h4>
-                            <p class="text-gray-400">Jede Kategorie hat eine eigene Farbe. So erkennst du auf einen Blick, welche Art von Tool du vor dir hast - von Grafik (Blau) über Audio (Grün) bis hin zu KI (Lila).</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start gap-3">
-                        <span class="text-2xl">⭐</span>
-                        <div>
-                            <h4 class="font-semibold text-white mb-1">Lesezeichen setzen</h4>
-                            <p class="text-gray-400">Speichere diese Seite als Lesezeichen in deinem Browser. So hast du deine Tool-Sammlung immer schnell zur Hand, wenn du sie brauchst.</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start gap-3">
-                        <span class="text-2xl">🔄</span>
-                        <div>
-                            <h4 class="font-semibold text-white mb-1">Regelmäßig vorbeischauen</h4>
-                            <p class="text-gray-400">Die Sammlung wird ständig erweitert. Schau regelmäßig vorbei, um neue Tools zu entdecken die deinen Workflow noch weiter verbessern können.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Bottom Ad Banner - only visible after substantial content -->
-            <div class="mt-12 max-w-5xl w-full">
+            <!-- Bottom Ad Banner -->
+            <div class="mt-8 max-w-5xl w-full">
                 <AdBannerBottom />
             </div>
         </div>
@@ -216,6 +213,11 @@ const categoryStyles = {
         text: 'text-indigo-600',
         border: 'border-indigo-600',
     },
+    'Stream-Interaktion': {
+        bg: 'bg-orange-600',
+        text: 'text-orange-600',
+        border: 'border-orange-600',
+    },
 };
 
 const categoryInfo = {
@@ -227,15 +229,41 @@ const categoryInfo = {
     Merch: 'Merchandise und Shop-Lösungen',
     Finanzen: 'Monetarisierung und Einnahmen',
     Ki: 'KI-gestützte Tools',
+    'Stream-Interaktion': 'Community-Engagement und interaktive Features',
 };
 
 const tools = [
+    {
+        title: 'ChallengePicker',
+        description: 'Innovatives Tool für Streamer um spannende, von der Community getriebene Challenges in deinen Stream zu integrieren - ganz ohne PC-Installation. Biete deinen Zuschauern ein einmaliges interaktives Erlebnis und fordere andere Streamer heraus.',
+        tags: ['Stream-Interaktion', 'Games'],
+        link: '#',
+        category: 'Stream-Interaktion',
+        status: 'todo',
+    },
+    {
+        title: 'Questify',
+        description: 'Ermögliche deiner Community gegeneinander zu spielen, auch in Spielen ohne direkte Ziele oder Quests. Als Gamehost wählst du aus verschiedenen Quests oder erstellst eigene. Verschiedene Modi machen jedes Spiel zum Wettbewerb - perfekt auch für Streamer-Battles.',
+        tags: ['Stream-Interaktion', 'Games'],
+        link: '#',
+        category: 'Stream-Interaktion',
+        status: 'todo',
+    },
+    {
+        title: 'Crowd Control',
+        description: 'Alternative zu ChallengePicker: Lass deine Zuschauer direkt ins Spielgeschehen eingreifen. Die Community kann durch verschiedene Aktionen deinen Stream beeinflussen und für chaotische oder hilfreiche Momente sorgen.',
+        tags: ['Stream-Interaktion', 'Games'],
+        link: 'https://crowdcontrol.live/',
+        category: 'Stream-Interaktion',
+        status: 'done',
+    },
     {
         title: 'Merlin Image Converter',
         description: 'Konvertiere deine Bilder schnell und einfach in verschiedene Formate wie PNG, JPG, WEBP oder SVG. Perfekt für die Optimierung von Thumbnails und Social Media Grafiken.',
         tags: ['Grafik', 'Utility'],
         link: 'https://example.com/converter',
         category: 'Grafik',
+        status: 'done',
     },
     {
         title: 'Thumbnail Previewer',
@@ -243,6 +271,7 @@ const tools = [
         tags: ['Grafik', 'Utility'],
         link: 'https://thumbnail-preview.tebbe.dev/',
         category: 'Grafik',
+        status: 'done',
     },
     {
         title: 'Todoist',
@@ -250,6 +279,7 @@ const tools = [
         tags: ['Organisation'],
         link: 'https://www.todoist.com/de',
         category: 'Organisation',
+        status: 'done',
     },
     {
         title: 'Sound Resource',
@@ -257,6 +287,7 @@ const tools = [
         tags: ['Audio'],
         link: 'https://www.sounds-resource.com/',
         category: 'Audio',
+        status: 'done',
     },
     {
         title: 'Sub Calculator',
@@ -264,6 +295,7 @@ const tools = [
         tags: ['Finanzen', 'Organisation'],
         link: 'https://subcalculator.blackeyestudio.de/',
         category: 'Finanzen',
+        status: 'done',
     },
     {
         title: 'Suno',
@@ -271,6 +303,7 @@ const tools = [
         tags: ['Organisation', 'Audio', 'Ki'],
         link: 'https://suno.com/',
         category: 'Audio',
+        status: 'done',
     },
     {
         title: 'Game Finder',
@@ -278,6 +311,7 @@ const tools = [
         tags: ['Organisation', 'Games'],
         link: 'https://game-finder.app/',
         category: 'Games',
+        status: 'done',
     },
     {
         title: 'Pixabay',
@@ -285,6 +319,7 @@ const tools = [
         tags: ['Organisation', 'Audio'],
         link: 'https://pixabay.com/de/',
         category: 'Audio',
+        status: 'done',
     },
     {
         title: 'Sora',
@@ -292,6 +327,7 @@ const tools = [
         tags: ['Grafik', 'Ki'],
         link: 'https://sora.chatgpt.com/explore',
         category: 'Grafik',
+        status: 'done',
     },
     {
         title: '101Soundboards',
@@ -299,6 +335,7 @@ const tools = [
         tags: ['Audio'],
         link: 'https://www.101soundboards.com/',
         category: 'Audio',
+        status: 'done',
     },
     {
         title: 'DiscoHook',
@@ -306,6 +343,7 @@ const tools = [
         tags: ['Organisation'],
         link: 'https://discohook.org/',
         category: 'Organisation',
+        status: 'done',
     },
     {
         title: 'Amazon Affiliate Partnerseite',
@@ -313,6 +351,7 @@ const tools = [
         tags: ['Organisation', 'Finanzen'],
         link: 'https://partnernet.amazon.de/home',
         category: 'Finanzen',
+        status: 'done',
     },
     {
         title: 'Shopify',
@@ -320,6 +359,7 @@ const tools = [
         tags: ['Organisation', 'Finanzen', 'Merch'],
         link: 'https://www.shopify.com/',
         category: 'Merch',
+        status: 'done',
     },
     {
         title: 'MyInstants',
@@ -327,6 +367,7 @@ const tools = [
         tags: ['Audio'],
         link: 'https://www.myinstants.com/',
         category: 'Audio',
+        status: 'done',
     },
     {
         title: 'ChatGPT',
@@ -334,6 +375,7 @@ const tools = [
         tags: ['Organisation', 'Ki'],
         link: 'https://chatgpt.com/',
         category: 'Ki',
+        status: 'done',
     },
     {
         title: 'Discords',
@@ -341,6 +383,7 @@ const tools = [
         tags: ['Organisation'],
         link: 'https://discords.com/',
         category: 'Organisation',
+        status: 'done',
     },
 ];
 
