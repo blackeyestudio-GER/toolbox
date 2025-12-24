@@ -144,9 +144,6 @@
             </div>
         </div>
     </div>
-    
-    <!-- Footer -->
-    <AppFooter />
 </template>
 
 <script setup>

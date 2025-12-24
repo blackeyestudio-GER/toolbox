@@ -770,9 +770,6 @@
                 </NuxtLink>
             </div>
         </div>
-        
-        <!-- Footer -->
-        <AppFooter />
     </div>
 </template>
 
