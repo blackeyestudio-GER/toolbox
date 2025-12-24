@@ -77,10 +77,10 @@
 
                     <div class="grid md:grid-cols-2 gap-6">
                         <!-- Mikrofon -->
-                        <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-blue-500 transition">
+                        <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-green-500 transition">
                             <div class="flex justify-between items-start mb-3">
                                 <h3 class="text-xl font-semibold">🎤 Mikrofon</h3>
-                                <span class="text-green-400 font-bold">~30€</span>
+                                <span class="text-green-400 font-bold">~35€</span>
                             </div>
                             <p class="text-lg font-semibold text-blue-400 mb-2">FIFINE USB Mikrofon K669B</p>
                             <p class="text-sm text-gray-400 mb-3">
@@ -92,34 +92,13 @@
                                 <li>✓ Gutes Preis-Leistungs-Verhältnis</li>
                             </ul>
                             <a href="https://www.amazon.de/s?k=FIFINE+K669B&tag=blackeye1980f-21" target="_blank" rel="nofollow sponsored"
-                               class="inline-block px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded text-sm transition">
-                                Auf Amazon ansehen →
-                            </a>
-                        </div>
-
-                        <!-- Webcam -->
-                        <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-blue-500 transition">
-                            <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-xl font-semibold">📹 Webcam</h3>
-                                <span class="text-green-400 font-bold">~40€</span>
-                            </div>
-                            <p class="text-lg font-semibold text-blue-400 mb-2">Logitech C920 HD</p>
-                            <p class="text-sm text-gray-400 mb-3">
-                                Der Klassiker für Einsteiger. 1080p, zuverlässig und weit verbreitet.
-                            </p>
-                            <ul class="text-sm text-gray-300 space-y-1 mb-3">
-                                <li>✓ 1080p @ 30fps</li>
-                                <li>✓ Autofokus</li>
-                                <li>✓ Eingebautes Stereo-Mikrofon</li>
-                            </ul>
-                            <a href="https://www.amazon.de/s?k=Logitech+C920&tag=blackeye1980f-21" target="_blank" rel="nofollow sponsored"
-                               class="inline-block px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded text-sm transition">
+                               class="inline-block px-4 py-2 bg-green-600 hover:bg-green-700 rounded text-sm transition">
                                 Auf Amazon ansehen →
                             </a>
                         </div>
 
                         <!-- Licht -->
-                        <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-blue-500 transition">
+                        <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-green-500 transition">
                             <div class="flex justify-between items-start mb-3">
                                 <h3 class="text-xl font-semibold">💡 Beleuchtung</h3>
                                 <span class="text-green-400 font-bold">~25€</span>
@@ -134,13 +113,34 @@
                                 <li>✓ Inklusive Tischstativ</li>
                             </ul>
                             <a href="https://www.amazon.de/s?k=Neewer+Ringlicht+10&tag=blackeye1980f-21" target="_blank" rel="nofollow sponsored"
-                               class="inline-block px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded text-sm transition">
+                               class="inline-block px-4 py-2 bg-green-600 hover:bg-green-700 rounded text-sm transition">
+                                Auf Amazon ansehen →
+                            </a>
+                        </div>
+
+                        <!-- Webcam -->
+                        <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-green-500 transition">
+                            <div class="flex justify-between items-start mb-3">
+                                <h3 class="text-xl font-semibold">📹 Webcam</h3>
+                                <span class="text-green-400 font-bold">~45€</span>
+                            </div>
+                            <p class="text-lg font-semibold text-blue-400 mb-2">Logitech C505 HD</p>
+                            <p class="text-sm text-gray-400 mb-3">
+                                Günstige aber solide 720p Webcam. Perfekt für den Einstieg.
+                            </p>
+                            <ul class="text-sm text-gray-300 space-y-1 mb-3">
+                                <li>✓ 720p @ 30fps</li>
+                                <li>✓ Autofokus</li>
+                                <li>✓ Eingebautes Mikrofon</li>
+                            </ul>
+                            <a href="https://www.amazon.de/s?k=Logitech+C505&tag=blackeye1980f-21" target="_blank" rel="nofollow sponsored"
+                               class="inline-block px-4 py-2 bg-green-600 hover:bg-green-700 rounded text-sm transition">
                                 Auf Amazon ansehen →
                             </a>
                         </div>
 
                         <!-- Kopfhörer -->
-                        <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-blue-500 transition">
+                        <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-green-500 transition">
                             <div class="flex justify-between items-start mb-3">
                                 <h3 class="text-xl font-semibold">🎧 Kopfhörer</h3>
                                 <span class="text-green-400 font-bold">~50€</span>
@@ -155,7 +155,7 @@
                                 <li>✓ 50mm Treiber</li>
                             </ul>
                             <a href="https://www.amazon.de/s?k=HyperX+Cloud+Stinger&tag=blackeye1980f-21" target="_blank" rel="nofollow sponsored"
-                               class="inline-block px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded text-sm transition">
+                               class="inline-block px-4 py-2 bg-green-600 hover:bg-green-700 rounded text-sm transition">
                                 Auf Amazon ansehen →
                             </a>
                         </div>
@@ -164,7 +164,7 @@
                     <div class="bg-gray-800 p-5 rounded-lg">
                         <div class="flex justify-between items-center">
                             <h3 class="text-xl font-semibold">Gesamtpreis:</h3>
-                            <span class="text-3xl font-bold text-green-400">~145€</span>
+                            <span class="text-3xl font-bold text-green-400">~155€</span>
                         </div>
                         <p class="text-sm text-gray-400 mt-2">
                             Preise können variieren. Schau nach Angeboten auf Amazon!
@@ -193,19 +193,20 @@
                         <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-yellow-500 transition">
                             <div class="flex justify-between items-start mb-3">
                                 <h3 class="text-xl font-semibold">🎤 Mikrofon</h3>
-                                <span class="text-yellow-400 font-bold">~100€</span>
+                                <span class="text-yellow-400 font-bold">~90€</span>
                             </div>
-                            <p class="text-lg font-semibold text-yellow-400 mb-2">Rode PodMic USB</p>
+                            <p class="text-lg font-semibold text-yellow-400 mb-2">Audio Technica AT2020USB+ ⭐</p>
                             <p class="text-sm text-gray-400 mb-3">
-                                Dynamisches USB-Mikrofon mit professionellem Sound. Perfekt für Streaming und Podcasts.
+                                <strong class="text-yellow-300">Persönliche Empfehlung!</strong> Exzellentes Kondensatormikrofon mit Studio-Qualität. 
+                                Perfekt für Streaming, Podcasting und Gesangsaufnahmen.
                             </p>
                             <ul class="text-sm text-gray-300 space-y-1 mb-3">
-                                <li>✓ Dynamisches Mikrofon</li>
-                                <li>✓ USB & XLR (flexibel)</li>
-                                <li>✓ Niedriges Grundrauschen</li>
-                                <li>✓ Sehr robust</li>
+                                <li>✓ Kondensatormikrofon (Studio-Sound)</li>
+                                <li>✓ USB-C & XLR (flexibel)</li>
+                                <li>✓ Kopfhörer-Monitoring inkl.</li>
+                                <li>✓ Sehr klarer, warmer Sound</li>
                             </ul>
-                            <a href="https://www.amazon.de/s?k=Rode+PodMic+USB&tag=blackeye1980f-21" target="_blank" rel="nofollow sponsored"
+                            <a href="https://www.amazon.de/s?k=Audio+Technica+AT2020USB+Plus&tag=blackeye1980f-21" target="_blank" rel="nofollow sponsored"
                                class="inline-block px-4 py-2 bg-yellow-600 hover:bg-yellow-700 rounded text-sm transition">
                                 Auf Amazon ansehen →
                             </a>
@@ -215,18 +216,20 @@
                         <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-yellow-500 transition">
                             <div class="flex justify-between items-start mb-3">
                                 <h3 class="text-xl font-semibold">🦾 Mikrofon Arm</h3>
-                                <span class="text-yellow-400 font-bold">~30€</span>
+                                <span class="text-yellow-400 font-bold">~25€</span>
                             </div>
-                            <p class="text-lg font-semibold text-yellow-400 mb-2">Rode PSA1+ Mikrofonarm</p>
+                            <p class="text-lg font-semibold text-yellow-400 mb-2">Neewer NW-35 Hydraulik-Arm ⭐</p>
                             <p class="text-sm text-gray-400 mb-3">
-                                Hochwertiger Mikrofonarm. Flexibel positionierbar und sehr stabil.
+                                <strong class="text-yellow-300">Persönliche Empfehlung!</strong> Der beste Mikrofonarm den ich je hatte. 
+                                Hydraulische Dämpfung, super stabil und unschlagbares Preis-Leistungs-Verhältnis.
                             </p>
                             <ul class="text-sm text-gray-300 space-y-1 mb-3">
-                                <li>✓ Stabil und hochwertig</li>
+                                <li>✓ Hydraulische Dämpfung</li>
+                                <li>✓ Extrem stabil</li>
                                 <li>✓ Kabelführung integriert</li>
-                                <li>✓ Tischklemme</li>
+                                <li>✓ Tischklemme & Tischbefestigung</li>
                             </ul>
-                            <a href="https://www.amazon.de/s?k=Rode+PSA1&tag=blackeye1980f-21" target="_blank" rel="nofollow sponsored" 
+                            <a href="https://www.amazon.de/s?k=Neewer+NW-35&tag=blackeye1980f-21" target="_blank" rel="nofollow sponsored" 
                                class="inline-block px-4 py-2 bg-yellow-600 hover:bg-yellow-700 rounded text-sm transition">
                                 Auf Amazon ansehen →
                             </a>
@@ -236,7 +239,7 @@
                         <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-yellow-500 transition">
                             <div class="flex justify-between items-start mb-3">
                                 <h3 class="text-xl font-semibold">📹 Webcam</h3>
-                                <span class="text-yellow-400 font-bold">~70€</span>
+                                <span class="text-yellow-400 font-bold">~90€</span>
                             </div>
                             <p class="text-lg font-semibold text-yellow-400 mb-2">Logitech C922 Pro Stream</p>
                             <p class="text-sm text-gray-400 mb-3">
@@ -258,19 +261,19 @@
                         <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-yellow-500 transition">
                             <div class="flex justify-between items-start mb-3">
                                 <h3 class="text-xl font-semibold">💡 Beleuchtung</h3>
-                                <span class="text-yellow-400 font-bold">~60-80€</span>
+                                <span class="text-yellow-400 font-bold">~70€</span>
                             </div>
-                            <p class="text-lg font-semibold text-yellow-400 mb-2">LED Streaming Light</p>
+                            <p class="text-lg font-semibold text-yellow-400 mb-2">2x Neewer LED Panel Kit</p>
                             <p class="text-sm text-gray-400 mb-3">
-                                LED-Panel mit einstellbarer Helligkeit und Farbtemperatur. Deutlich besser als Ringlicht.
+                                Zwei dimmbare LED-Panels mit Stativen. Professionelle Ausleuchtung für dein Setup - deutlich besser als Ringlicht.
                             </p>
                             <ul class="text-sm text-gray-300 space-y-1 mb-3">
-                                <li>✓ Dimmbar</li>
-                                <li>✓ Farbtemperatur einstellbar</li>
-                                <li>✓ Gute Ausleuchtung</li>
-                                <li>✓ Tischstativ oder Klemme</li>
+                                <li>✓ 2x LED Panels</li>
+                                <li>✓ Dimmbar (10-100%)</li>
+                                <li>✓ Stative inklusive</li>
+                                <li>✓ 3200-5600K</li>
                             </ul>
-                            <a href="https://www.amazon.de/s?k=LED+Streaming+Light&tag=blackeye1980f-21" target="_blank" rel="nofollow sponsored" 
+                            <a href="https://www.amazon.de/s?k=Neewer+LED+Panel+Light+Kit&tag=blackeye1980f-21" target="_blank" rel="nofollow sponsored" 
                                class="inline-block px-4 py-2 bg-yellow-600 hover:bg-yellow-700 rounded text-sm transition">
                                 Auf Amazon ansehen →
                             </a>
@@ -280,10 +283,10 @@
                     <div class="bg-gray-800 p-5 rounded-lg">
                         <div class="flex justify-between items-center">
                             <h3 class="text-xl font-semibold">Gesamtpreis:</h3>
-                            <span class="text-3xl font-bold text-yellow-400">~240€</span>
+                            <span class="text-3xl font-bold text-yellow-400">~180€</span>
                         </div>
                         <p class="text-sm text-gray-400 mt-2">
-                            Deutlich bessere Qualität für moderaten Aufpreis. Top Preis-Leistung!
+                            Merklich bessere Qualität als Anfänger-Setup! Mit persönlichen Empfehlungen - Top Preis-Leistung!
                         </p>
                     </div>
                 </div>
@@ -309,19 +312,19 @@
                         <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-blue-500 transition">
                             <div class="flex justify-between items-start mb-3">
                                 <h3 class="text-xl font-semibold">🎤 Mikrofon</h3>
-                                <span class="text-blue-400 font-bold">~140€</span>
+                                <span class="text-blue-400 font-bold">~170€</span>
                             </div>
-                            <p class="text-lg font-semibold text-blue-400 mb-2">Shure SM7B</p>
+                            <p class="text-lg font-semibold text-blue-400 mb-2">Rode PodMic USB</p>
                             <p class="text-sm text-gray-400 mb-3">
-                                Das legendäre Broadcast-Mikrofon. Von Streamern und Podcastern weltweit geliebt.
+                                Dynamisches USB-Mikrofon mit professionellem Sound. Flexibel dank USB & XLR - du kannst später auf ein Audio Interface upgraden.
                             </p>
                             <ul class="text-sm text-gray-300 space-y-1 mb-3">
-                                <li>✓ Studio-Qualität</li>
                                 <li>✓ Dynamisches Mikrofon</li>
-                                <li>✓ Exzellente Hintergrundunterdrückung</li>
-                                <li>✓ Warmer, voller Sound</li>
+                                <li>✓ USB & XLR (flexibel)</li>
+                                <li>✓ Niedriges Grundrauschen</li>
+                                <li>✓ Sehr robust & hochwertig</li>
                             </ul>
-                            <a href="https://www.amazon.de/s?k=Shure+SM7B&tag=blackeye1980f-21" target="_blank" rel="nofollow sponsored" 
+                            <a href="https://www.amazon.de/s?k=Rode+PodMic+USB&tag=blackeye1980f-21" target="_blank" rel="nofollow sponsored" 
                                class="inline-block px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded text-sm transition">
                                 Auf Amazon ansehen →
                             </a>
@@ -331,7 +334,7 @@
                         <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-blue-500 transition">
                             <div class="flex justify-between items-start mb-3">
                                 <h3 class="text-xl font-semibold">🎛️ Audio Interface</h3>
-                                <span class="text-blue-400 font-bold">~120€</span>
+                                <span class="text-blue-400 font-bold">~130€</span>
                             </div>
                             <p class="text-lg font-semibold text-blue-400 mb-2">Focusrite Scarlett Solo (3rd Gen)</p>
                             <p class="text-sm text-gray-400 mb-3">
@@ -375,7 +378,7 @@
                         <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-blue-500 transition">
                             <div class="flex justify-between items-start mb-3">
                                 <h3 class="text-xl font-semibold">📹 Webcam</h3>
-                                <span class="text-blue-400 font-bold">~80€</span>
+                                <span class="text-blue-400 font-bold">~150€</span>
                             </div>
                             <p class="text-lg font-semibold text-blue-400 mb-2">Razer Kiyo Pro</p>
                             <p class="text-sm text-gray-400 mb-3">
@@ -419,7 +422,7 @@
                         <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-blue-500 transition">
                             <div class="flex justify-between items-start mb-3">
                                 <h3 class="text-xl font-semibold">🟢 Green Screen</h3>
-                                <span class="text-blue-400 font-bold">~30€</span>
+                                <span class="text-blue-400 font-bold">~150€</span>
                             </div>
                             <p class="text-lg font-semibold text-blue-400 mb-2">Elgato Green Screen</p>
                             <p class="text-sm text-gray-400 mb-3">
@@ -441,7 +444,7 @@
                     <div class="bg-gray-800 p-5 rounded-lg">
                         <div class="flex justify-between items-center">
                             <h3 class="text-xl font-semibold">Gesamtpreis:</h3>
-                            <span class="text-3xl font-bold text-blue-400">~520€</span>
+                            <span class="text-3xl font-bold text-blue-400">~1.200€</span>
                         </div>
                         <p class="text-sm text-gray-400 mt-2">
                             Professionelles Setup. Du bist auf Augenhöhe mit erfolgreichen Streamern!
@@ -470,7 +473,7 @@
                         <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-purple-500 transition">
                             <div class="flex justify-between items-start mb-3">
                                 <h3 class="text-xl font-semibold">🎤 Mikrofon</h3>
-                                <span class="text-purple-400 font-bold">~430€</span>
+                                <span class="text-purple-400 font-bold">~570€</span>
                             </div>
                             <p class="text-lg font-semibold text-purple-400 mb-2">Shure SM7B + Cloudlifter CL-1</p>
                             <p class="text-sm text-gray-400 mb-3">
@@ -492,7 +495,7 @@
                         <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-purple-500 transition">
                             <div class="flex justify-between items-start mb-3">
                                 <h3 class="text-xl font-semibold">🎛️ Audio Interface</h3>
-                                <span class="text-purple-400 font-bold">~200€</span>
+                                <span class="text-purple-400 font-bold">~300€</span>
                             </div>
                             <p class="text-lg font-semibold text-purple-400 mb-2">Universal Audio Volt 276</p>
                             <p class="text-sm text-gray-400 mb-3">
@@ -536,7 +539,7 @@
                         <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-purple-500 transition">
                             <div class="flex justify-between items-start mb-3">
                                 <h3 class="text-xl font-semibold">📹 Kamera</h3>
-                                <span class="text-purple-400 font-bold">~600€</span>
+                                <span class="text-purple-400 font-bold">~850€</span>
                             </div>
                             <p class="text-lg font-semibold text-purple-400 mb-2">Sony Alpha 6400 (nur Body)</p>
                             <p class="text-sm text-gray-400 mb-3">
@@ -558,7 +561,7 @@
                         <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-purple-500 transition">
                             <div class="flex justify-between items-start mb-3">
                                 <h3 class="text-xl font-semibold">📸 Objektiv</h3>
-                                <span class="text-purple-400 font-bold">~220€</span>
+                                <span class="text-purple-400 font-bold">~420€</span>
                             </div>
                             <p class="text-lg font-semibold text-purple-400 mb-2">Sigma 16mm f/1.4 DC DN</p>
                             <p class="text-sm text-gray-400 mb-3">
@@ -580,7 +583,7 @@
                         <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-purple-500 transition">
                             <div class="flex justify-between items-start mb-3">
                                 <h3 class="text-xl font-semibold">🎬 Capture Card</h3>
-                                <span class="text-purple-400 font-bold">~130€</span>
+                                <span class="text-purple-400 font-bold">~150€</span>
                             </div>
                             <p class="text-lg font-semibold text-purple-400 mb-2">Elgato Cam Link 4K</p>
                             <p class="text-sm text-gray-400 mb-3">
@@ -624,7 +627,7 @@
                         <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-purple-500 transition">
                             <div class="flex justify-between items-start mb-3">
                                 <h3 class="text-xl font-semibold">🎮 Stream Deck</h3>
-                                <span class="text-purple-400 font-bold">~150€</span>
+                                <span class="text-purple-400 font-bold">~140€</span>
                             </div>
                             <p class="text-lg font-semibold text-purple-400 mb-2">Elgato Stream Deck</p>
                             <p class="text-sm text-gray-400 mb-3">
@@ -646,7 +649,7 @@
                     <div class="bg-gray-800 p-5 rounded-lg">
                         <div class="flex justify-between items-center">
                             <h3 class="text-xl font-semibold">Gesamtpreis:</h3>
-                            <span class="text-3xl font-bold text-purple-400">~2.020€</span>
+                            <span class="text-3xl font-bold text-purple-400">~3.200€</span>
                         </div>
                         <p class="text-sm text-gray-400 mt-2">
                             Absolut professionelles Setup. Broadcast-Qualität für Vollzeit-Streamer!
@@ -692,6 +695,115 @@
                                 </button>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Konsolen-Streaming Equipment -->
+            <div class="mt-16 pt-12 border-t border-gray-700">
+                <div class="bg-gradient-to-br from-orange-900/30 to-red-900/30 border border-orange-600 p-6 rounded-lg mb-8">
+                    <h2 class="text-3xl font-bold mb-4">🎮 Konsolen-Streaming Equipment</h2>
+                    <p class="text-gray-300 mb-2">
+                        <strong class="text-orange-400">[Nur für Konsolen-Streaming]</strong> - Du streamst von PlayStation, Xbox oder Switch? 
+                        Dann brauchst du eine Capture Card um das Bild auf deinen PC zu übertragen!
+                    </p>
+                    <p class="text-gray-400 text-sm mt-3">
+                        💡 Tipp: PC-Streamer brauchen keine Capture Card! Diese Hardware ist ausschließlich für Konsolen-Streaming gedacht.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6 mb-8">
+                    <!-- Budget Capture Card -->
+                    <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-orange-500 transition">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-semibold">🎬 Budget Capture Card</h3>
+                            <span class="text-orange-400 font-bold">~20€</span>
+                        </div>
+                        <p class="text-lg font-semibold text-orange-400 mb-2">NewGreen HDMI Capture Card (1080p)</p>
+                        <p class="text-sm text-gray-400 mb-3">
+                            Günstige Einstiegs-Capture Card für 1080p @ 30fps. Perfekt zum Testen und für Gelegenheits-Streamer.
+                        </p>
+                        <ul class="text-sm text-gray-300 space-y-1 mb-3">
+                            <li>✓ 1080p @ 30fps</li>
+                            <li>✓ USB 2.0</li>
+                            <li>✓ Plug & Play</li>
+                            <li>✓ HDMI Pass-Through</li>
+                        </ul>
+                        <a href="https://www.amazon.de/s?k=HDMI+Capture+Card+1080p&tag=blackeye1980f-21" target="_blank" rel="nofollow sponsored"
+                           class="inline-block px-4 py-2 bg-orange-600 hover:bg-orange-700 rounded text-sm transition">
+                            Auf Amazon ansehen →
+                        </a>
+                    </div>
+
+                    <!-- Premium Capture Card -->
+                    <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-orange-500 transition">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-semibold">🎬 Premium Capture Card</h3>
+                            <span class="text-orange-400 font-bold">~60€</span>
+                        </div>
+                        <p class="text-lg font-semibold text-orange-400 mb-2">NewGreen HDMI Capture Card (1080p60)</p>
+                        <p class="text-sm text-gray-400 mb-3">
+                            Bessere Capture Card für 1080p @ 60fps. Flüssigeres Bild und niedrigere Latenz. Ideal für Action-Games!
+                        </p>
+                        <ul class="text-sm text-gray-300 space-y-1 mb-3">
+                            <li>✓ 1080p @ 60fps</li>
+                            <li>✓ USB 3.0</li>
+                            <li>✓ Niedrige Latenz</li>
+                            <li>✓ HDMI Pass-Through</li>
+                        </ul>
+                        <a href="https://www.amazon.de/s?k=HDMI+Capture+Card+1080p+60fps&tag=blackeye1980f-21" target="_blank" rel="nofollow sponsored"
+                           class="inline-block px-4 py-2 bg-orange-600 hover:bg-orange-700 rounded text-sm transition">
+                            Auf Amazon ansehen →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- VideoGameCapture Software -->
+                <div class="bg-gradient-to-br from-purple-900/30 to-blue-900/30 border border-purple-600 p-6 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-3">💻 Empfohlene Software: VideoGameCapture (VGC)</h3>
+                    <p class="text-gray-300 mb-4">
+                        Eine <strong class="text-purple-400">kostenlose Open-Source Alternative</strong> zur Elgato Game Capture Software! 
+                        VGC funktioniert mit fast jeder Capture Card und bietet niedrige Latenz sowie hohe FPS.
+                    </p>
+                    
+                    <div class="grid md:grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <h4 class="font-semibold text-purple-400 mb-2">✨ Vorteile:</h4>
+                            <ul class="text-sm text-gray-300 space-y-1">
+                                <li>✓ Minimale Latenz</li>
+                                <li>✓ Hohe FPS</li>
+                                <li>✓ Einfaches Setup</li>
+                                <li>✓ Funktioniert mit fast jeder Capture Card</li>
+                                <li>✓ Kostenlos & Open Source</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-purple-400 mb-2">🎯 Features:</h4>
+                            <ul class="text-sm text-gray-300 space-y-1">
+                                <li>✓ Live-Preview auf deinem Monitor</li>
+                                <li>✓ Direkt in OBS als Game Capture nutzen</li>
+                                <li>✓ Auf Discord streamen</li>
+                                <li>✓ Regelmäßige Updates</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bg-purple-900/20 border border-purple-600 p-4 rounded mb-4">
+                        <p class="text-purple-200 text-sm">
+                            <strong>🔧 Developer-Info:</strong> Diese Software wird von mir geforkt und verbessert werden, 
+                            aber aktuell ist sie bereits eine super Einstiegsmöglichkeit für Konsolen-Streaming!
+                        </p>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <a href="https://immernochnoah.itch.io/videogamecapture" target="_blank" rel="noopener noreferrer"
+                           class="inline-block px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition">
+                            → VideoGameCapture herunterladen (itch.io)
+                        </a>
+                        <a href="https://github.com/immernochnoah/videogamecapture" target="_blank" rel="noopener noreferrer"
+                           class="inline-block px-6 py-3 bg-gray-700 hover:bg-gray-600 rounded-lg font-semibold transition">
+                            📦 GitHub Repository
+                        </a>
                     </div>
                 </div>
             </div>
