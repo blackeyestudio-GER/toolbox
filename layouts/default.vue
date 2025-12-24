@@ -11,6 +11,9 @@
       </div>
     -->
     <AppFooter />
+    
+    <!-- Cookie Banner -->
+    <CookieBanner />
   </div>
 </template>
 
