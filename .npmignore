@@ -1,6 +1,0 @@
-# Don't publish scripts to npm (if ever published)
-scripts/
-tools/
-*.md
-!README.md
-
