@@ -266,25 +266,41 @@
                             </div>
                         </div>
 
-                        <!-- Streamlabs Desktop -->
-                        <div class="bg-eerie-black p-4 md:p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
+                        <!-- Alternativen (ohne Empfehlung) -->
+                        <div class="bg-eerie-black p-4 md:p-5 rounded-lg border border-gray-700">
                             <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-lg md:text-xl font-semibold">Streamlabs Desktop</h3>
-                                <span class="bg-blue-600 text-white px-3 py-1 rounded text-sm font-bold">FREEMIUM</span>
+                                <h3 class="text-lg md:text-xl font-semibold">Weitere Optionen</h3>
+                                <span class="bg-gray-600 text-white px-3 py-1 rounded text-sm font-bold">INFO</span>
                             </div>
                             <p class="text-gray-300 mb-4 text-sm leading-relaxed">
-                                OBS-Fork mit integriertem Alertsystem. Einfacher für Anfänger, aber weniger flexibel. 
-                                <strong>Nicht empfohlen</strong> - besser OBS + StreamElements!
+                                Es gibt weitere Streaming-Software, aber <strong class="text-white">keine davon wird von mir empfohlen.</strong> 
+                                OBS Studio ist und bleibt die beste Wahl. Nur zur Vollständigkeit:
                             </p>
-                            <ul class="text-sm text-gray-300 space-y-1 list-disc list-inside ml-2 mb-4">
-                                <li>✅ Alerts integriert</li>
-                                <li>⚠️ Mehr Ressourcen-Verbrauch als OBS</li>
-                                <li>⚠️ Premium-Features hinter Paywall</li>
-                                <li>❌ Weniger Community-Support</li>
-                            </ul>
-                            <p class="text-xs text-gray-400 italic">
-                                💡 Tipp: Nutze lieber OBS Studio + StreamElements Plugin (kostenlos!)
-                            </p>
+                            
+                            <div class="space-y-3 text-sm text-gray-300">
+                                <div class="border-l-2 border-gray-600 pl-3">
+                                    <p class="font-semibold text-gray-200">Meld Studio</p>
+                                    <p class="text-xs">Browser-basiertes Streaming. Einfach, aber limitiert.</p>
+                                </div>
+                                
+                                <div class="border-l-2 border-gray-600 pl-3">
+                                    <p class="font-semibold text-gray-200">Twitch Studio</p>
+                                    <p class="text-xs">Offizielle Twitch-Software. Nur für Twitch, eingeschränkte Features.</p>
+                                </div>
+                                
+                                <div class="border-l-2 border-gray-600 pl-3">
+                                    <p class="font-semibold text-gray-200">XSplit</p>
+                                    <p class="text-xs">Kommerzielle Alternative. Kostenpflichtig (Premium), weniger flexibel als OBS.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-4 p-3 bg-gray-700/30 rounded border border-gray-600">
+                                <p class="text-xs text-gray-300">
+                                    <strong class="text-yellow-400">⚠️ Meine Meinung:</strong> 
+                                    Nutze OBS Studio + StreamElements/Streamlabs Browser Sources. 
+                                    Das ist kostenlos, mächtig und der Industrie-Standard. Die anderen Optionen bieten keinen echten Vorteil.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </section>
