@@ -69,23 +69,25 @@
             </div>
             
             <!-- Tab Navigation -->
-            <div class="flex flex-wrap gap-2 mb-6 border-b border-gray-700">
-                <button
-                    v-for="tab in tabs"
-                    :key="tab.id"
-                    @click="activeTab = tab.id"
-                    :class="[
-                        'px-3 md:px-6 py-2 md:py-3 text-sm md:text-base font-semibold transition-all rounded-t-lg',
-                        activeTab === tab.id 
-                            ? 'bg-eerie-black text-white border-b-2 border-gray-400' 
-                            : 'text-gray-400 hover:text-white hover:bg-gray-800'
-                    ]"
-                >
-                    <span class="block text-xs md:text-base">{{ tab.name }}</span>
-                    <span class="text-[10px] md:text-xs block mt-1" :class="activeTab === tab.id ? 'text-blue-400' : 'text-gray-500'">
-                        {{ tab.budget }}
-                    </span>
-                </button>
+            <div class="mb-6 border-b border-gray-700 overflow-x-auto scrollbar-hide">
+                <div class="flex gap-1 md:gap-2 min-w-max md:min-w-0">
+                    <button
+                        v-for="tab in tabs"
+                        :key="tab.id"
+                        @click="activeTab = tab.id"
+                        :class="[
+                            'px-2 md:px-6 py-2 md:py-3 text-xs md:text-base font-semibold transition-all rounded-t-lg whitespace-nowrap flex-shrink-0',
+                            activeTab === tab.id 
+                                ? 'bg-eerie-black text-white border-b-2 border-gray-400' 
+                                : 'text-gray-400 hover:text-white hover:bg-gray-800'
+                        ]"
+                    >
+                        <span class="block">{{ tab.name }}</span>
+                        <span class="text-[9px] md:text-xs block mt-0.5 md:mt-1" :class="activeTab === tab.id ? 'text-blue-400' : 'text-gray-500'">
+                            {{ tab.budget }}
+                        </span>
+                    </button>
+                </div>
             </div>
 
             <!-- Tab Content -->

@@ -1,6 +1,6 @@
 <template>
-    <nav class="w-full mb-8 bg-eerie-black rounded-lg p-4">
-        <div class="flex justify-center gap-8 text-base flex-wrap">
+    <nav class="w-full mb-6 md:mb-8 bg-eerie-black rounded-lg p-3 md:p-4">
+        <div class="flex justify-center gap-4 md:gap-8 text-sm md:text-base flex-wrap">
             <NuxtLink 
                 to="/" 
                 :class="isActive('/') ? 'text-white font-semibold' : 'text-gray-300 hover:text-blue-400'"
