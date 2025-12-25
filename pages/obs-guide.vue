@@ -20,8 +20,8 @@
                         In diesem Guide zeige ich dir Schritt für Schritt, wie du OBS einrichtest und deinen ersten Stream startest. 
                         Keine Vorkenntnisse nötig - wir fangen bei Null an!
                     </p>
-                    <div class="bg-blue-900/20 border border-blue-600 p-4 rounded mt-4">
-                        <p class="text-blue-200">
+                    <div class="bg-gray-700/30 border border-gray-500 p-4 rounded mt-4">
+                        <p class="text-gray-300">
                             <strong>💡 Tipp:</strong> Dieser Guide richtet sich an Anfänger. Wenn du bereits Erfahrung mit OBS hast, 
                             spring direkt zu den fortgeschrittenen Abschnitten.
                         </p>
@@ -34,89 +34,199 @@
                     
                     <div class="space-y-4">
                         <div>
-                            <h3 class="text-xl font-semibold mb-2 text-blue-400">Download-Optionen</h3>
                             <p class="text-gray-300 mb-4">
                                 OBS Studio ist komplett kostenlos und enthält keine Werbung oder versteckte Kosten. 
-                                Du hast zwei Möglichkeiten zur Installation:
+                                Wähle die Installation die am besten zu dir passt:
                             </p>
                             
-                            <div class="grid md:grid-cols-2 gap-4 mb-4">
-                                <!-- Steam Version -->
-                                <div class="bg-gradient-to-br from-blue-900/30 to-purple-900/30 border border-blue-600 p-4 rounded">
-                                    <h4 class="font-semibold mb-2 text-blue-300">🎮 Steam Version (EMPFOHLEN)</h4>
-                                    <p class="text-sm text-gray-300 mb-3">
-                                        Wenn du immer die neueste Version haben möchtest und automatische Updates bevorzugst.
-                                    </p>
-                                    <p class="text-sm text-gray-300 mb-2">
-                                        <strong>Vorteile:</strong>
-                                    </p>
-                                    <ul class="text-sm text-gray-300 list-disc list-inside ml-2 space-y-1">
-                                        <li>Automatische Updates</li>
-                                        <li>Einfache Installation</li>
-                                        <li>Version lässt sich bei Bedarf pinnen</li>
-                                        <li>Immer aktuell ohne manuelles Updaten</li>
-                                    </ul>
-                                    <p class="text-xs text-gray-400 mt-3">
-                                        → Suche in Steam nach "OBS Studio" und installiere es kostenlos
-                                    </p>
-                                </div>
-                                
-                                <!-- Manuelle Version -->
-                                <div class="bg-gray-800/50 border border-gray-600 p-4 rounded">
-                                    <h4 class="font-semibold mb-2 text-gray-300">💻 Manuelle Installation</h4>
-                                    <p class="text-sm text-gray-300 mb-3">
-                                        Wenn du volle Kontrolle über die Version haben und Updates manuell durchführen möchtest.
-                                    </p>
-                                    <p class="text-sm text-gray-300 mb-2">
-                                        <strong>Vorteile:</strong>
-                                    </p>
-                                    <ul class="text-sm text-gray-300 list-disc list-inside ml-2 space-y-1">
-                                        <li>Funktioniert ohne Steam</li>
-                                        <li>Version bleibt stabil bis du updatest</li>
-                                        <li>Volle Kontrolle über Updates</li>
-                                        <li>Auch für ältere Systeme verfügbar</li>
-                                    </ul>
-                                    <p class="text-xs text-gray-400 mt-3">
-                                        → Download von: 
-                                        <a href="https://obsproject.com/de" target="_blank" class="text-blue-400 hover:text-blue-300 underline">
-                                            obsproject.com/de
-                                        </a>
-                                    </p>
-                                </div>
-                            </div>
-                            
-                            <div class="bg-green-900/20 border border-green-600 p-4 rounded">
-                                <p class="text-green-200 text-sm">
+                            <div class="bg-gray-700/30 border border-gray-500 p-4 rounded mb-6">
+                                <p class="text-gray-300 text-sm">
                                     <strong>💡 Meine Empfehlung:</strong> Nutze die <strong>Steam-Version</strong>, wenn du Steam bereits installiert hast. 
-                                    Du bleibst automatisch auf dem neuesten Stand und kannst bei Problemen trotzdem eine ältere Version über Steam pinnen. 
-                                    Falls du kein Steam nutzen möchtest, ist die manuelle Installation genauso gut!
+                                    Du bleibst automatisch auf dem neuesten Stand. Für maximale Kontrolle und Portabilität empfehle ich die <strong>Portable Version</strong>!
                                 </p>
                             </div>
-                        </div>
 
-                        <div>
-                            <h3 class="text-xl font-semibold mb-2 text-blue-400">Installation</h3>
-                            
-                            <div class="mb-4">
-                                <p class="text-sm text-gray-400 mb-2"><strong>Für Steam-Version:</strong></p>
-                                <ol class="text-gray-300 space-y-2 list-decimal list-inside ml-2 text-sm">
-                                    <li>Öffne Steam</li>
-                                    <li>Suche nach "OBS Studio" im Store</li>
-                                    <li>Klicke auf "Installieren" (kostenlos)</li>
-                                    <li>Starte OBS über deine Steam-Bibliothek</li>
-                                    <li><em>Optional:</em> Version pinnen unter Eigenschaften → Updates → "Nur gewählte Beta-Version"</li>
-                                </ol>
+                            <!-- Tab Navigation -->
+                            <div class="flex flex-wrap gap-2 mb-6 border-b border-gray-700">
+                                <button
+                                    v-for="tab in installTabs"
+                                    :key="tab.id"
+                                    @click="activeInstallTab = tab.id"
+                                    :class="[
+                                        'px-6 py-3 font-semibold transition-all rounded-t-lg',
+                                        activeInstallTab === tab.id 
+                                            ? 'bg-eerie-black text-white border-b-2 border-gray-400' 
+                                            : 'text-gray-400 hover:text-white hover:bg-gray-800'
+                                    ]"
+                                >
+                                    {{ tab.name }}
+                                </button>
                             </div>
-                            
-                            <div>
-                                <p class="text-sm text-gray-400 mb-2"><strong>Für manuelle Installation:</strong></p>
-                                <ol class="text-gray-300 space-y-2 list-decimal list-inside ml-2 text-sm">
-                                    <li>Starte das heruntergeladene Installationsprogramm</li>
-                                    <li>Folge den Anweisungen des Installationsassistenten</li>
-                                    <li>Wähle den Installationsort (Standard ist meist in Ordnung)</li>
-                                    <li>Warte bis die Installation abgeschlossen ist</li>
-                                    <li>Starte OBS Studio zum ersten Mal</li>
-                                </ol>
+
+                            <!-- Tab Content -->
+                            <div class="space-y-6">
+                                <!-- Steam Installation -->
+                                <div v-if="activeInstallTab === 'steam'" class="space-y-4">
+                                    <div class="bg-gray-700/30 border border-gray-500 p-5 rounded-lg">
+                                        <h3 class="text-xl font-semibold mb-3 text-white">🎮 Steam Version (EMPFOHLEN)</h3>
+                                        <p class="text-gray-300 mb-4">
+                                            Automatische Updates, einfache Installation und trotzdem die Möglichkeit Versionen zu pinnen.
+                                        </p>
+                                        
+                                        <div class="mb-4">
+                                            <h4 class="font-semibold mb-2 text-gray-200">✨ Vorteile:</h4>
+                                            <ul class="text-sm text-gray-300 list-disc list-inside ml-2 space-y-1">
+                                                <li>Automatische Updates - immer aktuell</li>
+                                                <li>Einfache Installation mit einem Klick</li>
+                                                <li>Version lässt sich bei Bedarf pinnen</li>
+                                                <li>Keine manuelle Update-Verwaltung nötig</li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="bg-gray-800/60 border border-gray-600 p-4 rounded">
+                                            <h4 class="font-semibold mb-3 text-gray-200">📋 Installations-Schritte:</h4>
+                                            <ol class="text-gray-300 space-y-2 list-decimal list-inside ml-2">
+                                                <li>Öffne Steam</li>
+                                                <li>Suche nach "OBS Studio" im Store</li>
+                                                <li>Klicke auf "Installieren" (kostenlos)</li>
+                                                <li>Warte bis die Installation abgeschlossen ist</li>
+                                                <li>Starte OBS über deine Steam-Bibliothek</li>
+                                            </ol>
+                                        </div>
+
+                                        <div class="bg-gray-800/60 border border-gray-600 p-4 rounded mt-4">
+                                            <h4 class="font-semibold mb-2 text-gray-200">🔧 Optional: Version pinnen</h4>
+                                            <p class="text-sm text-gray-300 mb-2">
+                                                Wenn du bei einer bestimmten Version bleiben willst:
+                                            </p>
+                                            <ol class="text-sm text-gray-300 space-y-1 list-decimal list-inside ml-2">
+                                                <li>Rechtsklick auf OBS Studio in deiner Steam-Bibliothek</li>
+                                                <li>Eigenschaften → Updates</li>
+                                                <li>Wähle "Nur gewählte Beta-Version"</li>
+                                                <li>Wähle die gewünschte Version aus</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Manuelle Installation -->
+                                <div v-if="activeInstallTab === 'manual'" class="space-y-4">
+                                    <div class="bg-gray-700/30 border border-gray-500 p-5 rounded-lg">
+                                        <h3 class="text-xl font-semibold mb-3 text-white">💻 Manuelle Installation</h3>
+                                        <p class="text-gray-300 mb-4">
+                                            Volle Kontrolle über Updates und funktioniert ohne Steam. Perfekt wenn du Updates selbst verwalten willst.
+                                        </p>
+                                        
+                                        <div class="mb-4">
+                                            <h4 class="font-semibold mb-2 text-gray-200">✨ Vorteile:</h4>
+                                            <ul class="text-sm text-gray-300 list-disc list-inside ml-2 space-y-1">
+                                                <li>Funktioniert ohne Steam</li>
+                                                <li>Version bleibt stabil bis du manuell updatest</li>
+                                                <li>Volle Kontrolle über den Installationsort</li>
+                                                <li>Auch für ältere Systeme verfügbar</li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="bg-gray-800/60 border border-gray-600 p-4 rounded mb-4">
+                                            <h4 class="font-semibold mb-3 text-gray-200">📥 Download:</h4>
+                                            <p class="text-gray-300 mb-2">
+                                                → <a href="https://obsproject.com/de" target="_blank" class="text-blue-400 hover:text-blue-300 underline font-semibold">
+                                                    obsproject.com/de
+                                                </a>
+                                            </p>
+                                            <p class="text-sm text-gray-400">
+                                                Wähle die Version für dein Betriebssystem (Windows, macOS, Linux)
+                                            </p>
+                                        </div>
+
+                                        <div class="bg-gray-800/60 border border-gray-600 p-4 rounded">
+                                            <h4 class="font-semibold mb-3 text-gray-200">📋 Installations-Schritte:</h4>
+                                            <ol class="text-gray-300 space-y-2 list-decimal list-inside ml-2">
+                                                <li>Starte das heruntergeladene Installationsprogramm</li>
+                                                <li>Folge den Anweisungen des Installationsassistenten</li>
+                                                <li>Wähle den Installationsort (Standard ist meist in Ordnung)</li>
+                                                <li>Warte bis die Installation abgeschlossen ist</li>
+                                                <li>Starte OBS Studio über das Desktop-Icon oder Startmenü</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Portable Version -->
+                                <div v-if="activeInstallTab === 'portable'" class="space-y-4">
+                                    <div class="bg-gray-700/30 border border-gray-500 p-5 rounded-lg">
+                                        <h3 class="text-xl font-semibold mb-3 text-white">🎒 Portable Version ⭐</h3>
+                                        <p class="text-gray-300 mb-4">
+                                            Die beste Option für maximale Kontrolle! OBS läuft komplett aus einem Ordner - 
+                                            perfekt zum Mitnehmen oder für mehrere OBS-Installationen.
+                                        </p>
+                                        
+                                        <div class="mb-4">
+                                            <h4 class="font-semibold mb-2 text-gray-200">✨ Vorteile:</h4>
+                                            <ul class="text-sm text-gray-300 list-disc list-inside ml-2 space-y-1">
+                                                <li>Alle Einstellungen & Szenen bleiben im OBS-Ordner</li>
+                                                <li>Auf USB-Stick mitnehmen und auf jedem PC nutzen</li>
+                                                <li>Mehrere OBS-Versionen parallel (z.B. Test & Produktion)</li>
+                                                <li>Keine Registry-Einträge - komplett portabel</li>
+                                                <li>Perfekt für Backups</li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="bg-blue-900/20 border border-blue-600 p-4 rounded mb-4">
+                                            <p class="text-blue-200 text-sm">
+                                                <strong>💡 Meine persönliche Empfehlung:</strong> Die Portable Version ist perfekt! 
+                                                Du hast volle Kontrolle, kannst alles einfach sichern und bei Problemen einfach eine 
+                                                zweite Installation testen ohne deine Haupt-Installation zu gefährden.
+                                            </p>
+                                        </div>
+
+                                        <div class="bg-gray-800/60 border border-gray-600 p-4 rounded">
+                                            <h4 class="font-semibold mb-3 text-gray-200">📋 So machst du OBS portabel:</h4>
+                                            
+                                            <div class="space-y-4">
+                                                <div>
+                                                    <p class="font-semibold text-gray-300 mb-2">Option 1: Portable ZIP (Einfachste Methode)</p>
+                                                    <ol class="text-sm text-gray-300 space-y-2 list-decimal list-inside ml-2">
+                                                        <li>Gehe zu <a href="https://obsproject.com/de/download" target="_blank" class="text-blue-400 hover:text-blue-300 underline">obsproject.com/de/download</a></li>
+                                                        <li>Scrolle nach unten zu "Windows Portable"</li>
+                                                        <li>Lade die ZIP-Datei herunter</li>
+                                                        <li>Entpacke die ZIP in einen beliebigen Ordner (z.B. <code class="bg-gray-900 px-2 py-1 rounded text-xs">C:\OBS-Portable</code>)</li>
+                                                        <li>Starte <code class="bg-gray-900 px-2 py-1 rounded text-xs">obs64.exe</code></li>
+                                                        <li>Fertig! 🎉</li>
+                                                    </ol>
+                                                </div>
+
+                                                <div class="border-t border-gray-600 pt-4">
+                                                    <p class="font-semibold text-gray-300 mb-2">Option 2: Normale Installation portabel machen</p>
+                                                    <ol class="text-sm text-gray-300 space-y-2 list-decimal list-inside ml-2">
+                                                        <li>Installiere OBS normal (siehe "Manuelle Installation")</li>
+                                                        <li>Gehe zum OBS-Installationsordner (z.B. <code class="bg-gray-900 px-2 py-1 rounded text-xs">C:\Program Files\obs-studio</code>)</li>
+                                                        <li>Erstelle im OBS-Ordner einen neuen Ordner namens <code class="bg-gray-900 px-2 py-1 rounded text-xs">portable_mode</code></li>
+                                                        <li>Starte OBS neu</li>
+                                                        <li>Ab sofort speichert OBS alle Daten im <code class="bg-gray-900 px-2 py-1 rounded text-xs">portable_mode</code> Ordner!</li>
+                                                    </ol>
+                                                </div>
+
+                                                <div class="bg-green-900/20 border border-green-600 p-3 rounded mt-4">
+                                                    <p class="text-green-200 text-sm">
+                                                        <strong>✅ So erkennst du ob es funktioniert:</strong> Gehe in OBS zu 
+                                                        <strong>Hilfe → Logdatei → Aktuelles Protokoll ansehen</strong>. 
+                                                        In der ersten Zeile sollte "Portable Mode: true" stehen!
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="bg-gray-800/60 border border-gray-600 p-4 rounded mt-4">
+                                            <h4 class="font-semibold mb-2 text-gray-200">💾 Backup-Tipp:</h4>
+                                            <p class="text-sm text-gray-300">
+                                                Kopiere einfach den kompletten OBS-Ordner (inkl. <code class="bg-gray-900 px-1 rounded text-xs">portable_mode</code>) 
+                                                und du hast ein perfektes Backup mit allen Einstellungen, Szenen und Plugins! 
+                                                Das kannst du dann auf jeden anderen PC kopieren und direkt weitermachen. 🚀
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -176,20 +286,232 @@
                         <div>
                             <h3 class="text-xl font-semibold mb-3 text-green-400">Ausgabe-Einstellungen</h3>
                             <p class="text-gray-300 mb-3">
+                                Die Ausgabe-Einstellungen sind das Herzstück deines Streams. Wenn du deine Internet-Verbindung genau kennst, 
+                                kannst du direkt die Werte einstellen. Wenn du dir unsicher bist, nutze den Calculator unten!
+                            </p>
+                            <p class="text-gray-300 mb-4">
                                 Gehe zu <strong>Einstellungen → Ausgabe</strong>
                             </p>
-                            <p class="text-gray-300 mb-3"><strong>Empfohlene Einstellungen für Einsteiger:</strong></p>
-                            <ul class="text-gray-300 space-y-2 list-disc list-inside ml-4">
-                                <li><strong>Encoder:</strong> x264 (Software) oder NVENC H.264 (Nvidia GPU)</li>
-                                <li><strong>Bitrate:</strong> 3000-6000 Kbps (abhängig von deiner Upload-Geschwindigkeit)</li>
-                                <li><strong>Keyframe-Intervall:</strong> 2 Sekunden</li>
-                                <li><strong>Preset:</strong> "veryfast" für x264, "Quality" für NVENC</li>
-                            </ul>
-                            <div class="bg-blue-900/20 border border-blue-600 p-3 rounded mt-4">
-                                <p class="text-blue-200 text-sm">
-                                    <strong>💡 Tipp:</strong> Deine Upload-Geschwindigkeit sollte mindestens 1,5x höher sein als 
-                                    deine gewählte Bitrate. Nutze einen Speedtest um deine Upload-Rate zu prüfen!
-                                </p>
+
+                            <!-- Bitrate Calculator -->
+                            <div class="bg-gray-800/60 border border-gray-600 p-5 rounded-lg mb-6">
+                                <h4 class="text-lg font-semibold mb-3 text-white flex items-center gap-2">
+                                    🧮 Bitrate Calculator
+                                    <span class="text-xs text-gray-400 font-normal">(Optional, aber empfohlen!)</span>
+                                </h4>
+                                
+                                <div class="space-y-4">
+                                    <!-- Speedtest Links -->
+                                    <div class="bg-gray-700/30 border border-gray-500 p-3 rounded">
+                                        <p class="text-sm text-gray-300 mb-2">
+                                            <strong>📊 Schritt 1:</strong> Mache einen Speedtest (Frankfurt-Server für Twitch optimal):
+                                        </p>
+                                        <div class="flex flex-wrap gap-2">
+                                            <a href="https://www.speedtest.net/" target="_blank" 
+                                               class="px-3 py-1 bg-gray-600 hover:bg-gray-500 rounded text-xs transition">
+                                                Speedtest.net
+                                            </a>
+                                            <a href="https://fast.com/" target="_blank" 
+                                               class="px-3 py-1 bg-gray-600 hover:bg-gray-500 rounded text-xs transition">
+                                                Fast.com
+                                            </a>
+                                            <a href="https://www.wieistmeineip.de/speedtest/" target="_blank" 
+                                               class="px-3 py-1 bg-gray-600 hover:bg-gray-500 rounded text-xs transition">
+                                                WieIstMeineIP (DE)
+                                            </a>
+                                        </div>
+                                        <p class="text-xs text-gray-400 mt-2">
+                                            💡 Tipp: Wähle bei Speedtest.net einen Server in Frankfurt für beste Twitch-Näherung
+                                        </p>
+                                    </div>
+
+                                    <!-- Input -->
+                                    <div>
+                                        <label class="block text-sm text-gray-300 mb-2">
+                                            <strong>📤 Schritt 2:</strong> Deine Upload-Geschwindigkeit:
+                                        </label>
+                                        <div class="flex gap-3 items-center">
+                                            <input 
+                                                v-model.number="uploadSpeed" 
+                                                type="number" 
+                                                placeholder="z.B. 50"
+                                                class="px-4 py-2 bg-gray-700 border border-gray-600 rounded text-white w-32"
+                                                @input="calculateBitrate"
+                                            />
+                                            <span class="text-gray-300">Mbit/s</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Results -->
+                                    <div v-if="bitrateResult" class="bg-green-900/20 border border-green-600 p-4 rounded space-y-3">
+                                        <h5 class="font-semibold text-green-400">✅ Empfohlene Einstellungen:</h5>
+                                        
+                                        <div class="grid md:grid-cols-2 gap-3 text-sm">
+                                            <div class="bg-gray-800/60 p-3 rounded">
+                                                <p class="text-gray-400 text-xs mb-1">Bitrate:</p>
+                                                <p class="text-white font-bold text-lg">{{ bitrateResult.bitrate }} Kbps</p>
+                                            </div>
+                                            <div class="bg-gray-800/60 p-3 rounded">
+                                                <p class="text-gray-400 text-xs mb-1">Auflösung:</p>
+                                                <p class="text-white font-bold text-lg">
+                                                    {{ bitrateResult.resolution }}
+                                                    <button 
+                                                        v-if="bitrateResult.showResolutionInfo"
+                                                        @click="showResolutionModal = true"
+                                                        class="ml-2 text-blue-400 hover:text-blue-300 text-xs underline"
+                                                    >
+                                                        Warum?
+                                                    </button>
+                                                </p>
+                                            </div>
+                                            <div class="bg-gray-800/60 p-3 rounded">
+                                                <p class="text-gray-400 text-xs mb-1">FPS:</p>
+                                                <p class="text-white font-bold text-lg">{{ bitrateResult.fps }}</p>
+                                            </div>
+                                            <div class="bg-gray-800/60 p-3 rounded">
+                                                <p class="text-gray-400 text-xs mb-1">Encoder:</p>
+                                                <p class="text-white font-bold text-lg">{{ bitrateResult.encoder }}</p>
+                                            </div>
+                                        </div>
+
+                                        <p class="text-gray-300 text-xs">
+                                            {{ bitrateResult.note }}
+                                        </p>
+                                    </div>
+
+                                    <!-- Haushaltsbandbreite Warnung -->
+                                    <div class="bg-yellow-900/20 border border-yellow-600 p-4 rounded">
+                                        <h5 class="font-semibold text-yellow-400 mb-2 flex items-center gap-2">
+                                            ⚠️ Wichtig: Andere im Haushalt mitbedenken!
+                                        </h5>
+                                        <p class="text-gray-300 text-sm mb-3">
+                                            Deine nervigen Geschwister die TikTok scrollen, dein Partner der Netflix schaut, oder Mitbewohner 
+                                            die zocken - <strong>alle nutzen deine Bandbreite!</strong> Hier ist der 30% Puffer besonders wichtig.
+                                        </p>
+
+                                        <div class="bg-gray-800/60 border border-gray-600 p-3 rounded mb-3">
+                                            <p class="text-gray-300 text-xs mb-2">
+                                                <strong>📊 Typische Bandbreiten-Nutzung im Haushalt:</strong>
+                                            </p>
+                                            <div class="grid md:grid-cols-2 gap-x-4 gap-y-1 text-xs text-gray-300">
+                                                <div>• <strong>Netflix (HD):</strong> 5 Mbit/s ⬇️</div>
+                                                <div>• <strong>Netflix (4K):</strong> 25 Mbit/s ⬇️</div>
+                                                <div>• <strong>YouTube (1080p):</strong> 5 Mbit/s ⬇️</div>
+                                                <div>• <strong>YouTube (4K):</strong> 20 Mbit/s ⬇️</div>
+                                                <div>• <strong>TikTok/Instagram:</strong> 2-3 Mbit/s ⬇️</div>
+                                                <div>• <strong>Twitch (1080p):</strong> 6 Mbit/s ⬇️</div>
+                                                <div>• <strong>Discord (Video):</strong> 2-4 Mbit/s ⬇️⬆️</div>
+                                                <div>• <strong>Zoom/Teams (HD):</strong> 2-3 Mbit/s ⬇️⬆️</div>
+                                                <div>• <strong>Online Gaming:</strong> 1-3 Mbit/s ⬇️⬆️</div>
+                                                <div>• <strong>Cloud-Backups:</strong> variabel ⬆️</div>
+                                                <div>• <strong>Smart Home:</strong> 0.5-1 Mbit/s ⬇️⬆️</div>
+                                                <div>• <strong>Software-Updates:</strong> variabel ⬇️</div>
+                                            </div>
+                                            <p class="text-xs text-gray-400 mt-2 italic">
+                                                ⬇️ = Download | ⬆️ = Upload
+                                            </p>
+                                        </div>
+
+                                        <div class="bg-blue-900/20 border border-blue-600 p-3 rounded">
+                                            <p class="text-blue-200 text-xs">
+                                                <strong>💡 Warum der 70%-Puffer?</strong> Die meisten Aktivitäten sind zwar hauptsächlich Download, 
+                                                <strong>aber es gibt immer Kommunikation zurück zum Server</strong> (Upload). 
+                                                Discord sendet dein Mikrofon, Gaming sendet deine Eingaben, und Netflix/YouTube bestätigen empfangene Pakete. 
+                                                Diese Upload-Kommunikation kann deine Stream-Qualität einschränken, selbst wenn die anderen "nur schauen". 
+                                                Deshalb nutzen wir vorsorglich nur 70% deiner Upload-Rate, damit <strong>30% Puffer für alle anderen da sind</strong>!
+                                            </p>
+                                        </div>
+
+                                        <p class="text-gray-300 text-xs mt-3">
+                                            <strong>🎯 Streaming-Zeit planen:</strong> Streame am besten wenn weniger Leute zu Hause sind, 
+                                            oder sprich mit deinem Haushalt ab, dass während deines Streams keine 4K-Videos geschaut werden. 
+                                            Das macht einen riesigen Unterschied!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Manual Settings -->
+                            <div class="bg-gray-700/30 border border-gray-500 p-4 rounded">
+                                <p class="text-gray-300 mb-3"><strong>📋 Standard-Empfehlungen (ohne Calculator):</strong></p>
+                                <ul class="text-gray-300 space-y-2 list-disc list-inside ml-4 text-sm">
+                                    <li><strong>Encoder:</strong> x264 (Software) oder NVENC H.264 (Nvidia GPU)</li>
+                                    <li><strong>Bitrate:</strong> 3000-6000 Kbps (abhängig von Upload-Geschwindigkeit)</li>
+                                    <li><strong>Keyframe-Intervall:</strong> 2 Sekunden</li>
+                                    <li><strong>Preset:</strong> "veryfast" für x264, "Quality" für NVENC</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Resolution Info Modal -->
+                        <div v-if="showResolutionModal" 
+                             @click="showResolutionModal = false"
+                             class="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4">
+                            <div @click.stop class="bg-gray-800 border border-gray-600 rounded-lg p-6 max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+                                <div class="flex justify-between items-start mb-4">
+                                    <h3 class="text-xl font-bold text-white">🎯 Warum 936p statt 1080p bei 6000 Kbps?</h3>
+                                    <button @click="showResolutionModal = false" 
+                                            class="text-gray-400 hover:text-white text-2xl leading-none">
+                                        ×
+                                    </button>
+                                </div>
+                                
+                                <div class="space-y-4 text-gray-300 text-sm">
+                                    <p>
+                                        Bei Twitch (und anderen Streaming-Plattformen) gibt es ein <strong>Bitrate-Limit von ca. 6000-8000 Kbps</strong>. 
+                                        Das klingt nach viel, aber für 1080p bei 60 FPS ist das eigentlich zu wenig!
+                                    </p>
+
+                                    <div class="bg-red-900/20 border border-red-600 p-4 rounded">
+                                        <h4 class="font-semibold text-red-400 mb-2">❌ Problem: 1080p @ 6000 Kbps</h4>
+                                        <ul class="space-y-1 list-disc list-inside ml-2">
+                                            <li>Zu wenig Bitrate für die hohe Auflösung</li>
+                                            <li>Artefakte und Verpixelung bei schnellen Bewegungen</li>
+                                            <li>Besonders schlecht bei Action-Spielen</li>
+                                            <li>Zuschauer sehen ein matschiges Bild</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="bg-green-900/20 border border-green-600 p-4 rounded">
+                                        <h4 class="font-semibold text-green-400 mb-2">✅ Lösung: 936p @ 6000 Kbps</h4>
+                                        <ul class="space-y-1 list-disc list-inside ml-2">
+                                            <li>Perfektes Verhältnis zwischen Auflösung und Bitrate</li>
+                                            <li>Scharfes, klares Bild ohne Artefakte</li>
+                                            <li>Auch bei schnellen Spielen gut</li>
+                                            <li>Kaum Unterschied zu 1080p für Zuschauer</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="bg-blue-900/20 border border-blue-600 p-4 rounded">
+                                        <h4 class="font-semibold text-blue-400 mb-2">💡 Technischer Hintergrund:</h4>
+                                        <p class="mb-2">
+                                            Die Bitrate bestimmt, wie viele Daten pro Sekunde übertragen werden. Je höher die Auflösung, 
+                                            desto mehr Bitrate wird benötigt um ein scharfes Bild zu liefern.
+                                        </p>
+                                        <p class="mb-2">
+                                            <strong>936p (1664x936)</strong> hat ca. <strong>20% weniger Pixel</strong> als 1080p (1920x1080). 
+                                            Das bedeutet: Die gleiche Bitrate kann mehr Details pro Pixel speichern = schärferes Bild!
+                                        </p>
+                                        <p class="text-xs text-gray-400 mt-2">
+                                            Erst ab 8000 Kbps macht 1080p wirklich Sinn - aber das ist das Twitch-Maximum und lässt keinen Puffer!
+                                        </p>
+                                    </div>
+
+                                    <div class="bg-gray-700/30 border border-gray-500 p-4 rounded">
+                                        <h4 class="font-semibold text-gray-200 mb-2">📊 Faustregeln:</h4>
+                                        <ul class="space-y-1 text-xs">
+                                            <li>• <strong>3000 Kbps:</strong> 720p @ 30fps oder 720p @ 60fps</li>
+                                            <li>• <strong>4500 Kbps:</strong> 900p @ 60fps</li>
+                                            <li>• <strong>6000 Kbps:</strong> 936p @ 60fps (Sweet Spot! ⭐)</li>
+                                            <li>• <strong>8000 Kbps:</strong> 1080p @ 60fps (Twitch Maximum)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <button @click="showResolutionModal = false" 
+                                        class="mt-6 w-full px-4 py-2 bg-gray-600 hover:bg-gray-500 rounded transition">
+                                    Verstanden!
+                                </button>
                             </div>
                         </div>
 
@@ -250,29 +572,75 @@
                         <div>
                             <h3 class="text-xl font-semibold mb-3 text-purple-400">Quellen hinzufügen</h3>
                             <p class="text-gray-300 mb-3">
-                                Quellen sind die Inhalte, die in deinen Szenen angezeigt werden. Die wichtigsten Quellen:
+                                Quellen sind die Inhalte, die in deinen Szenen angezeigt werden. Die wichtigsten Quellen für Spiele und Programme:
                             </p>
                             
+                            <div class="bg-yellow-900/20 border border-yellow-600 p-4 rounded mb-4">
+                                <p class="text-yellow-200 text-sm">
+                                    <strong>⚡ Performance-Reihenfolge:</strong> Versuche immer in dieser Reihenfolge: 
+                                    <strong>Game Capture → Window Capture → Display Capture</strong>. 
+                                    Je weiter unten, desto mehr Performance kostet die Aufnahme!
+                                </p>
+                            </div>
+                            
                             <div class="space-y-4 mt-4">
-                                <div class="bg-gray-800/50 p-4 rounded">
-                                    <h4 class="font-semibold mb-2">🎮 Bildschirmaufnahme (Game Capture)</h4>
-                                    <p class="text-sm text-gray-300 mb-2">Für Spiele - beste Performance:</p>
-                                    <ol class="text-sm text-gray-300 list-decimal list-inside ml-4">
+                                <div class="bg-green-900/20 border border-green-600 p-4 rounded">
+                                    <h4 class="font-semibold mb-2 text-green-400">🎮 1. Game Capture (Spielaufnahme) - BESTE Performance</h4>
+                                    <p class="text-sm text-gray-300 mb-2">
+                                        <strong>Nutze dies für:</strong> Spiele (beste Performance!)
+                                    </p>
+                                    <ol class="text-sm text-gray-300 list-decimal list-inside ml-4 space-y-1">
                                         <li>Klicke "+" im Quellen-Bereich</li>
                                         <li>Wähle "Spielaufnahme"</li>
                                         <li>Modus: "Bestimmtes Fenster aufnehmen"</li>
                                         <li>Wähle dein Spiel aus der Liste</li>
                                     </ol>
+                                    <div class="bg-blue-900/20 border border-blue-600 p-3 rounded mt-3">
+                                        <p class="text-blue-200 text-xs">
+                                            <strong>💡 Pro-Tipp:</strong> Du musst die Quelle für jedes Spiel ändern. Das ist zwar nervig, 
+                                            aber du kannst einfach mehrere Game Capture Quellen erstellen wenn du dieselben Spiele 
+                                            wiederholt spielst (z.B. "Game Capture - Valorant", "Game Capture - League of Legends").
+                                        </p>
+                                    </div>
                                 </div>
 
-                                <div class="bg-gray-800/50 p-4 rounded">
-                                    <h4 class="font-semibold mb-2">🖥️ Bildschirmaufnahme (Display Capture)</h4>
-                                    <p class="text-sm text-gray-300 mb-2">Für alles andere (Browser, Programme, etc.):</p>
-                                    <ol class="text-sm text-gray-300 list-decimal list-inside ml-4">
+                                <div class="bg-gray-800/50 border border-gray-600 p-4 rounded">
+                                    <h4 class="font-semibold mb-2">🪟 2. Window Capture (Fensteraufnahme) - Mittlere Performance</h4>
+                                    <p class="text-sm text-gray-300 mb-2">
+                                        <strong>Nutze dies für:</strong> Wenn Game Capture nicht funktioniert, oder für Programme/Browser
+                                    </p>
+                                    <ol class="text-sm text-gray-300 list-decimal list-inside ml-4 space-y-1">
+                                        <li>Klicke "+" im Quellen-Bereich</li>
+                                        <li>Wähle "Fensteraufnahme"</li>
+                                        <li>Wähle das Fenster aus der Liste</li>
+                                        <li>Fenster wird am Namen erkannt</li>
+                                    </ol>
+                                    <div class="bg-gray-700/30 border border-gray-500 p-3 rounded mt-3">
+                                        <p class="text-gray-300 text-xs">
+                                            <strong>ℹ️ Hinweis:</strong> Die Quelle muss angepasst werden wenn sich der Fenstertitel ändert. 
+                                            Window Capture vergleicht den Namen des Fensters - wenn das Spiel/Programm einen anderen Titel zeigt, 
+                                            musst du die Quelle neu auswählen.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="bg-red-900/20 border border-red-600 p-4 rounded">
+                                    <h4 class="font-semibold mb-2 text-red-400">🖥️ 3. Display Capture (Bildschirmaufnahme) - SCHLECHTESTE Performance</h4>
+                                    <p class="text-sm text-gray-300 mb-2">
+                                        <strong>Nutze dies nur als letzte Option:</strong> Wenn Game & Window Capture nicht funktionieren
+                                    </p>
+                                    <ol class="text-sm text-gray-300 list-decimal list-inside ml-4 space-y-1">
                                         <li>Klicke "+" im Quellen-Bereich</li>
                                         <li>Wähle "Bildschirmaufnahme"</li>
                                         <li>Wähle den Monitor aus, den du aufnehmen willst</li>
                                     </ol>
+                                    <div class="bg-yellow-900/20 border border-yellow-600 p-3 rounded mt-3">
+                                        <p class="text-yellow-200 text-xs">
+                                            <strong>⚠️ Performance-Warnung:</strong> Display Capture greift das Bild NACH dem kompletten Rendering ab. 
+                                            Das bedeutet: Dein PC muss alles rendern UND dann nochmal für OBS aufnehmen. 
+                                            Dies kostet am meisten Performance! Nutze es nur wenn Game/Window Capture wirklich nicht funktionieren.
+                                        </p>
+                                    </div>
                                 </div>
 
                                 <div class="bg-gray-800/50 p-4 rounded">
@@ -307,8 +675,8 @@
                             </div>
                         </div>
 
-                        <div class="bg-green-900/20 border border-green-600 p-4 rounded">
-                            <p class="text-green-200">
+                        <div class="bg-gray-700/30 border border-gray-500 p-4 rounded">
+                            <p class="text-gray-300">
                                 <strong>✅ Pro-Tipp:</strong> Die Reihenfolge der Quellen ist wichtig! Quellen weiter oben 
                                 in der Liste werden über denen darunter angezeigt. Ziehe Quellen per Drag & Drop um sie neu zu ordnen.
                             </p>
@@ -411,7 +779,7 @@
                             </p>
                         </div>
 
-                        <div class="bg-gradient-to-r from-purple-900/30 to-pink-900/30 border border-purple-600 p-6 rounded mt-6">
+                        <div class="bg-gray-800/40 border border-gray-600 p-6 rounded mt-6">
                             <h4 class="text-xl font-bold mb-3">🎊 Glückwunsch!</h4>
                             <p class="text-gray-200">
                                 Du hast jetzt alle Grundlagen um mit OBS zu streamen! Übung macht den Meister - 
@@ -431,7 +799,8 @@
                             <h4 class="font-semibold mb-2">⚡ Performance-Optimierung</h4>
                             <ul class="text-sm text-gray-300 space-y-1 list-disc list-inside">
                                 <li>Schließe unnötige Programme</li>
-                                <li>Nutze "Game Capture" statt "Display Capture"</li>
+                                <li>Nutze immer: Game Capture → Window Capture → Display Capture (in dieser Reihenfolge!)</li>
+                                <li>Display Capture nur als letzte Option (kostet am meisten Performance)</li>
                                 <li>Verwende NVENC Encoder wenn du eine Nvidia-GPU hast</li>
                                 <li>Reduziere FPS oder Auflösung bei Problemen</li>
                             </ul>
@@ -740,14 +1109,14 @@
                 </section>
 
                 <!-- Weiterführende Ressourcen -->
-                <section class="bg-gradient-to-br from-blue-900/30 to-purple-900/30 p-6 rounded-lg border border-blue-700">
+                <section class="bg-gray-800/40 p-6 rounded-lg border border-gray-600">
                     <h2 class="text-2xl font-semibold mb-4">📚 Weiterführende Ressourcen</h2>
                     <div class="grid md:grid-cols-2 gap-4 text-gray-300">
                         <div>
                             <h4 class="font-semibold mb-2">Offizielle Quellen:</h4>
                             <ul class="space-y-1 text-sm">
-                                <li>→ <a href="https://obsproject.com/wiki/" target="_blank" class="text-blue-400 hover:text-blue-300">OBS Wiki</a></li>
-                                <li>→ <a href="https://obsproject.com/forum/" target="_blank" class="text-blue-400 hover:text-blue-300">OBS Forum</a></li>
+                                <li>→ <a href="https://obsproject.com/wiki/" target="_blank" class="text-gray-300 hover:text-white underline">OBS Wiki</a></li>
+                                <li>→ <a href="https://obsproject.com/forum/" target="_blank" class="text-gray-300 hover:text-white underline">OBS Forum</a></li>
                                 <li>→ OBS Discord Server</li>
                             </ul>
                         </div>
@@ -765,7 +1134,7 @@
 
             <!-- Back to home -->
             <div class="mt-12 text-center">
-                <NuxtLink to="/" class="inline-block px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition">
+                <NuxtLink to="/" class="inline-block px-6 py-3 bg-gray-600 hover:bg-gray-500 rounded-lg font-semibold transition">
                     ← Zurück zur Tool-Übersicht
                 </NuxtLink>
             </div>
@@ -774,6 +1143,8 @@
 </template>
 
 <script setup>
+import { ref } from 'vue';
+
 useHead({
   title: 'OBS Studio Guide für Einsteiger',
   meta: [
@@ -781,6 +1152,98 @@ useHead({
     { name: 'keywords', content: 'OBS Studio, Streaming Guide, Twitch Tutorial, OBS Einstellungen, Stream Setup' }
   ]
 });
+
+// Installation Tabs
+const activeInstallTab = ref('steam');
+const installTabs = [
+  { id: 'steam', name: '🎮 Steam' },
+  { id: 'manual', name: '💻 Manuell' },
+  { id: 'portable', name: '🎒 Portable ⭐' },
+];
+
+// Bitrate Calculator
+const uploadSpeed = ref(null);
+const bitrateResult = ref(null);
+const showResolutionModal = ref(false);
+
+const calculateBitrate = () => {
+  if (!uploadSpeed.value || uploadSpeed.value <= 0) {
+    bitrateResult.value = null;
+    return;
+  }
+
+  const upload = uploadSpeed.value; // Mbit/s
+  // Upload in Kbps umrechnen und 70% für Stabilität nutzen
+  const maxBitrate = Math.floor(upload * 1000 * 0.70);
+  
+  let bitrate, resolution, fps, encoder, note, showResolutionInfo = false;
+
+  // Twitch hat ein Maximum von ca. 8000 Kbps, YouTube 9000 Kbps
+  // Wir limitieren auf 8000 für Twitch-Kompatibilität
+  const twitchMax = 8000;
+  const safeBitrate = Math.min(maxBitrate, twitchMax);
+
+  if (upload >= 12) {
+    // >12 Mbit/s Upload: 8000 Kbps möglich (Twitch Maximum)
+    bitrate = 8000;
+    resolution = '1920x1080 (1080p)';
+    fps = '60 FPS';
+    encoder = 'NVENC (empfohlen) oder x264';
+    note = '🎉 Perfekte Verbindung! Du kannst mit maximaler Qualität (Twitch-Maximum) streamen.';
+  } else if (upload >= 9) {
+    // 9-12 Mbit/s: 6000 Kbps (Sweet Spot mit 936p)
+    bitrate = 6000;
+    resolution = '1664x936 (936p)';
+    fps = '60 FPS';
+    encoder = 'NVENC (empfohlen) oder x264';
+    note = '⭐ Optimal! 936p ist der Sweet Spot für 6000 Kbps - besser als 1080p bei dieser Bitrate!';
+    showResolutionInfo = true;
+  } else if (upload >= 7) {
+    // 7-9 Mbit/s: 4500-5000 Kbps
+    bitrate = Math.min(safeBitrate, 5000);
+    resolution = '1600x900 (900p)';
+    fps = '60 FPS';
+    encoder = 'NVENC (empfohlen) oder x264';
+    note = '👍 Gute Verbindung! 900p bietet eine schöne Balance zwischen Qualität und Stabilität.';
+  } else if (upload >= 5) {
+    // 5-7 Mbit/s: 3500 Kbps
+    bitrate = 3500;
+    resolution = '1280x720 (720p)';
+    fps = '60 FPS';
+    encoder = 'x264 (veryfast) oder NVENC';
+    note = '✅ Solide Verbindung! 720p @ 60fps ist perfekt für die meisten Streams.';
+  } else if (upload >= 4) {
+    // 4-5 Mbit/s: 3000 Kbps
+    bitrate = 3000;
+    resolution = '1280x720 (720p)';
+    fps = '60 FPS';
+    encoder = 'x264 (veryfast) oder NVENC';
+    note = '✅ Solide! 720p @ 60fps funktioniert gut.';
+  } else if (upload >= 3) {
+    // 3-4 Mbit/s: 2500 Kbps, 30fps empfohlen
+    bitrate = 2500;
+    resolution = '1280x720 (720p)';
+    fps = '30 FPS';
+    encoder = 'x264 (veryfast)';
+    note = '⚠️ Niedrige Upload-Rate. 30 FPS sind stabiler bei dieser Geschwindigkeit.';
+  } else {
+    // <3 Mbit/s: Sehr niedrig
+    bitrate = 2000;
+    resolution = '854x480 (480p)';
+    fps = '30 FPS';
+    encoder = 'x264 (veryfast)';
+    note = '⚠️ Sehr niedrige Upload-Rate. Erwäge einen besseren Internetanschluss für höhere Qualität.';
+  }
+
+  bitrateResult.value = {
+    bitrate,
+    resolution,
+    fps,
+    encoder,
+    note,
+    showResolutionInfo
+  };
+};
 </script>
 
 <style scoped>
