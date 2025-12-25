@@ -4,8 +4,8 @@
             <!-- Navigation -->
             <AppNavigation />
 
-            <h1 class="text-4xl font-bold mb-4">Streaming Hardware Guide</h1>
-            <p class="text-gray-400 mb-4">
+            <h1 class="text-2xl md:text-4xl font-bold mb-4">Streaming Hardware Guide</h1>
+            <p class="text-sm md:text-base text-gray-400 mb-4">
                 Dein Upgrade-Pfad von den ersten Schritten bis zum professionellen Setup. 
                 Alle Empfehlungen basieren auf praktischer Erfahrung und echtem Einsatz im Stream.
             </p>
@@ -20,8 +20,8 @@
             </div>
 
             <!-- Intro Text -->
-            <div class="bg-gray-800/40 border border-gray-600 p-6 rounded-lg mb-8">
-                <h2 class="text-2xl font-bold mb-4">💡 Bevor du startest - Ein ehrliches Wort</h2>
+            <div class="bg-gray-800/40 border border-gray-600 p-4 md:p-6 rounded-lg mb-8">
+                <h2 class="text-xl md:text-2xl font-bold mb-4">💡 Bevor du startest - Ein ehrliches Wort</h2>
                 
                 <div class="space-y-4 text-gray-300">
                     <p class="leading-relaxed">
@@ -75,14 +75,14 @@
                     :key="tab.id"
                     @click="activeTab = tab.id"
                     :class="[
-                        'px-6 py-3 font-semibold transition-all rounded-t-lg',
+                        'px-3 md:px-6 py-2 md:py-3 text-sm md:text-base font-semibold transition-all rounded-t-lg',
                         activeTab === tab.id 
                             ? 'bg-eerie-black text-white border-b-2 border-gray-400' 
                             : 'text-gray-400 hover:text-white hover:bg-gray-800'
                     ]"
                 >
-                    <span class="block">{{ tab.name }}</span>
-                    <span class="text-xs block mt-1" :class="activeTab === tab.id ? 'text-blue-400' : 'text-gray-500'">
+                    <span class="block text-xs md:text-base">{{ tab.name }}</span>
+                    <span class="text-[10px] md:text-xs block mt-1" :class="activeTab === tab.id ? 'text-blue-400' : 'text-gray-500'">
                         {{ tab.budget }}
                     </span>
                 </button>
@@ -92,8 +92,8 @@
             <div class="space-y-8">
                 <!-- 1. Hobbyist Setup -->
                 <div v-if="activeTab === 'hobbyist'" class="space-y-6">
-                    <div class="bg-gray-800/40 border border-gray-600 p-6 rounded-lg">
-                        <h2 class="text-2xl font-bold mb-3">🌱 Hobbyist - Dein erster Stream</h2>
+                    <div class="bg-gray-800/40 border border-gray-600 p-4 md:p-6 rounded-lg">
+                        <h2 class="text-xl md:text-2xl font-bold mb-3">🌱 Hobbyist - Dein erster Stream</h2>
                         <p class="text-gray-300 mb-4">
                             Teste ob Streaming etwas für dich ist - minimale Investition, maximaler Spaß! 
                             Starte mit dem Wichtigsten: einem guten Mikrofon.
@@ -109,9 +109,9 @@
 
                     <div class="grid md:grid-cols-2 gap-6">
                         <!-- Mikrofon -->
-                        <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
+                        <div class="bg-eerie-black p-4 md:p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
                             <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-xl font-semibold">🎤 Mikrofon</h3>
+                                <h3 class="text-lg md:text-xl font-semibold">🎤 Mikrofon</h3>
                                 <span class="text-gray-300 font-bold">~50-80€</span>
                             </div>
                             <p class="text-lg font-semibold text-white mb-2">FIFINE XLR/USB Mikrofon</p>
@@ -131,9 +131,9 @@
                         </div>
 
                         <!-- Keine Kamera -->
-                        <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
+                        <div class="bg-eerie-black p-4 md:p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
                             <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-xl font-semibold">📹 Webcam</h3>
+                                <h3 class="text-lg md:text-xl font-semibold">📹 Webcam</h3>
                                 <span class="text-gray-300 font-bold">0€</span>
                             </div>
                             <p class="text-lg font-semibold text-gray-400 mb-2">Keine Kamera nötig!</p>
@@ -152,9 +152,9 @@
                         </div>
 
                         <!-- Kopfhörer -->
-                        <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
+                        <div class="bg-eerie-black p-4 md:p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
                             <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-xl font-semibold">🎧 Kopfhörer</h3>
+                                <h3 class="text-lg md:text-xl font-semibold">🎧 Kopfhörer</h3>
                                 <span class="text-gray-300 font-bold">0€</span>
                             </div>
                             <p class="text-lg font-semibold text-gray-400 mb-2">Nutze was du hast!</p>
@@ -173,9 +173,9 @@
                         </div>
                     </div>
 
-                    <div class="bg-gray-800/60 border border-gray-600 p-5 rounded-lg">
+                    <div class="bg-gray-800/60 border border-gray-600 p-4 md:p-5 rounded-lg">
                         <div class="flex justify-between items-center">
-                            <h3 class="text-xl font-semibold">Gesamtpreis:</h3>
+                            <h3 class="text-lg md:text-xl font-semibold">Gesamtpreis:</h3>
                             <span class="text-3xl font-bold text-white">~50-80€</span>
                         </div>
                         <p class="text-sm text-gray-400 mt-2">
@@ -186,8 +186,8 @@
 
                 <!-- 2. Affiliate Setup -->
                 <div v-if="activeTab === 'affiliate'" class="space-y-6">
-                    <div class="bg-gray-800/40 border border-gray-600 p-6 rounded-lg">
-                        <h2 class="text-2xl font-bold mb-3">⚡ Affiliate - Regelmäßiges Streaming</h2>
+                    <div class="bg-gray-800/40 border border-gray-600 p-4 md:p-6 rounded-lg">
+                        <h2 class="text-xl md:text-2xl font-bold mb-3">⚡ Affiliate - Regelmäßiges Streaming</h2>
                         <p class="text-gray-300 mb-4">
                             Bereit für deine ersten Subs und Donations - regelmäßiges Streaming mit solider Qualität. 
                             Zeit für deine erste richtige Streaming-Kamera!
@@ -201,9 +201,9 @@
 
                     <div class="grid md:grid-cols-2 gap-6">
                         <!-- Mikrofon -->
-                        <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
+                        <div class="bg-eerie-black p-4 md:p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
                             <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-xl font-semibold">🎤 Mikrofon (Option 1)</h3>
+                                <h3 class="text-lg md:text-xl font-semibold">🎤 Mikrofon (Option 1)</h3>
                                 <span class="text-gray-300 font-bold">~70€</span>
                             </div>
                             <p class="text-lg font-semibold text-white mb-2">FIFINE XLR/USB</p>
@@ -221,9 +221,9 @@
                             </a>
                         </div>
 
-                        <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
+                        <div class="bg-eerie-black p-4 md:p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
                             <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-xl font-semibold">🎤 Mikrofon (Option 2)</h3>
+                                <h3 class="text-lg md:text-xl font-semibold">🎤 Mikrofon (Option 2)</h3>
                                 <span class="text-gray-300 font-bold">~90€</span>
                             </div>
                             <p class="text-lg font-semibold text-white mb-2">Audio Technica AT2020USB+</p>
@@ -242,9 +242,9 @@
                         </div>
 
                         <!-- Licht -->
-                        <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
+                        <div class="bg-eerie-black p-4 md:p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
                             <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-xl font-semibold">💡 Beleuchtung</h3>
+                                <h3 class="text-lg md:text-xl font-semibold">💡 Beleuchtung</h3>
                                 <span class="text-gray-300 font-bold">~70€</span>
                             </div>
                             <p class="text-lg font-semibold text-white mb-2">2x Neewer LED Panel Kit</p>
@@ -264,9 +264,9 @@
                         </div>
 
                         <!-- Kamera -->
-                        <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
+                        <div class="bg-eerie-black p-4 md:p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
                             <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-xl font-semibold">📹 Webcam</h3>
+                                <h3 class="text-lg md:text-xl font-semibold">📹 Webcam</h3>
                                 <span class="text-gray-300 font-bold">~80-100€</span>
                             </div>
                             <p class="text-lg font-semibold text-white mb-2">OBSBOT Meet SE ⭐</p>
@@ -286,9 +286,9 @@
                         </div>
 
                         <!-- Mikrofonarm -->
-                        <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
+                        <div class="bg-eerie-black p-4 md:p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
                             <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-xl font-semibold">🦾 Mikrofonarm</h3>
+                                <h3 class="text-lg md:text-xl font-semibold">🦾 Mikrofonarm</h3>
                                 <span class="text-gray-300 font-bold">~50-80€</span>
                             </div>
                             <p class="text-lg font-semibold text-white mb-2">Neewer Hydraulik-Arm ⭐</p>
@@ -308,9 +308,9 @@
                         </div>
 
                         <!-- Kopfhörer Option 1 -->
-                        <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
+                        <div class="bg-eerie-black p-4 md:p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
                             <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-xl font-semibold">🎧 Kopfhörer (Option 1)</h3>
+                                <h3 class="text-lg md:text-xl font-semibold">🎧 Kopfhörer (Option 1)</h3>
                                 <span class="text-gray-300 font-bold">~50€</span>
                             </div>
                             <p class="text-lg font-semibold text-white mb-2">HyperX Cloud Stinger</p>
@@ -330,9 +330,9 @@
                         </div>
 
                         <!-- Kopfhörer Option 2 -->
-                        <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
+                        <div class="bg-eerie-black p-4 md:p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
                             <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-xl font-semibold">🎧 Kopfhörer (Option 2)</h3>
+                                <h3 class="text-lg md:text-xl font-semibold">🎧 Kopfhörer (Option 2)</h3>
                                 <span class="text-gray-300 font-bold">~80€</span>
                             </div>
                             <p class="text-lg font-semibold text-white mb-2">Logitech G PRO X</p>
@@ -352,9 +352,9 @@
                         </div>
                     </div>
 
-                    <div class="bg-gray-800/60 border border-gray-600 p-5 rounded-lg">
+                    <div class="bg-gray-800/60 border border-gray-600 p-4 md:p-5 rounded-lg">
                         <div class="flex justify-between items-center">
-                            <h3 class="text-xl font-semibold">Gesamtpreis:</h3>
+                            <h3 class="text-lg md:text-xl font-semibold">Gesamtpreis:</h3>
                             <span class="text-3xl font-bold text-white">~320-390€</span>
                         </div>
                         <p class="text-sm text-gray-400 mt-2">
@@ -365,8 +365,8 @@
 
                 <!-- 3. Etablierter Streamer -->
                 <div v-if="activeTab === 'established'" class="space-y-6">
-                    <div class="bg-gray-800/40 border border-gray-600 p-6 rounded-lg">
-                        <h2 class="text-2xl font-bold mb-3">💎 Etablierter Streamer - Community aufbauen</h2>
+                    <div class="bg-gray-800/40 border border-gray-600 p-4 md:p-6 rounded-lg">
+                        <h2 class="text-xl md:text-2xl font-bold mb-3">💎 Etablierter Streamer - Community aufbauen</h2>
                         <p class="text-gray-300 mb-4">
                             Du streamst regelmäßig und baust dir eine Community auf - solide Basis für kontinuierliches Wachstum.
                             Zeit für bessere Bildqualität!
@@ -380,9 +380,9 @@
 
                     <div class="grid md:grid-cols-2 gap-6">
                         <!-- Mikrofon bleibt -->
-                        <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
+                        <div class="bg-eerie-black p-4 md:p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
                             <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-xl font-semibold">🎤 Mikrofon</h3>
+                                <h3 class="text-lg md:text-xl font-semibold">🎤 Mikrofon</h3>
                                 <span class="text-gray-300 font-bold">~90€</span>
                             </div>
                             <p class="text-lg font-semibold text-white mb-2">Audio Technica AT2020USB+</p>
@@ -401,9 +401,9 @@
                         </div>
 
                         <!-- Licht bleibt -->
-                        <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
+                        <div class="bg-eerie-black p-4 md:p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
                             <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-xl font-semibold">💡 Beleuchtung</h3>
+                                <h3 class="text-lg md:text-xl font-semibold">💡 Beleuchtung</h3>
                                 <span class="text-gray-300 font-bold">~70€</span>
                             </div>
                             <p class="text-lg font-semibold text-white mb-2">2x LED Panel Kit</p>
@@ -422,9 +422,9 @@
                         </div>
 
                         <!-- Kamera UPGRADE -->
-                        <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
+                        <div class="bg-eerie-black p-4 md:p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
                             <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-xl font-semibold">📹 Webcam ⭐ UPGRADE</h3>
+                                <h3 class="text-lg md:text-xl font-semibold">📹 Webcam ⭐ UPGRADE</h3>
                                 <span class="text-gray-300 font-bold">~120-150€</span>
                             </div>
                             <p class="text-lg font-semibold text-white mb-2">OBSBOT Meet 2</p>
@@ -444,9 +444,9 @@
                         </div>
 
                         <!-- Arm bleibt -->
-                        <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
+                        <div class="bg-eerie-black p-4 md:p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
                             <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-xl font-semibold">🦾 Mikrofonarm</h3>
+                                <h3 class="text-lg md:text-xl font-semibold">🦾 Mikrofonarm</h3>
                                 <span class="text-gray-300 font-bold">~50-80€</span>
                             </div>
                             <p class="text-lg font-semibold text-white mb-2">Neewer Hydraulik-Arm</p>
@@ -465,9 +465,9 @@
                         </div>
 
                         <!-- Kopfhörer bleibt -->
-                        <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
+                        <div class="bg-eerie-black p-4 md:p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
                             <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-xl font-semibold">🎧 Kopfhörer</h3>
+                                <h3 class="text-lg md:text-xl font-semibold">🎧 Kopfhörer</h3>
                                 <span class="text-gray-300 font-bold">~50€</span>
                             </div>
                             <p class="text-lg font-semibold text-white mb-2">HyperX Cloud Stinger</p>
@@ -486,9 +486,9 @@
                         </div>
                     </div>
 
-                    <div class="bg-gray-800/60 border border-gray-600 p-5 rounded-lg">
+                    <div class="bg-gray-800/60 border border-gray-600 p-4 md:p-5 rounded-lg">
                         <div class="flex justify-between items-center">
-                            <h3 class="text-xl font-semibold">Gesamtpreis:</h3>
+                            <h3 class="text-lg md:text-xl font-semibold">Gesamtpreis:</h3>
                             <span class="text-3xl font-bold text-white">~380-440€</span>
                         </div>
                         <p class="text-sm text-gray-400 mt-2">
@@ -499,8 +499,8 @@
 
                 <!-- 4. Semi-Pro / Partner Setup -->
                 <div v-if="activeTab === 'semi-pro'" class="space-y-6">
-                    <div class="bg-gray-800/40 border border-gray-600 p-6 rounded-lg">
-                        <h2 class="text-2xl font-bold mb-3">🚀 Semi-Pro - Konstante Einnahmen</h2>
+                    <div class="bg-gray-800/40 border border-gray-600 p-4 md:p-6 rounded-lg">
+                        <h2 class="text-xl md:text-2xl font-bold mb-3">🚀 Semi-Pro - Konstante Einnahmen</h2>
                         <p class="text-gray-300 mb-4">
                             Du verdienst bereits konstant Geld mit Streaming - Zeit für ein Setup, das deinen Ansprüchen gerecht wird. 
                             Etablierte Streamer mit wachsender Community.
@@ -515,9 +515,9 @@
 
                     <div class="grid md:grid-cols-2 gap-6">
                         <!-- Mikrofon UPGRADE -->
-                        <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
+                        <div class="bg-eerie-black p-4 md:p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
                             <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-xl font-semibold">🎤 Mikrofon</h3>
+                                <h3 class="text-lg md:text-xl font-semibold">🎤 Mikrofon</h3>
                                 <span class="text-gray-300 font-bold">~90€</span>
                             </div>
                             <p class="text-lg font-semibold text-white mb-2">Audio Technica AT2020 (XLR)</p>
@@ -537,9 +537,9 @@
                         </div>
 
                         <!-- Audio Interface OPTIONAL -->
-                        <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
+                        <div class="bg-eerie-black p-4 md:p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
                             <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-xl font-semibold">🎛️ Audio Interface (Optional)</h3>
+                                <h3 class="text-lg md:text-xl font-semibold">🎛️ Audio Interface (Optional)</h3>
                                 <span class="text-gray-300 font-bold">~160€</span>
                             </div>
                             <p class="text-lg font-semibold text-white mb-2">Elgato Wave XLR ⭐</p>
@@ -559,9 +559,9 @@
                         </div>
 
                         <!-- Licht UPGRADE -->
-                        <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
+                        <div class="bg-eerie-black p-4 md:p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
                             <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-xl font-semibold">💡 Beleuchtung (Option 1)</h3>
+                                <h3 class="text-lg md:text-xl font-semibold">💡 Beleuchtung (Option 1)</h3>
                                 <span class="text-gray-300 font-bold">~70€</span>
                             </div>
                             <p class="text-lg font-semibold text-white mb-2">2x LED Panel Kit</p>
@@ -579,9 +579,9 @@
                             </a>
                         </div>
 
-                        <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
+                        <div class="bg-eerie-black p-4 md:p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
                             <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-xl font-semibold">💡 Beleuchtung (Option 2)</h3>
+                                <h3 class="text-lg md:text-xl font-semibold">💡 Beleuchtung (Option 2)</h3>
                                 <span class="text-gray-300 font-bold">~260€</span>
                             </div>
                             <p class="text-lg font-semibold text-white mb-2">2x Elgato Key Light Air ⭐</p>
@@ -601,9 +601,9 @@
                         </div>
 
                         <!-- Kamera UPGRADE -->
-                        <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
+                        <div class="bg-eerie-black p-4 md:p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
                             <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-xl font-semibold">📹 Webcam ⭐</h3>
+                                <h3 class="text-lg md:text-xl font-semibold">📹 Webcam ⭐</h3>
                                 <span class="text-gray-300 font-bold">~150-200€</span>
                             </div>
                             <p class="text-lg font-semibold text-white mb-2">OBSBOT Tiny 2 Lite</p>
@@ -623,9 +623,9 @@
                         </div>
 
                         <!-- Arm bleibt -->
-                        <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
+                        <div class="bg-eerie-black p-4 md:p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
                             <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-xl font-semibold">🦾 Mikrofonarm</h3>
+                                <h3 class="text-lg md:text-xl font-semibold">🦾 Mikrofonarm</h3>
                                 <span class="text-gray-300 font-bold">~50-80€</span>
                             </div>
                             <p class="text-lg font-semibold text-white mb-2">Neewer Hydraulik-Arm</p>
@@ -644,9 +644,9 @@
                         </div>
 
                         <!-- Kopfhörer UPGRADE -->
-                        <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
+                        <div class="bg-eerie-black p-4 md:p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
                             <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-xl font-semibold">🎧 Kopfhörer (Option 1)</h3>
+                                <h3 class="text-lg md:text-xl font-semibold">🎧 Kopfhörer (Option 1)</h3>
                                 <span class="text-gray-300 font-bold">~80€</span>
                             </div>
                             <p class="text-lg font-semibold text-white mb-2">HyperX Cloud III</p>
@@ -665,9 +665,9 @@
                             </a>
                         </div>
 
-                        <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
+                        <div class="bg-eerie-black p-4 md:p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
                             <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-xl font-semibold">🎧 Kopfhörer (Option 2) ⭐</h3>
+                                <h3 class="text-lg md:text-xl font-semibold">🎧 Kopfhörer (Option 2) ⭐</h3>
                                 <span class="text-gray-300 font-bold">~140€</span>
                             </div>
                             <p class="text-lg font-semibold text-white mb-2">Beyerdynamic DT 990 PRO</p>
@@ -687,9 +687,9 @@
                         </div>
 
                         <!-- Stream Deck OPTIONAL -->
-                        <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
+                        <div class="bg-eerie-black p-4 md:p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
                             <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-xl font-semibold">🎛️ Stream Deck (Optional)</h3>
+                                <h3 class="text-lg md:text-xl font-semibold">🎛️ Stream Deck (Optional)</h3>
                                 <span class="text-gray-300 font-bold">~80€</span>
                             </div>
                             <p class="text-lg font-semibold text-white mb-2">Elgato Stream Deck Mini</p>
@@ -709,9 +709,9 @@
                         </div>
 
                         <!-- Capture Card Optional -->
-                        <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
+                        <div class="bg-eerie-black p-4 md:p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
                             <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-xl font-semibold">🎬 Capture Card (Optional)</h3>
+                                <h3 class="text-lg md:text-xl font-semibold">🎬 Capture Card (Optional)</h3>
                                 <span class="text-gray-300 font-bold">~60€</span>
                             </div>
                             <p class="text-lg font-semibold text-white mb-2">NewGreen HDMI (1080p60)</p>
@@ -730,9 +730,9 @@
                         </div>
                     </div>
 
-                    <div class="bg-gray-800/60 border border-gray-600 p-5 rounded-lg">
+                    <div class="bg-gray-800/60 border border-gray-600 p-4 md:p-5 rounded-lg">
                         <div class="flex justify-between items-center">
-                            <h3 class="text-xl font-semibold">Gesamtpreis:</h3>
+                            <h3 class="text-lg md:text-xl font-semibold">Gesamtpreis:</h3>
                             <span class="text-3xl font-bold text-white">~570-730€</span>
                         </div>
                         <p class="text-sm text-gray-400 mt-2">
@@ -743,8 +743,8 @@
 
                 <!-- 5. Professional Setup -->
                 <div v-if="activeTab === 'professional'" class="space-y-6">
-                    <div class="bg-gray-800/40 border border-gray-600 p-6 rounded-lg">
-                        <h2 class="text-2xl font-bold mb-3">👑 Professional - Top-Tier Setup</h2>
+                    <div class="bg-gray-800/40 border border-gray-600 p-4 md:p-6 rounded-lg">
+                        <h2 class="text-xl md:text-2xl font-bold mb-3">👑 Professional - Top-Tier Setup</h2>
                         <p class="text-gray-300 mb-4">
                             Das ultimative Setup für hauptberufliche Streamer. DSLR-Qualität, professionelles Audio und Premium-Equipment. 
                             Nur wenn Streaming dein Haupteinkommen ist!
@@ -759,9 +759,9 @@
 
                     <div class="grid md:grid-cols-2 gap-6">
                         <!-- Mikrofon Premium -->
-                        <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
+                        <div class="bg-eerie-black p-4 md:p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
                             <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-xl font-semibold">🎤 Mikrofon ⭐</h3>
+                                <h3 class="text-lg md:text-xl font-semibold">🎤 Mikrofon ⭐</h3>
                                 <span class="text-gray-300 font-bold">~400€</span>
                             </div>
                             <p class="text-lg font-semibold text-white mb-2">Shure SM7B</p>
@@ -781,9 +781,9 @@
                         </div>
 
                         <!-- Audio Interface Premium -->
-                        <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
+                        <div class="bg-eerie-black p-4 md:p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
                             <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-xl font-semibold">🎛️ Audio Interface ⭐</h3>
+                                <h3 class="text-lg md:text-xl font-semibold">🎛️ Audio Interface ⭐</h3>
                                 <span class="text-gray-300 font-bold">~300€</span>
                             </div>
                             <p class="text-lg font-semibold text-white mb-2">Focusrite Scarlett 2i2 (4th Gen)</p>
@@ -803,9 +803,9 @@
                         </div>
 
                         <!-- Licht Premium -->
-                        <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
+                        <div class="bg-eerie-black p-4 md:p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
                             <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-xl font-semibold">💡 Beleuchtung ⭐</h3>
+                                <h3 class="text-lg md:text-xl font-semibold">💡 Beleuchtung ⭐</h3>
                                 <span class="text-gray-300 font-bold">~400€</span>
                             </div>
                             <p class="text-lg font-semibold text-white mb-2">2x Elgato Key Light</p>
@@ -825,9 +825,9 @@
                         </div>
 
                         <!-- Kamera DSLR -->
-                        <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
+                        <div class="bg-eerie-black p-4 md:p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
                             <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-xl font-semibold">📹 Kamera ⭐</h3>
+                                <h3 class="text-lg md:text-xl font-semibold">📹 Kamera ⭐</h3>
                                 <span class="text-gray-300 font-bold">~800€</span>
                             </div>
                             <p class="text-lg font-semibold text-white mb-2">Sony ZV-E10</p>
@@ -847,9 +847,9 @@
                         </div>
 
                         <!-- HDMI Capture für DSLR -->
-                        <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
+                        <div class="bg-eerie-black p-4 md:p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
                             <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-xl font-semibold">🎬 Capture Card (DSLR)</h3>
+                                <h3 class="text-lg md:text-xl font-semibold">🎬 Capture Card (DSLR)</h3>
                                 <span class="text-gray-300 font-bold">~150€</span>
                             </div>
                             <p class="text-lg font-semibold text-white mb-2">Elgato Cam Link 4K</p>
@@ -869,9 +869,9 @@
                         </div>
 
                         <!-- Mikrofonarm bleibt -->
-                        <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
+                        <div class="bg-eerie-black p-4 md:p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
                             <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-xl font-semibold">🦾 Mikrofonarm</h3>
+                                <h3 class="text-lg md:text-xl font-semibold">🦾 Mikrofonarm</h3>
                                 <span class="text-gray-300 font-bold">~50-80€</span>
                             </div>
                             <p class="text-lg font-semibold text-white mb-2">Neewer Hydraulik-Arm</p>
@@ -890,9 +890,9 @@
                         </div>
 
                         <!-- Kopfhörer Premium -->
-                        <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
+                        <div class="bg-eerie-black p-4 md:p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
                             <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-xl font-semibold">🎧 Kopfhörer (Option 1)</h3>
+                                <h3 class="text-lg md:text-xl font-semibold">🎧 Kopfhörer (Option 1)</h3>
                                 <span class="text-gray-300 font-bold">~140€</span>
                             </div>
                             <p class="text-lg font-semibold text-white mb-2">Beyerdynamic DT 990 PRO</p>
@@ -911,9 +911,9 @@
                             </a>
                         </div>
 
-                        <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
+                        <div class="bg-eerie-black p-4 md:p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
                             <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-xl font-semibold">🎧 Kopfhörer (Option 2)</h3>
+                                <h3 class="text-lg md:text-xl font-semibold">🎧 Kopfhörer (Option 2)</h3>
                                 <span class="text-gray-300 font-bold">~70€</span>
                             </div>
                             <p class="text-lg font-semibold text-white mb-2">Audio-Technica ATH-M30x</p>
@@ -933,9 +933,9 @@
                         </div>
 
                         <!-- Stream Deck Pro -->
-                        <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
+                        <div class="bg-eerie-black p-4 md:p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
                             <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-xl font-semibold">🎛️ Stream Deck ⭐</h3>
+                                <h3 class="text-lg md:text-xl font-semibold">🎛️ Stream Deck ⭐</h3>
                                 <span class="text-gray-300 font-bold">~150€</span>
                             </div>
                             <p class="text-lg font-semibold text-white mb-2">Elgato Stream Deck (Classic)</p>
@@ -955,9 +955,9 @@
                         </div>
 
                         <!-- Objektiv für DSLR -->
-                        <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
+                        <div class="bg-eerie-black p-4 md:p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
                             <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-xl font-semibold">📸 Objektiv (DSLR)</h3>
+                                <h3 class="text-lg md:text-xl font-semibold">📸 Objektiv (DSLR)</h3>
                                 <span class="text-gray-300 font-bold">~250€</span>
                             </div>
                             <p class="text-lg font-semibold text-white mb-2">Sigma 16mm f/1.4</p>
@@ -977,9 +977,9 @@
                         </div>
                     </div>
 
-                    <div class="bg-gray-800/60 border border-gray-600 p-5 rounded-lg">
+                    <div class="bg-gray-800/60 border border-gray-600 p-4 md:p-5 rounded-lg">
                         <div class="flex justify-between items-center">
-                            <h3 class="text-xl font-semibold">Gesamtpreis:</h3>
+                            <h3 class="text-lg md:text-xl font-semibold">Gesamtpreis:</h3>
                             <span class="text-3xl font-bold text-white">~2.500-2.700€</span>
                         </div>
                         <p class="text-sm text-gray-400 mt-2">
@@ -996,7 +996,7 @@
                 
                 <!-- Mein Setup Placeholder -->
                 <div v-if="activeTab === 'my-setup'" class="space-y-6">
-                    <div class="bg-gray-800/40 border border-gray-600 p-6 rounded-lg text-center">
+                    <div class="bg-gray-800/40 border border-gray-600 p-4 md:p-6 rounded-lg text-center">
                         <p class="text-white mb-3 text-2xl font-semibold">
                             🔧 Mein persönliches Setup
                         </p>
@@ -1012,7 +1012,7 @@
 
             <!-- Konsolen-Streaming Equipment -->
             <div class="mt-16 pt-12 border-t border-gray-700">
-                <div class="bg-gray-800/40 border border-gray-600 p-6 rounded-lg mb-8">
+                <div class="bg-gray-800/40 border border-gray-600 p-4 md:p-6 rounded-lg mb-8">
                     <h2 class="text-3xl font-bold mb-4">🎮 Konsolen-Streaming Equipment</h2>
                     <p class="text-gray-300 mb-2">
                         <strong class="text-gray-200">[Nur für Konsolen-Streaming]</strong> - Du streamst von PlayStation, Xbox oder Switch? 
@@ -1025,9 +1025,9 @@
 
                 <div class="grid md:grid-cols-2 gap-6 mb-8">
                     <!-- Budget Capture Card -->
-                    <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
+                    <div class="bg-eerie-black p-4 md:p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
                         <div class="flex justify-between items-start mb-3">
-                            <h3 class="text-xl font-semibold">🎬 Budget Capture Card</h3>
+                            <h3 class="text-lg md:text-xl font-semibold">🎬 Budget Capture Card</h3>
                             <span class="text-orange-400 font-bold">~20€</span>
                         </div>
                         <p class="text-lg font-semibold text-white mb-2">NewGreen HDMI Capture Card (1080p)</p>
@@ -1047,9 +1047,9 @@
                     </div>
 
                     <!-- Premium Capture Card -->
-                    <div class="bg-eerie-black p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
+                    <div class="bg-eerie-black p-4 md:p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
                         <div class="flex justify-between items-start mb-3">
-                            <h3 class="text-xl font-semibold">🎬 Premium Capture Card</h3>
+                            <h3 class="text-lg md:text-xl font-semibold">🎬 Premium Capture Card</h3>
                             <span class="text-orange-400 font-bold">~60€</span>
                         </div>
                         <p class="text-lg font-semibold text-white mb-2">NewGreen HDMI Capture Card (1080p60)</p>
@@ -1070,8 +1070,8 @@
                 </div>
 
                 <!-- VideoGameCapture Software -->
-                <div class="bg-gray-800/40 border border-gray-600 p-6 rounded-lg">
-                    <h3 class="text-2xl font-bold mb-3">💻 Empfohlene Software: VideoGameCapture (VGC)</h3>
+                <div class="bg-gray-800/40 border border-gray-600 p-4 md:p-6 rounded-lg">
+                    <h3 class="text-xl md:text-2xl font-bold mb-3">💻 Empfohlene Software: VideoGameCapture (VGC)</h3>
                     <p class="text-gray-300 mb-4">
                         Eine <strong class="text-gray-200">kostenlose Open-Source Alternative</strong> zur Elgato Game Capture Software! 
                         VGC funktioniert mit fast jeder Capture Card und bietet niedrige Latenz sowie hohe FPS.

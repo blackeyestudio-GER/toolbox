@@ -4,13 +4,13 @@
             <!-- Navigation -->
             <AppNavigation />
 
-            <h1 class="text-4xl font-bold mb-4">OBS Studio - Der ultimative Einsteigerguide</h1>
-            <p class="text-gray-400 mb-8">Alles was du brauchst, um mit OBS Studio durchzustarten</p>
+            <h1 class="text-2xl md:text-4xl font-bold mb-4">OBS Studio - Der ultimative Einsteigerguide</h1>
+            <p class="text-sm md:text-base text-gray-400 mb-6 md:mb-8">Alles was du brauchst, um mit OBS Studio durchzustarten</p>
             
             <div class="space-y-8">
                 <!-- Intro -->
-                <section class="bg-gray-800/40 border border-gray-600 p-6 rounded-lg">
-                    <h2 class="text-2xl font-semibold mb-4">Was ist OBS Studio?</h2>
+                <section class="bg-gray-800/40 border border-gray-600 p-4 md:p-6 rounded-lg">
+                    <h2 class="text-xl md:text-2xl font-semibold mb-3 md:mb-4">Was ist OBS Studio?</h2>
                     <p class="text-gray-300 mb-4">
                         OBS Studio (Open Broadcaster Software) ist eine kostenlose, quelloffene Software zum Aufnehmen und Streamen 
                         von Videos. Sie ist die erste Wahl für die meisten Streamer auf Twitch, YouTube und anderen Plattformen. 
@@ -29,8 +29,8 @@
                 </section>
 
                 <!-- Installation -->
-                <section class="bg-gray-800/40 border border-gray-600 p-6 rounded-lg">
-                    <h2 class="text-2xl font-semibold mb-4">Schritt 1: Installation & Download</h2>
+                <section class="bg-gray-800/40 border border-gray-600 p-4 md:p-6 rounded-lg">
+                    <h2 class="text-xl md:text-2xl font-semibold mb-3 md:mb-4">Schritt 1: Installation & Download</h2>
                     
                     <div class="space-y-4">
                         <div>
@@ -54,7 +54,7 @@
                                     :key="tab.id"
                                     @click="activeInstallTab = tab.id"
                                     :class="[
-                                        'px-6 py-3 font-semibold transition-all rounded-t-lg',
+                                        'px-4 md:px-6 py-2 md:py-3 text-sm md:text-base font-semibold transition-all rounded-t-lg',
                                         activeInstallTab === tab.id 
                                             ? 'bg-eerie-black text-white border-b-2 border-gray-400' 
                                             : 'text-gray-400 hover:text-white hover:bg-gray-800'
@@ -68,8 +68,8 @@
                             <div class="space-y-6">
                                 <!-- Steam Installation -->
                                 <div v-if="activeInstallTab === 'steam'" class="space-y-4">
-                                    <div class="bg-gray-700/30 border border-gray-500 p-5 rounded-lg">
-                                        <h3 class="text-xl font-semibold mb-3 text-white">🎮 Steam Version (EMPFOHLEN)</h3>
+                                    <div class="bg-gray-700/30 border border-gray-500 p-4 md:p-5 rounded-lg">
+                                        <h3 class="text-lg md:text-xl font-semibold mb-3 text-white">🎮 Steam Version (EMPFOHLEN)</h3>
                                         <p class="text-gray-300 mb-4">
                                             Automatische Updates, einfache Installation und trotzdem die Möglichkeit Versionen zu pinnen.
                                         </p>
@@ -149,8 +149,8 @@
 
                                 <!-- Manuelle Installation -->
                                 <div v-if="activeInstallTab === 'manual'" class="space-y-4">
-                                    <div class="bg-gray-700/30 border border-gray-500 p-5 rounded-lg">
-                                        <h3 class="text-xl font-semibold mb-3 text-white">💻 Manuelle Installation</h3>
+                                    <div class="bg-gray-700/30 border border-gray-500 p-4 md:p-5 rounded-lg">
+                                        <h3 class="text-lg md:text-xl font-semibold mb-3 text-white">💻 Manuelle Installation</h3>
                                         <p class="text-gray-300 mb-4">
                                             Volle Kontrolle über Updates und funktioniert ohne Steam. Perfekt wenn du Updates selbst verwalten willst.
                                         </p>
@@ -225,7 +225,7 @@
                         </div>
 
                         <div>
-                            <h3 class="text-xl font-semibold mb-2 text-blue-400">Auto-Konfigurationsassistent</h3>
+                            <h3 class="text-lg md:text-xl font-semibold mb-2 text-blue-400">Auto-Konfigurationsassistent</h3>
                             <p class="text-gray-300 mb-3">
                                 Beim ersten Start öffnet sich automatisch der Auto-Konfigurationsassistent. Dieser hilft dir dabei, 
                                 die optimalen Einstellungen für dein System zu finden:
@@ -243,12 +243,12 @@
                 </section>
 
                 <!-- Grundlegende Einstellungen -->
-                <section class="bg-gray-800/40 border border-gray-600 p-6 rounded-lg">
-                    <h2 class="text-2xl font-semibold mb-4">Schritt 2: Grundlegende Einstellungen</h2>
+                <section class="bg-gray-800/40 border border-gray-600 p-4 md:p-6 rounded-lg">
+                    <h2 class="text-xl md:text-2xl font-semibold mb-3 md:mb-4">Schritt 2: Grundlegende Einstellungen</h2>
                     
                     <div class="space-y-6">
                         <div>
-                            <h3 class="text-xl font-semibold mb-3 text-green-400">Stream-Einstellungen</h3>
+                            <h3 class="text-lg md:text-xl font-semibold mb-3 text-green-400">Stream-Einstellungen</h3>
                             <p class="text-gray-300 mb-3">
                                 Gehe zu <strong>Datei → Einstellungen → Stream</strong>
                             </p>
@@ -278,7 +278,7 @@
                         </div>
 
                         <div>
-                            <h3 class="text-xl font-semibold mb-3 text-green-400">Ausgabe-Einstellungen</h3>
+                            <h3 class="text-lg md:text-xl font-semibold mb-3 text-green-400">Ausgabe-Einstellungen</h3>
                             <p class="text-gray-300 mb-3">
                                 Die Ausgabe-Einstellungen sind das Herzstück deines Streams. Wenn du deine Internet-Verbindung genau kennst, 
                                 kannst du direkt die Werte einstellen. Wenn du dir unsicher bist, nutze den Calculator unten!
@@ -288,7 +288,7 @@
                             </p>
 
                             <!-- Bitrate Calculator -->
-                            <div class="bg-gray-800/60 border border-gray-600 p-5 rounded-lg mb-6">
+                            <div class="bg-gray-800/60 border border-gray-600 p-4 md:p-5 rounded-lg mb-6">
                                 <h4 class="text-lg font-semibold mb-3 text-white flex items-center gap-2">
                                     🧮 Bitrate Calculator
                                     <span class="text-xs text-gray-400 font-normal">(Optional, aber empfohlen!)</span>
@@ -510,7 +510,7 @@
                         </div>
 
                         <div>
-                            <h3 class="text-xl font-semibold mb-3 text-green-400">Video-Einstellungen</h3>
+                            <h3 class="text-lg md:text-xl font-semibold mb-3 text-green-400">Video-Einstellungen</h3>
                             <p class="text-gray-300 mb-3">
                                 Gehe zu <strong>Einstellungen → Video</strong>
                             </p>
@@ -522,7 +522,7 @@
                         </div>
 
                         <div>
-                            <h3 class="text-xl font-semibold mb-3 text-green-400">Audio-Einstellungen</h3>
+                            <h3 class="text-lg md:text-xl font-semibold mb-3 text-green-400">Audio-Einstellungen</h3>
                             <p class="text-gray-300 mb-3">
                                 Gehe zu <strong>Einstellungen → Audio</strong>
                             </p>
@@ -536,12 +536,12 @@
                 </section>
 
                 <!-- Szenen und Quellen -->
-                <section class="bg-gray-800/40 border border-gray-600 p-6 rounded-lg">
-                    <h2 class="text-2xl font-semibold mb-4">Schritt 3: Szenen und Quellen erstellen</h2>
+                <section class="bg-gray-800/40 border border-gray-600 p-4 md:p-6 rounded-lg">
+                    <h2 class="text-xl md:text-2xl font-semibold mb-3 md:mb-4">Schritt 3: Szenen und Quellen erstellen</h2>
                     
                     <div class="space-y-6">
                         <div>
-                            <h3 class="text-xl font-semibold mb-3 text-purple-400">Was sind Szenen?</h3>
+                            <h3 class="text-lg md:text-xl font-semibold mb-3 text-purple-400">Was sind Szenen?</h3>
                             <p class="text-gray-300 mb-3">
                                 Szenen sind verschiedene Layouts für deinen Stream. Du kannst zwischen ihnen wechseln, zum Beispiel:
                             </p>
@@ -555,7 +555,7 @@
                         </div>
 
                         <div>
-                            <h3 class="text-xl font-semibold mb-3 text-purple-400">Szene erstellen</h3>
+                            <h3 class="text-lg md:text-xl font-semibold mb-3 text-purple-400">Szene erstellen</h3>
                             <ol class="text-gray-300 space-y-2 list-decimal list-inside ml-4">
                                 <li>Klicke auf das "+" Symbol im "Szenen" Bereich unten links</li>
                                 <li>Gib deiner Szene einen Namen (z.B. "Gaming")</li>
@@ -564,7 +564,7 @@
                         </div>
 
                         <div>
-                            <h3 class="text-xl font-semibold mb-3 text-purple-400">Quellen hinzufügen</h3>
+                            <h3 class="text-lg md:text-xl font-semibold mb-3 text-purple-400">Quellen hinzufügen</h3>
                             <p class="text-gray-300 mb-3">
                                 Quellen sind die Inhalte, die in deinen Szenen angezeigt werden. Die wichtigsten Quellen für Spiele und Programme:
                             </p>
@@ -679,8 +679,8 @@
                 </section>
 
                 <!-- Audio Setup -->
-                <section class="bg-gray-800/40 border border-gray-600 p-6 rounded-lg">
-                    <h2 class="text-2xl font-semibold mb-4">Schritt 4: Audio richtig einstellen</h2>
+                <section class="bg-gray-800/40 border border-gray-600 p-4 md:p-6 rounded-lg">
+                    <h2 class="text-xl md:text-2xl font-semibold mb-3 md:mb-4">Schritt 4: Audio richtig einstellen</h2>
                     
                     <div class="space-y-4">
                         <p class="text-gray-300">
@@ -689,7 +689,7 @@
                         </p>
 
                         <div>
-                            <h3 class="text-xl font-semibold mb-3 text-orange-400">Audio-Mixer verstehen</h3>
+                            <h3 class="text-lg md:text-xl font-semibold mb-3 text-orange-400">Audio-Mixer verstehen</h3>
                             <p class="text-gray-300 mb-3">
                                 Der Audio-Mixer befindet sich standardmäßig rechts unten in OBS. Hier siehst du alle Audio-Quellen:
                             </p>
@@ -701,7 +701,7 @@
                         </div>
 
                         <div>
-                            <h3 class="text-xl font-semibold mb-3 text-orange-400">Pegel richtig einstellen</h3>
+                            <h3 class="text-lg md:text-xl font-semibold mb-3 text-orange-400">Pegel richtig einstellen</h3>
                             <p class="text-gray-300 mb-3">Die Balken zeigen die Lautstärke an. Achte darauf:</p>
                             <ul class="text-gray-300 space-y-2 list-disc list-inside ml-4">
                                 <li><strong>Grün:</strong> Guter Bereich - hier sollten deine Audio-Quellen sein</li>
@@ -715,7 +715,7 @@
                         </div>
 
                         <div>
-                            <h3 class="text-xl font-semibold mb-3 text-orange-400">Filter hinzufügen (Fortgeschritten)</h3>
+                            <h3 class="text-lg md:text-xl font-semibold mb-3 text-orange-400">Filter hinzufügen (Fortgeschritten)</h3>
                             <p class="text-gray-300 mb-3">
                                 Rechtsklick auf dein Mikrofon im Mixer → Filter. Empfohlene Filter:
                             </p>
@@ -729,12 +729,12 @@
                 </section>
 
                 <!-- Los gehts -->
-                <section class="bg-gray-800/40 border border-gray-600 p-6 rounded-lg">
-                    <h2 class="text-2xl font-semibold mb-4">Schritt 5: Deinen ersten Stream starten!</h2>
+                <section class="bg-gray-800/40 border border-gray-600 p-4 md:p-6 rounded-lg">
+                    <h2 class="text-xl md:text-2xl font-semibold mb-3 md:mb-4">Schritt 5: Deinen ersten Stream starten!</h2>
                     
                     <div class="space-y-4">
                         <div>
-                            <h3 class="text-xl font-semibold mb-3 text-red-400">Vor dem Start - Checkliste:</h3>
+                            <h3 class="text-lg md:text-xl font-semibold mb-3 text-red-400">Vor dem Start - Checkliste:</h3>
                             <ul class="text-gray-300 space-y-2 list-disc list-inside ml-4">
                                 <li>✅ Stream-Schlüssel ist eingetragen</li>
                                 <li>✅ Alle Szenen sind vorbereitet</li>
@@ -746,7 +746,7 @@
                         </div>
 
                         <div>
-                            <h3 class="text-xl font-semibold mb-3 text-red-400">Stream starten:</h3>
+                            <h3 class="text-lg md:text-xl font-semibold mb-3 text-red-400">Stream starten:</h3>
                             <ol class="text-gray-300 space-y-2 list-decimal list-inside ml-4">
                                 <li>Wähle deine Startszene aus</li>
                                 <li>Klicke auf <strong>"Streaming starten"</strong> (rechts unten)</li>
@@ -757,7 +757,7 @@
                         </div>
 
                         <div>
-                            <h3 class="text-xl font-semibold mb-3 text-red-400">Während des Streams:</h3>
+                            <h3 class="text-lg md:text-xl font-semibold mb-3 text-red-400">Während des Streams:</h3>
                             <ul class="text-gray-300 space-y-2 list-disc list-inside ml-4">
                                 <li>Achte auf die Indikatoren unten rechts in OBS (grün = alles gut)</li>
                                 <li>Der "CPU" Wert sollte unter 80% bleiben</li>
@@ -767,7 +767,7 @@
                         </div>
 
                         <div>
-                            <h3 class="text-xl font-semibold mb-3 text-red-400">Stream beenden:</h3>
+                            <h3 class="text-lg md:text-xl font-semibold mb-3 text-red-400">Stream beenden:</h3>
                             <p class="text-gray-300 mb-2">
                                 Klicke einfach auf <strong>"Streaming stoppen"</strong>. Fertig! 🎉
                             </p>
@@ -785,8 +785,8 @@
                 </section>
 
                 <!-- Tipps und Tricks -->
-                <section class="bg-gray-800/40 border border-gray-600 p-6 rounded-lg">
-                    <h2 class="text-2xl font-semibold mb-4">Bonus: Wichtige Tipps für bessere Streams</h2>
+                <section class="bg-gray-800/40 border border-gray-600 p-4 md:p-6 rounded-lg">
+                    <h2 class="text-xl md:text-2xl font-semibold mb-3 md:mb-4">Bonus: Wichtige Tipps für bessere Streams</h2>
                     
                     <div class="grid md:grid-cols-2 gap-4">
                         <div class="bg-gray-800/50 p-4 rounded">
@@ -833,8 +833,8 @@
                 </section>
 
                 <!-- Troubleshooting -->
-                <section class="bg-gray-800/40 border border-gray-600 p-6 rounded-lg">
-                    <h2 class="text-2xl font-semibold mb-4">Häufige Probleme & Lösungen</h2>
+                <section class="bg-gray-800/40 border border-gray-600 p-4 md:p-6 rounded-lg">
+                    <h2 class="text-xl md:text-2xl font-semibold mb-3 md:mb-4">Häufige Probleme & Lösungen</h2>
                     
                     <div class="space-y-4">
                         <div class="border-l-4 border-red-500 pl-4">
@@ -880,7 +880,7 @@
                 </section>
 
                 <!-- Plattform-Richtlinien -->
-                <section class="bg-gray-800/40 border border-gray-600 p-6 rounded-lg border border-gray-700">
+                <section class="bg-gray-800/40 border border-gray-600 p-4 md:p-6 rounded-lg border border-gray-700">
                     <h2 class="text-2xl font-semibold mb-4 text-red-400">⚠️ WICHTIG: Plattform-Richtlinien & Regeln</h2>
                     <p class="text-gray-200 mb-6">
                         Bevor du mit dem Streamen beginnst, ist es <strong>absolut essentiell</strong>, dass du die Regeln und 
@@ -890,8 +890,8 @@
 
                     <div class="space-y-6">
                         <!-- Twitch -->
-                        <div class="bg-gray-800/50 border border-gray-600 p-5 rounded-lg">
-                            <h3 class="text-xl font-semibold mb-3 flex items-center gap-2">
+                        <div class="bg-gray-800/50 border border-gray-600 p-4 md:p-5 rounded-lg">
+                            <h3 class="text-lg md:text-xl font-semibold mb-3 flex items-center gap-2">
                                 <span class="text-purple-400">📺 Twitch</span>
                             </h3>
                             
@@ -947,8 +947,8 @@
                         </div>
 
                         <!-- YouTube -->
-                        <div class="bg-gray-800/50 border border-gray-600 p-5 rounded-lg">
-                            <h3 class="text-xl font-semibold mb-3 flex items-center gap-2">
+                        <div class="bg-gray-800/50 border border-gray-600 p-4 md:p-5 rounded-lg">
+                            <h3 class="text-lg md:text-xl font-semibold mb-3 flex items-center gap-2">
                                 <span class="text-red-400">▶️ YouTube</span>
                             </h3>
                             
@@ -1012,8 +1012,8 @@
                         </div>
 
                         <!-- Kick -->
-                        <div class="bg-gray-800/50 border border-gray-600 p-5 rounded-lg">
-                            <h3 class="text-xl font-semibold mb-3 flex items-center gap-2">
+                        <div class="bg-gray-800/50 border border-gray-600 p-4 md:p-5 rounded-lg">
+                            <h3 class="text-lg md:text-xl font-semibold mb-3 flex items-center gap-2">
                                 <span class="text-green-400">🎯 Kick</span>
                             </h3>
                             
@@ -1047,8 +1047,8 @@
                         </div>
 
                         <!-- Allgemeine Tipps -->
-                        <div class="bg-gray-800/50 border border-gray-600 p-5 rounded-lg">
-                            <h3 class="text-xl font-semibold mb-3 border-b border-yellow-500 pb-2">
+                        <div class="bg-gray-800/50 border border-gray-600 p-4 md:p-5 rounded-lg">
+                            <h3 class="text-lg md:text-xl font-semibold mb-3 border-b border-yellow-500 pb-2">
                                 <span class="text-yellow-400">💡 Allgemeine Tipps für alle Plattformen</span>
                             </h3>
                             <div class="space-y-3 text-gray-300 text-sm">
@@ -1105,8 +1105,8 @@
                 </section>
 
                 <!-- Plugins & Erweiterungen -->
-                <section class="bg-gray-800/40 border border-gray-600 p-6 rounded-lg">
-                    <h2 class="text-2xl font-semibold mb-4">🔌 Empfohlene Plugins & Tools</h2>
+                <section class="bg-gray-800/40 border border-gray-600 p-4 md:p-6 rounded-lg">
+                    <h2 class="text-xl md:text-2xl font-semibold mb-3 md:mb-4">🔌 Empfohlene Plugins & Tools</h2>
                     
                     <div class="space-y-4">
                         <p class="text-gray-300 mb-4">
@@ -1196,8 +1196,8 @@
                 </section>
 
                 <!-- Backup Scripts -->
-                <section class="bg-gray-800/40 border border-gray-600 p-6 rounded-lg">
-                    <h2 class="text-2xl font-semibold mb-4">💾 Automatische OBS-Backups</h2>
+                <section class="bg-gray-800/40 border border-gray-600 p-4 md:p-6 rounded-lg">
+                    <h2 class="text-xl md:text-2xl font-semibold mb-3 md:mb-4">💾 Automatische OBS-Backups</h2>
                     
                     <div class="space-y-4">
                         <p class="text-gray-300 mb-4">
@@ -1341,7 +1341,7 @@
 
                 <!-- Weiterführende Ressourcen -->
                 <section class="bg-gray-800/40 p-6 rounded-lg border border-gray-600">
-                    <h2 class="text-2xl font-semibold mb-4">📚 Weiterführende Ressourcen</h2>
+                    <h2 class="text-xl md:text-2xl font-semibold mb-3 md:mb-4">📚 Weiterführende Ressourcen</h2>
                     <div class="grid md:grid-cols-2 gap-4 text-gray-300">
                         <div>
                             <h4 class="font-semibold mb-2">Offizielle Quellen:</h4>
