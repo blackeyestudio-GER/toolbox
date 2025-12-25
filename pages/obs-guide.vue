@@ -1,6 +1,6 @@
 <template>
     <div class="min-h-screen bg-night text-white p-4">
-        <div class="max-w-4xl mx-auto">
+        <div class="max-w-6xl mx-auto">
             <!-- Navigation -->
             <AppNavigation />
 
@@ -9,7 +9,7 @@
             
             <div class="space-y-8">
                 <!-- Intro -->
-                <section class="bg-eerie-black p-6 rounded-lg">
+                <section class="bg-gray-800/40 border border-gray-600 p-6 rounded-lg">
                     <h2 class="text-2xl font-semibold mb-4">Was ist OBS Studio?</h2>
                     <p class="text-gray-300 mb-4">
                         OBS Studio (Open Broadcaster Software) ist eine kostenlose, quelloffene Software zum Aufnehmen und Streamen 
@@ -29,7 +29,7 @@
                 </section>
 
                 <!-- Installation -->
-                <section class="bg-eerie-black p-6 rounded-lg">
+                <section class="bg-gray-800/40 border border-gray-600 p-6 rounded-lg">
                     <h2 class="text-2xl font-semibold mb-4">Schritt 1: Installation & Download</h2>
                     
                     <div class="space-y-4">
@@ -243,7 +243,7 @@
                 </section>
 
                 <!-- Grundlegende Einstellungen -->
-                <section class="bg-eerie-black p-6 rounded-lg">
+                <section class="bg-gray-800/40 border border-gray-600 p-6 rounded-lg">
                     <h2 class="text-2xl font-semibold mb-4">Schritt 2: Grundlegende Einstellungen</h2>
                     
                     <div class="space-y-6">
@@ -536,7 +536,7 @@
                 </section>
 
                 <!-- Szenen und Quellen -->
-                <section class="bg-eerie-black p-6 rounded-lg">
+                <section class="bg-gray-800/40 border border-gray-600 p-6 rounded-lg">
                     <h2 class="text-2xl font-semibold mb-4">Schritt 3: Szenen und Quellen erstellen</h2>
                     
                     <div class="space-y-6">
@@ -679,7 +679,7 @@
                 </section>
 
                 <!-- Audio Setup -->
-                <section class="bg-eerie-black p-6 rounded-lg">
+                <section class="bg-gray-800/40 border border-gray-600 p-6 rounded-lg">
                     <h2 class="text-2xl font-semibold mb-4">Schritt 4: Audio richtig einstellen</h2>
                     
                     <div class="space-y-4">
@@ -729,7 +729,7 @@
                 </section>
 
                 <!-- Los gehts -->
-                <section class="bg-eerie-black p-6 rounded-lg">
+                <section class="bg-gray-800/40 border border-gray-600 p-6 rounded-lg">
                     <h2 class="text-2xl font-semibold mb-4">Schritt 5: Deinen ersten Stream starten!</h2>
                     
                     <div class="space-y-4">
@@ -785,7 +785,7 @@
                 </section>
 
                 <!-- Tipps und Tricks -->
-                <section class="bg-eerie-black p-6 rounded-lg">
+                <section class="bg-gray-800/40 border border-gray-600 p-6 rounded-lg">
                     <h2 class="text-2xl font-semibold mb-4">Bonus: Wichtige Tipps für bessere Streams</h2>
                     
                     <div class="grid md:grid-cols-2 gap-4">
@@ -833,7 +833,7 @@
                 </section>
 
                 <!-- Troubleshooting -->
-                <section class="bg-eerie-black p-6 rounded-lg">
+                <section class="bg-gray-800/40 border border-gray-600 p-6 rounded-lg">
                     <h2 class="text-2xl font-semibold mb-4">Häufige Probleme & Lösungen</h2>
                     
                     <div class="space-y-4">
@@ -880,7 +880,7 @@
                 </section>
 
                 <!-- Plattform-Richtlinien -->
-                <section class="bg-eerie-black p-6 rounded-lg border border-gray-700">
+                <section class="bg-gray-800/40 border border-gray-600 p-6 rounded-lg border border-gray-700">
                     <h2 class="text-2xl font-semibold mb-4 text-red-400">⚠️ WICHTIG: Plattform-Richtlinien & Regeln</h2>
                     <p class="text-gray-200 mb-6">
                         Bevor du mit dem Streamen beginnst, ist es <strong>absolut essentiell</strong>, dass du die Regeln und 
@@ -1105,7 +1105,7 @@
                 </section>
 
                 <!-- Plugins & Erweiterungen -->
-                <section class="bg-eerie-black p-6 rounded-lg">
+                <section class="bg-gray-800/40 border border-gray-600 p-6 rounded-lg">
                     <h2 class="text-2xl font-semibold mb-4">🔌 Empfohlene Plugins & Tools</h2>
                     
                     <div class="space-y-4">
@@ -1196,7 +1196,7 @@
                 </section>
 
                 <!-- Backup Scripts -->
-                <section class="bg-gray-800/60 border border-gray-600 p-6 rounded-lg">
+                <section class="bg-gray-800/40 border border-gray-600 p-6 rounded-lg">
                     <h2 class="text-2xl font-semibold mb-4">💾 Automatische OBS-Backups</h2>
                     
                     <div class="space-y-4">
