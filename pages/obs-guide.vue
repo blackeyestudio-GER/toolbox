@@ -42,7 +42,8 @@
                             <div class="bg-gray-700/30 border border-gray-500 p-4 rounded mb-6">
                                 <p class="text-gray-300 text-sm">
                                     <strong>💡 Meine Empfehlung:</strong> Nutze die <strong>Steam-Version</strong>, wenn du Steam bereits installiert hast. 
-                                    Du bleibst automatisch auf dem neuesten Stand. Für maximale Kontrolle und Portabilität empfehle ich die <strong>Portable Version</strong>!
+                                    Du bleibst automatisch auf dem neuesten Stand. <strong>Mache deine Installation dann portabel</strong> 
+                                    (siehe Anleitung in den Tabs) - so hast du das Beste aus beiden Welten!
                                 </p>
                             </div>
 
@@ -106,6 +107,43 @@
                                                 <li>Wähle die gewünschte Version aus</li>
                                             </ol>
                                         </div>
+
+                                        <div class="bg-blue-900/20 border border-blue-600 p-4 rounded mt-4">
+                                            <h4 class="font-semibold mb-3 text-blue-400">🎒 OBS Portabel machen (EMPFOHLEN!)</h4>
+                                            <p class="text-sm text-gray-300 mb-3">
+                                                Mache deine OBS-Installation portabel! Alle Einstellungen, Szenen und Plugins bleiben dann 
+                                                im OBS-Ordner statt in AppData. <strong>Der Hauptgrund:</strong> Du kannst einfache Backups erstellen! 
+                                                Weiter unten findest du fertige Backup-Scripts zum Download.
+                                            </p>
+                                            
+                                            <div class="bg-gray-800/60 p-3 rounded mb-3">
+                                                <p class="text-xs text-gray-300 mb-2"><strong>So geht's:</strong></p>
+                                                <ol class="text-xs text-gray-300 space-y-1 list-decimal list-inside ml-2">
+                                                    <li>Öffne das OBS-Installationsverzeichnis:
+                                                        <ul class="list-disc list-inside ml-4 mt-1 text-xs text-gray-400">
+                                                            <li>Steam: Rechtsklick auf OBS → Verwalten → Lokale Dateien durchsuchen</li>
+                                                            <li>Oder direkt zu: <code class="bg-gray-900 px-1 rounded">C:\Program Files (x86)\Steam\steamapps\common\OBS Studio</code></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>Erstelle im OBS-Ordner einen <strong>neuen Ordner</strong> namens <code class="bg-gray-900 px-2 py-0.5 rounded">portable_mode</code></li>
+                                                    <li>Starte OBS neu</li>
+                                                    <li>Fertig! OBS speichert ab jetzt alles im <code class="bg-gray-900 px-1 rounded">portable_mode</code> Ordner</li>
+                                                </ol>
+                                            </div>
+
+                                            <div class="bg-green-900/20 border border-green-600 p-3 rounded">
+                                                <p class="text-green-200 text-xs">
+                                                    <strong>✅ So prüfst du ob es funktioniert:</strong> Öffne in OBS 
+                                                    <strong>Hilfe → Logdatei → Aktuelles Protokoll ansehen</strong>. 
+                                                    In den ersten Zeilen sollte "Portable mode: true" stehen!
+                                                </p>
+                                            </div>
+
+                                            <p class="text-xs text-gray-400 mt-3">
+                                                <strong>💾 Backup-Tipp:</strong> Kopiere einfach den ganzen <code class="bg-gray-900 px-1 rounded">portable_mode</code> 
+                                                Ordner = perfektes Backup mit allen Einstellungen!
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -149,80 +187,36 @@
                                                 <li>Starte OBS Studio über das Desktop-Icon oder Startmenü</li>
                                             </ol>
                                         </div>
-                                    </div>
-                                </div>
 
-                                <!-- Portable Version -->
-                                <div v-if="activeInstallTab === 'portable'" class="space-y-4">
-                                    <div class="bg-gray-700/30 border border-gray-500 p-5 rounded-lg">
-                                        <h3 class="text-xl font-semibold mb-3 text-white">🎒 Portable Version ⭐</h3>
-                                        <p class="text-gray-300 mb-4">
-                                            Die beste Option für maximale Kontrolle! OBS läuft komplett aus einem Ordner - 
-                                            perfekt zum Mitnehmen oder für mehrere OBS-Installationen.
-                                        </p>
-                                        
-                                        <div class="mb-4">
-                                            <h4 class="font-semibold mb-2 text-gray-200">✨ Vorteile:</h4>
-                                            <ul class="text-sm text-gray-300 list-disc list-inside ml-2 space-y-1">
-                                                <li>Alle Einstellungen & Szenen bleiben im OBS-Ordner</li>
-                                                <li>Auf USB-Stick mitnehmen und auf jedem PC nutzen</li>
-                                                <li>Mehrere OBS-Versionen parallel (z.B. Test & Produktion)</li>
-                                                <li>Keine Registry-Einträge - komplett portabel</li>
-                                                <li>Perfekt für Backups</li>
-                                            </ul>
-                                        </div>
-
-                                        <div class="bg-blue-900/20 border border-blue-600 p-4 rounded mb-4">
-                                            <p class="text-blue-200 text-sm">
-                                                <strong>💡 Meine persönliche Empfehlung:</strong> Die Portable Version ist perfekt! 
-                                                Du hast volle Kontrolle, kannst alles einfach sichern und bei Problemen einfach eine 
-                                                zweite Installation testen ohne deine Haupt-Installation zu gefährden.
+                                        <div class="bg-blue-900/20 border border-blue-600 p-4 rounded mt-4">
+                                            <h4 class="font-semibold mb-3 text-blue-400">🎒 OBS Portabel machen (EMPFOHLEN!)</h4>
+                                            <p class="text-sm text-gray-300 mb-3">
+                                                Mache deine OBS-Installation portabel! Alle Einstellungen, Szenen und Plugins bleiben dann 
+                                                im OBS-Ordner statt in AppData. <strong>Der Hauptgrund:</strong> Du kannst einfache Backups erstellen! 
+                                                Weiter unten findest du fertige Backup-Scripts zum Download.
                                             </p>
-                                        </div>
-
-                                        <div class="bg-gray-800/60 border border-gray-600 p-4 rounded">
-                                            <h4 class="font-semibold mb-3 text-gray-200">📋 So machst du OBS portabel:</h4>
                                             
-                                            <div class="space-y-4">
-                                                <div>
-                                                    <p class="font-semibold text-gray-300 mb-2">Option 1: Portable ZIP (Einfachste Methode)</p>
-                                                    <ol class="text-sm text-gray-300 space-y-2 list-decimal list-inside ml-2">
-                                                        <li>Gehe zu <a href="https://obsproject.com/de/download" target="_blank" class="text-blue-400 hover:text-blue-300 underline">obsproject.com/de/download</a></li>
-                                                        <li>Scrolle nach unten zu "Windows Portable"</li>
-                                                        <li>Lade die ZIP-Datei herunter</li>
-                                                        <li>Entpacke die ZIP in einen beliebigen Ordner (z.B. <code class="bg-gray-900 px-2 py-1 rounded text-xs">C:\OBS-Portable</code>)</li>
-                                                        <li>Starte <code class="bg-gray-900 px-2 py-1 rounded text-xs">obs64.exe</code></li>
-                                                        <li>Fertig! 🎉</li>
-                                                    </ol>
-                                                </div>
-
-                                                <div class="border-t border-gray-600 pt-4">
-                                                    <p class="font-semibold text-gray-300 mb-2">Option 2: Normale Installation portabel machen</p>
-                                                    <ol class="text-sm text-gray-300 space-y-2 list-decimal list-inside ml-2">
-                                                        <li>Installiere OBS normal (siehe "Manuelle Installation")</li>
-                                                        <li>Gehe zum OBS-Installationsordner (z.B. <code class="bg-gray-900 px-2 py-1 rounded text-xs">C:\Program Files\obs-studio</code>)</li>
-                                                        <li>Erstelle im OBS-Ordner einen neuen Ordner namens <code class="bg-gray-900 px-2 py-1 rounded text-xs">portable_mode</code></li>
-                                                        <li>Starte OBS neu</li>
-                                                        <li>Ab sofort speichert OBS alle Daten im <code class="bg-gray-900 px-2 py-1 rounded text-xs">portable_mode</code> Ordner!</li>
-                                                    </ol>
-                                                </div>
-
-                                                <div class="bg-green-900/20 border border-green-600 p-3 rounded mt-4">
-                                                    <p class="text-green-200 text-sm">
-                                                        <strong>✅ So erkennst du ob es funktioniert:</strong> Gehe in OBS zu 
-                                                        <strong>Hilfe → Logdatei → Aktuelles Protokoll ansehen</strong>. 
-                                                        In der ersten Zeile sollte "Portable Mode: true" stehen!
-                                                    </p>
-                                                </div>
+                                            <div class="bg-gray-800/60 p-3 rounded mb-3">
+                                                <p class="text-xs text-gray-300 mb-2"><strong>So geht's:</strong></p>
+                                                <ol class="text-xs text-gray-300 space-y-1 list-decimal list-inside ml-2">
+                                                    <li>Öffne das OBS-Installationsverzeichnis (Standard: <code class="bg-gray-900 px-1 rounded">C:\Program Files\obs-studio</code>)</li>
+                                                    <li>Erstelle im OBS-Ordner einen <strong>neuen Ordner</strong> namens <code class="bg-gray-900 px-2 py-0.5 rounded">portable_mode</code></li>
+                                                    <li>Starte OBS neu</li>
+                                                    <li>Fertig! OBS speichert ab jetzt alles im <code class="bg-gray-900 px-1 rounded">portable_mode</code> Ordner</li>
+                                                </ol>
                                             </div>
-                                        </div>
 
-                                        <div class="bg-gray-800/60 border border-gray-600 p-4 rounded mt-4">
-                                            <h4 class="font-semibold mb-2 text-gray-200">💾 Backup-Tipp:</h4>
-                                            <p class="text-sm text-gray-300">
-                                                Kopiere einfach den kompletten OBS-Ordner (inkl. <code class="bg-gray-900 px-1 rounded text-xs">portable_mode</code>) 
-                                                und du hast ein perfektes Backup mit allen Einstellungen, Szenen und Plugins! 
-                                                Das kannst du dann auf jeden anderen PC kopieren und direkt weitermachen. 🚀
+                                            <div class="bg-green-900/20 border border-green-600 p-3 rounded">
+                                                <p class="text-green-200 text-xs">
+                                                    <strong>✅ So prüfst du ob es funktioniert:</strong> Öffne in OBS 
+                                                    <strong>Hilfe → Logdatei → Aktuelles Protokoll ansehen</strong>. 
+                                                    In den ersten Zeilen sollte "Portable mode: true" stehen!
+                                                </p>
+                                            </div>
+
+                                            <p class="text-xs text-gray-400 mt-3">
+                                                <strong>💾 Backup-Tipp:</strong> Kopiere einfach den ganzen <code class="bg-gray-900 px-1 rounded">portable_mode</code> 
+                                                Ordner = perfektes Backup mit allen Einstellungen!
                                             </p>
                                         </div>
                                     </div>
@@ -1108,6 +1102,240 @@
                     </div>
                 </section>
 
+                <!-- Plugins & Erweiterungen -->
+                <section class="bg-eerie-black p-6 rounded-lg">
+                    <h2 class="text-2xl font-semibold mb-4">🔌 Empfohlene Plugins & Tools</h2>
+                    
+                    <div class="space-y-4">
+                        <p class="text-gray-300 mb-4">
+                            OBS lässt sich mit Plugins massiv erweitern. Hier sind meine persönlichen Empfehlungen:
+                        </p>
+
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <!-- StreamUp Tips -->
+                            <div class="bg-gray-700/30 border border-gray-500 p-4 rounded-lg">
+                                <h4 class="font-semibold mb-2 text-blue-400">⭐ StreamUp.tips (Meine Wahl!)</h4>
+                                <p class="text-sm text-gray-300 mb-3">
+                                    Das Plugin das ich selbst nutze! Perfekt für Alerts, Overlays und Stream-Interaktionen.
+                                </p>
+                                <ul class="text-xs text-gray-300 space-y-1 list-disc list-inside mb-3">
+                                    <li>Einfache Integration in OBS</li>
+                                    <li>Moderne Alerts & Widgets</li>
+                                    <li>Kostenlose & Premium Features</li>
+                                    <li>Twitch, YouTube & Kick Support</li>
+                                </ul>
+                                <a href="https://streamup.tips/" target="_blank" rel="noopener noreferrer"
+                                   class="inline-block px-3 py-1.5 bg-gray-600 hover:bg-gray-500 rounded text-xs transition">
+                                    → streamup.tips
+                                </a>
+                            </div>
+
+                            <!-- Move Transition -->
+                            <div class="bg-gray-800/50 border border-gray-600 p-4 rounded-lg">
+                                <h4 class="font-semibold mb-2 text-gray-200">Move Transition</h4>
+                                <p class="text-sm text-gray-300 mb-3">
+                                    Animierte Übergänge zwischen Szenen. Macht deinen Stream professioneller!
+                                </p>
+                                <ul class="text-xs text-gray-300 space-y-1 list-disc list-inside mb-3">
+                                    <li>Smooth Animationen</li>
+                                    <li>Einfach zu konfigurieren</li>
+                                    <li>Kostenlos & Open Source</li>
+                                </ul>
+                                <a href="https://obsproject.com/forum/resources/move.913/" target="_blank" rel="noopener noreferrer"
+                                   class="inline-block px-3 py-1.5 bg-gray-600 hover:bg-gray-500 rounded text-xs transition">
+                                    → OBS Forum
+                                </a>
+                            </div>
+
+                            <!-- Advanced Scene Switcher -->
+                            <div class="bg-gray-800/50 border border-gray-600 p-4 rounded-lg">
+                                <h4 class="font-semibold mb-2 text-gray-200">Advanced Scene Switcher</h4>
+                                <p class="text-sm text-gray-300 mb-3">
+                                    Automatischer Szenenwechsel basierend auf Fenstern, Zeit oder Bedingungen.
+                                </p>
+                                <ul class="text-xs text-gray-300 space-y-1 list-disc list-inside mb-3">
+                                    <li>Automatische Szenen-Wechsel</li>
+                                    <li>Sehr mächtig & flexibel</li>
+                                    <li>Spart viel manuelle Arbeit</li>
+                                </ul>
+                                <a href="https://obsproject.com/forum/resources/advanced-scene-switcher.395/" target="_blank" rel="noopener noreferrer"
+                                   class="inline-block px-3 py-1.5 bg-gray-600 hover:bg-gray-500 rounded text-xs transition">
+                                    → OBS Forum
+                                </a>
+                            </div>
+
+                            <!-- Source Record -->
+                            <div class="bg-gray-800/50 border border-gray-600 p-4 rounded-lg">
+                                <h4 class="font-semibold mb-2 text-gray-200">Source Record</h4>
+                                <p class="text-sm text-gray-300 mb-3">
+                                    Nehme einzelne Quellen separat auf (z.B. nur Webcam oder nur Game).
+                                </p>
+                                <ul class="text-xs text-gray-300 space-y-1 list-disc list-inside mb-3">
+                                    <li>Separate Aufnahmen</li>
+                                    <li>Perfekt für Editing</li>
+                                    <li>Multi-Track Recording</li>
+                                </ul>
+                                <a href="https://obsproject.com/forum/resources/source-record.1285/" target="_blank" rel="noopener noreferrer"
+                                   class="inline-block px-3 py-1.5 bg-gray-600 hover:bg-gray-500 rounded text-xs transition">
+                                    → OBS Forum
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="bg-blue-900/20 border border-blue-600 p-4 rounded mt-4">
+                            <p class="text-blue-200 text-sm">
+                                <strong>⚠️ Plugin-Installation:</strong> Plugins müssen manuell in den OBS-Ordner kopiert werden. 
+                                Lies immer die Installations-Anleitung des jeweiligen Plugins! Mit portable_mode bleiben auch 
+                                Plugins in deinem OBS-Ordner.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Backup Scripts -->
+                <section class="bg-gray-800/60 border border-gray-600 p-6 rounded-lg">
+                    <h2 class="text-2xl font-semibold mb-4">💾 Automatische OBS-Backups</h2>
+                    
+                    <div class="space-y-4">
+                        <p class="text-gray-300 mb-4">
+                            Du hast OBS portabel gemacht? Perfekt! Hier sind fertige Backup-Scripts die automatisch 
+                            deine komplette OBS-Konfiguration sichern - mit Datum im Dateinamen!
+                        </p>
+
+                        <div class="bg-green-900/20 border border-green-600 p-4 rounded mb-4">
+                            <h4 class="font-semibold text-green-400 mb-2">✨ Was die Scripts machen:</h4>
+                            <ul class="text-sm text-gray-300 space-y-1 list-disc list-inside ml-4">
+                                <li>Finden automatisch deine OBS portable_mode Installation</li>
+                                <li>Erstellen ein komprimiertes Backup</li>
+                                <li>Speichern mit Datum im Format: <code class="bg-gray-900 px-1 rounded text-xs">OBS-Backup_2025-01-15.zip</code></li>
+                                <li>Backup landet in: <code class="bg-gray-900 px-1 rounded text-xs">Dokumente/OBS-Backups</code></li>
+                            </ul>
+                        </div>
+
+                        <div class="grid md:grid-cols-3 gap-4">
+                            <!-- Windows .bat -->
+                            <div class="bg-gray-700/30 border border-gray-500 p-4 rounded">
+                                <h4 class="font-semibold mb-2 text-white">🪟 Windows (.bat)</h4>
+                                <p class="text-xs text-gray-300 mb-3">
+                                    Batch-Script für Windows. Nutzt 7-Zip für beste Kompression.
+                                </p>
+                                <p class="text-xs text-gray-400 mb-3">
+                                    <strong>Benötigt:</strong> <a href="https://www.7-zip.org/" target="_blank" class="text-blue-400 underline">7-Zip</a>
+                                </p>
+                                <a href="/obs-backup.bat" download
+                                   class="inline-block w-full text-center px-3 py-2 bg-blue-600 hover:bg-blue-700 rounded text-sm transition">
+                                    ⬇️ Download .bat
+                                </a>
+                            </div>
+
+                            <!-- PowerShell -->
+                            <div class="bg-gray-700/30 border border-gray-500 p-4 rounded">
+                                <h4 class="font-semibold mb-2 text-white">⚡ PowerShell (.ps1)</h4>
+                                <p class="text-xs text-gray-300 mb-3">
+                                    Modernes PowerShell-Script. Nutzt native ZIP-Kompression.
+                                </p>
+                                <p class="text-xs text-gray-400 mb-3">
+                                    <strong>Benötigt:</strong> PowerShell 5.0+
+                                </p>
+                                <a href="/obs-backup.ps1" download
+                                   class="inline-block w-full text-center px-3 py-2 bg-blue-600 hover:bg-blue-700 rounded text-sm transition">
+                                    ⬇️ Download .ps1
+                                </a>
+                            </div>
+
+                            <!-- Linux -->
+                            <div class="bg-gray-700/30 border border-gray-500 p-4 rounded">
+                                <h4 class="font-semibold mb-2 text-white">🐧 Linux/Mac (.sh)</h4>
+                                <p class="text-xs text-gray-300 mb-3">
+                                    Bash-Script für Linux & macOS. Nutzt tar.gz Kompression.
+                                </p>
+                                <p class="text-xs text-gray-400 mb-3">
+                                    <strong>Benötigt:</strong> bash, tar
+                                </p>
+                                <a href="/obs-backup.sh" download
+                                   class="inline-block w-full text-center px-3 py-2 bg-blue-600 hover:bg-blue-700 rounded text-sm transition">
+                                    ⬇️ Download .sh
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="bg-red-900/20 border border-red-600 p-4 rounded mb-4">
+                            <h4 class="font-semibold text-red-400 mb-2">⚠️ WICHTIG: Pfad anpassen!</h4>
+                            <p class="text-sm text-gray-300 mb-3">
+                                Dein OBS kann auf einer anderen Festplatte sein! Du <strong>musst den Pfad im Script anpassen</strong>:
+                            </p>
+                            
+                            <div class="space-y-3 text-xs">
+                                <div class="bg-gray-800/60 p-3 rounded">
+                                    <p class="text-white font-semibold mb-2">🔍 So findest du deinen OBS-Pfad:</p>
+                                    <ul class="text-gray-300 space-y-1 list-disc list-inside ml-2">
+                                        <li><strong>Steam:</strong> Rechtsklick auf OBS in Steam → Verwalten → Lokale Dateien durchsuchen → Pfad aus Adressleiste kopieren</li>
+                                        <li><strong>Manuell:</strong> Meist <code class="bg-gray-900 px-1 rounded">C:\Program Files\obs-studio</code></li>
+                                        <li><strong>Andere Festplatte:</strong> z.B. <code class="bg-gray-900 px-1 rounded">D:\Steam\steamapps\common\OBS Studio</code></li>
+                                    </ul>
+                                </div>
+
+                                <div class="bg-gray-800/60 p-3 rounded">
+                                    <p class="text-white font-semibold mb-2">✏️ So passt du das Script an:</p>
+                                    <div class="space-y-2">
+                                        <div>
+                                            <p class="text-yellow-400 mb-1">Windows (.bat / .ps1):</p>
+                                            <ol class="text-gray-300 list-decimal list-inside ml-2">
+                                                <li>Rechtsklick auf die Datei → "Bearbeiten" oder "Bearbeiten mit Notepad++"</li>
+                                                <li>Ändere die Zeile <code class="bg-gray-900 px-1 rounded">set "OBS_PATH=..."</code> bzw. <code class="bg-gray-900 px-1 rounded">$ObsPath = "..."</code></li>
+                                                <li>Trage deinen OBS-Pfad zwischen die Anführungszeichen ein</li>
+                                                <li>Speichern (Strg+S)</li>
+                                            </ol>
+                                        </div>
+                                        <div>
+                                            <p class="text-green-400 mb-1">Linux/Mac (.sh):</p>
+                                            <ol class="text-gray-300 list-decimal list-inside ml-2">
+                                                <li><code class="bg-gray-900 px-1 rounded">nano obs-backup.sh</code> (oder vim/gedit)</li>
+                                                <li>Ändere die Zeile <code class="bg-gray-900 px-1 rounded">OBS_PATH="..."</code></li>
+                                                <li>Speichern (Strg+O, Enter, Strg+X bei nano)</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-yellow-900/20 border border-yellow-600 p-4 rounded mb-4">
+                            <h4 class="font-semibold text-yellow-400 mb-2">📋 Nach der Anpassung - Nutzung:</h4>
+                            <ol class="text-xs text-gray-300 space-y-1 list-decimal list-inside ml-4">
+                                <li><strong>Windows .bat:</strong> Einfach doppelklicken</li>
+                                <li><strong>PowerShell:</strong> Rechtsklick → "Mit PowerShell ausführen"</li>
+                                <li><strong>Linux:</strong> <code class="bg-gray-900 px-1 rounded">chmod +x obs-backup.sh && ./obs-backup.sh</code></li>
+                            </ol>
+                        </div>
+
+                        <div class="bg-blue-900/20 border border-blue-600 p-4 rounded">
+                            <h4 class="font-semibold text-blue-400 mb-2">💡 Wann solltest du Backups machen?</h4>
+                            <ul class="text-xs text-gray-300 space-y-1 list-disc list-inside ml-4">
+                                <li><strong>VOR jedem OBS-Update</strong> - Falls das Update Probleme macht</li>
+                                <li><strong>NACH jeder großen Änderung</strong> - Neue Szenen, Einstellungen, Plugins</li>
+                                <li><strong>Vor dem Testen neuer Plugins</strong> - Sicherheit falls etwas schief geht</li>
+                                <li><strong>Regelmäßig (wöchentlich)</strong> - Automatisch via Task Scheduler</li>
+                                <li><strong>Vor Stream-Events</strong> - Damit du schnell zurück kannst</li>
+                            </ul>
+                            <p class="text-xs text-gray-400 mt-3">
+                                <strong>📅 Mein Tipp:</strong> Erstelle ein Backup <strong>vor und nach jedem Update/Change</strong>. 
+                                So kannst du immer zur letzten funktionierenden Version zurück!
+                            </p>
+                        </div>
+
+                        <div class="bg-gray-700/30 border border-gray-500 p-4 rounded">
+                            <h4 class="font-semibold text-gray-200 mb-2">🤖 Automatische Backups (Fortgeschritten):</h4>
+                            <p class="text-xs text-gray-300 mb-2">
+                                Erstelle eine Windows-Aufgabe (Task Scheduler) für automatische tägliche/wöchentliche Backups!
+                            </p>
+                            <p class="text-xs text-gray-400">
+                                → Windows → Suche "Aufgabenplanung" → Einfache Aufgabe erstellen → Script als Aktion hinzufügen
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
                 <!-- Weiterführende Ressourcen -->
                 <section class="bg-gray-800/40 p-6 rounded-lg border border-gray-600">
                     <h2 class="text-2xl font-semibold mb-4">📚 Weiterführende Ressourcen</h2>
@@ -1158,7 +1386,6 @@ const activeInstallTab = ref('steam');
 const installTabs = [
   { id: 'steam', name: '🎮 Steam' },
   { id: 'manual', name: '💻 Manuell' },
-  { id: 'portable', name: '🎒 Portable ⭐' },
 ];
 
 // Bitrate Calculator
