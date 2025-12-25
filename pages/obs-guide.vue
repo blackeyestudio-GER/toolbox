@@ -108,7 +108,7 @@
                                             </ol>
                                         </div>
 
-                                        <div class="bg-blue-900/20 border border-blue-600 p-4 rounded mt-4">
+                                        <div class="bg-gray-700/30 border-l-4 border-blue-500 p-4 rounded mt-4">
                                             <h4 class="font-semibold mb-3 text-blue-400">🎒 OBS Portabel machen (EMPFOHLEN!)</h4>
                                             <p class="text-sm text-gray-300 mb-3">
                                                 Mache deine OBS-Installation portabel! Alle Einstellungen, Szenen und Plugins bleiben dann 
@@ -131,9 +131,9 @@
                                                 </ol>
                                             </div>
 
-                                            <div class="bg-green-900/20 border border-green-600 p-3 rounded">
-                                                <p class="text-green-200 text-xs">
-                                                    <strong>✅ So prüfst du ob es funktioniert:</strong> Öffne in OBS 
+                                            <div class="bg-gray-700/30 border-l-4 border-green-500 p-3 rounded">
+                                                <p class="text-gray-300 text-xs">
+                                                    <strong class="text-green-400">✅ So prüfst du ob es funktioniert:</strong> Öffne in OBS 
                                                     <strong>Hilfe → Logdatei → Aktuelles Protokoll ansehen</strong>. 
                                                     In den ersten Zeilen sollte "Portable mode: true" stehen!
                                                 </p>
@@ -188,7 +188,7 @@
                                             </ol>
                                         </div>
 
-                                        <div class="bg-blue-900/20 border border-blue-600 p-4 rounded mt-4">
+                                        <div class="bg-gray-700/30 border-l-4 border-blue-500 p-4 rounded mt-4">
                                             <h4 class="font-semibold mb-3 text-blue-400">🎒 OBS Portabel machen (EMPFOHLEN!)</h4>
                                             <p class="text-sm text-gray-300 mb-3">
                                                 Mache deine OBS-Installation portabel! Alle Einstellungen, Szenen und Plugins bleiben dann 
@@ -206,9 +206,9 @@
                                                 </ol>
                                             </div>
 
-                                            <div class="bg-green-900/20 border border-green-600 p-3 rounded">
-                                                <p class="text-green-200 text-xs">
-                                                    <strong>✅ So prüfst du ob es funktioniert:</strong> Öffne in OBS 
+                                            <div class="bg-gray-700/30 border-l-4 border-green-500 p-3 rounded">
+                                                <p class="text-gray-300 text-xs">
+                                                    <strong class="text-green-400">✅ So prüfst du ob es funktioniert:</strong> Öffne in OBS 
                                                     <strong>Hilfe → Logdatei → Aktuelles Protokoll ansehen</strong>. 
                                                     In den ersten Zeilen sollte "Portable mode: true" stehen!
                                                 </p>
@@ -269,9 +269,9 @@
                                     </ul>
                                 </li>
                             </ul>
-                            <div class="bg-yellow-900/20 border border-yellow-600 p-3 rounded mt-4">
-                                <p class="text-yellow-200 text-sm">
-                                    <strong>⚠️ WICHTIG:</strong> Teile deinen Stream-Schlüssel NIEMALS mit anderen! 
+                            <div class="bg-gray-700/30 border-l-4 border-yellow-500 p-3 rounded mt-4">
+                                <p class="text-gray-300 text-sm">
+                                    <strong class="text-yellow-400">⚠️ WICHTIG:</strong> Teile deinen Stream-Schlüssel NIEMALS mit anderen! 
                                     Wer deinen Schlüssel hat, kann in deinem Namen streamen.
                                 </p>
                             </div>
@@ -337,7 +337,7 @@
                                     </div>
 
                                     <!-- Results -->
-                                    <div v-if="bitrateResult" class="bg-green-900/20 border border-green-600 p-4 rounded space-y-3">
+                                    <div v-if="bitrateResult" class="bg-gray-800/50 border-l-4 border-green-500 p-4 rounded space-y-3">
                                         <h5 class="font-semibold text-green-400">✅ Empfohlene Einstellungen:</h5>
                                         
                                         <div class="grid md:grid-cols-2 gap-3 text-sm">
@@ -374,7 +374,7 @@
                                     </div>
 
                                     <!-- Haushaltsbandbreite Warnung -->
-                                    <div class="bg-yellow-900/20 border border-yellow-600 p-4 rounded">
+                                    <div class="bg-gray-800/50 border-l-4 border-yellow-500 p-4 rounded">
                                         <h5 class="font-semibold text-yellow-400 mb-2 flex items-center gap-2">
                                             ⚠️ Wichtig: Andere im Haushalt mitbedenken!
                                         </h5>
@@ -406,9 +406,9 @@
                                             </p>
                                         </div>
 
-                                        <div class="bg-blue-900/20 border border-blue-600 p-3 rounded">
-                                            <p class="text-blue-200 text-xs">
-                                                <strong>💡 Warum der 70%-Puffer?</strong> Die meisten Aktivitäten sind zwar hauptsächlich Download, 
+                                        <div class="bg-gray-700/30 border-l-4 border-blue-500 p-3 rounded">
+                                            <p class="text-gray-300 text-xs">
+                                                <strong class="text-blue-400">💡 Warum der 70%-Puffer?</strong> Die meisten Aktivitäten sind zwar hauptsächlich Download, 
                                                 <strong>aber es gibt immer Kommunikation zurück zum Server</strong> (Upload). 
                                                 Discord sendet dein Mikrofon, Gaming sendet deine Eingaben, und Netflix/YouTube bestätigen empfangene Pakete. 
                                                 Diese Upload-Kommunikation kann deine Stream-Qualität einschränken, selbst wenn die anderen "nur schauen". 
@@ -456,9 +456,9 @@
                                         Das klingt nach viel, aber für 1080p bei 60 FPS ist das eigentlich zu wenig!
                                     </p>
 
-                                    <div class="bg-red-900/20 border border-red-600 p-4 rounded">
+                                    <div class="bg-gray-800/50 border-l-4 border-red-500 p-4 rounded">
                                         <h4 class="font-semibold text-red-400 mb-2">❌ Problem: 1080p @ 6000 Kbps</h4>
-                                        <ul class="space-y-1 list-disc list-inside ml-2">
+                                        <ul class="space-y-1 list-disc list-inside ml-2 text-gray-300">
                                             <li>Zu wenig Bitrate für die hohe Auflösung</li>
                                             <li>Artefakte und Verpixelung bei schnellen Bewegungen</li>
                                             <li>Besonders schlecht bei Action-Spielen</li>
@@ -466,9 +466,9 @@
                                         </ul>
                                     </div>
 
-                                    <div class="bg-green-900/20 border border-green-600 p-4 rounded">
+                                    <div class="bg-gray-800/50 border-l-4 border-green-500 p-4 rounded">
                                         <h4 class="font-semibold text-green-400 mb-2">✅ Lösung: 936p @ 6000 Kbps</h4>
-                                        <ul class="space-y-1 list-disc list-inside ml-2">
+                                        <ul class="space-y-1 list-disc list-inside ml-2 text-gray-300">
                                             <li>Perfektes Verhältnis zwischen Auflösung und Bitrate</li>
                                             <li>Scharfes, klares Bild ohne Artefakte</li>
                                             <li>Auch bei schnellen Spielen gut</li>
@@ -476,13 +476,13 @@
                                         </ul>
                                     </div>
 
-                                    <div class="bg-blue-900/20 border border-blue-600 p-4 rounded">
+                                    <div class="bg-gray-800/50 border-l-4 border-blue-500 p-4 rounded">
                                         <h4 class="font-semibold text-blue-400 mb-2">💡 Technischer Hintergrund:</h4>
-                                        <p class="mb-2">
+                                        <p class="mb-2 text-gray-300">
                                             Die Bitrate bestimmt, wie viele Daten pro Sekunde übertragen werden. Je höher die Auflösung, 
                                             desto mehr Bitrate wird benötigt um ein scharfes Bild zu liefern.
                                         </p>
-                                        <p class="mb-2">
+                                        <p class="mb-2 text-gray-300">
                                             <strong>936p (1664x936)</strong> hat ca. <strong>20% weniger Pixel</strong> als 1080p (1920x1080). 
                                             Das bedeutet: Die gleiche Bitrate kann mehr Details pro Pixel speichern = schärferes Bild!
                                         </p>
@@ -569,17 +569,17 @@
                                 Quellen sind die Inhalte, die in deinen Szenen angezeigt werden. Die wichtigsten Quellen für Spiele und Programme:
                             </p>
                             
-                            <div class="bg-yellow-900/20 border border-yellow-600 p-4 rounded mb-4">
-                                <p class="text-yellow-200 text-sm">
-                                    <strong>⚡ Performance-Reihenfolge:</strong> Versuche immer in dieser Reihenfolge: 
+                            <div class="bg-gray-700/30 border-l-4 border-yellow-500 p-4 rounded mb-4">
+                                <p class="text-gray-300 text-sm">
+                                    <strong class="text-yellow-400">⚡ Performance-Reihenfolge:</strong> Versuche immer in dieser Reihenfolge: 
                                     <strong>Game Capture → Window Capture → Display Capture</strong>. 
                                     Je weiter unten, desto mehr Performance kostet die Aufnahme!
                                 </p>
                             </div>
                             
                             <div class="space-y-4 mt-4">
-                                <div class="bg-green-900/20 border border-green-600 p-4 rounded">
-                                    <h4 class="font-semibold mb-2 text-green-400">🎮 1. Game Capture (Spielaufnahme) - BESTE Performance</h4>
+                                <div class="bg-gray-800/50 border border-gray-600 p-4 rounded">
+                                    <h4 class="font-semibold mb-2 text-green-400 border-b border-green-500 pb-2">🎮 1. Game Capture (Spielaufnahme) - BESTE Performance</h4>
                                     <p class="text-sm text-gray-300 mb-2">
                                         <strong>Nutze dies für:</strong> Spiele (beste Performance!)
                                     </p>
@@ -589,9 +589,9 @@
                                         <li>Modus: "Bestimmtes Fenster aufnehmen"</li>
                                         <li>Wähle dein Spiel aus der Liste</li>
                                     </ol>
-                                    <div class="bg-blue-900/20 border border-blue-600 p-3 rounded mt-3">
-                                        <p class="text-blue-200 text-xs">
-                                            <strong>💡 Pro-Tipp:</strong> Du musst die Quelle für jedes Spiel ändern. Das ist zwar nervig, 
+                                    <div class="bg-gray-700/30 border-l-4 border-blue-500 p-3 rounded mt-3">
+                                        <p class="text-gray-300 text-xs">
+                                            <strong class="text-blue-400">💡 Pro-Tipp:</strong> Du musst die Quelle für jedes Spiel ändern. Das ist zwar nervig, 
                                             aber du kannst einfach mehrere Game Capture Quellen erstellen wenn du dieselben Spiele 
                                             wiederholt spielst (z.B. "Game Capture - Valorant", "Game Capture - League of Legends").
                                         </p>
@@ -618,8 +618,8 @@
                                     </div>
                                 </div>
 
-                                <div class="bg-red-900/20 border border-red-600 p-4 rounded">
-                                    <h4 class="font-semibold mb-2 text-red-400">🖥️ 3. Display Capture (Bildschirmaufnahme) - SCHLECHTESTE Performance</h4>
+                                <div class="bg-gray-800/50 border border-gray-600 p-4 rounded">
+                                    <h4 class="font-semibold mb-2 text-red-400 border-b border-red-500 pb-2">🖥️ 3. Display Capture (Bildschirmaufnahme) - SCHLECHTESTE Performance</h4>
                                     <p class="text-sm text-gray-300 mb-2">
                                         <strong>Nutze dies nur als letzte Option:</strong> Wenn Game & Window Capture nicht funktionieren
                                     </p>
@@ -628,9 +628,9 @@
                                         <li>Wähle "Bildschirmaufnahme"</li>
                                         <li>Wähle den Monitor aus, den du aufnehmen willst</li>
                                     </ol>
-                                    <div class="bg-yellow-900/20 border border-yellow-600 p-3 rounded mt-3">
-                                        <p class="text-yellow-200 text-xs">
-                                            <strong>⚠️ Performance-Warnung:</strong> Display Capture greift das Bild NACH dem kompletten Rendering ab. 
+                                    <div class="bg-gray-700/30 border-l-4 border-yellow-500 p-3 rounded mt-3">
+                                        <p class="text-gray-300 text-xs">
+                                            <strong class="text-yellow-400">⚠️ Performance-Warnung:</strong> Display Capture greift das Bild NACH dem kompletten Rendering ab. 
                                             Das bedeutet: Dein PC muss alles rendern UND dann nochmal für OBS aufnehmen. 
                                             Dies kostet am meisten Performance! Nutze es nur wenn Game/Window Capture wirklich nicht funktionieren.
                                         </p>
@@ -880,8 +880,8 @@
                 </section>
 
                 <!-- Plattform-Richtlinien -->
-                <section class="bg-gradient-to-br from-red-900/30 to-orange-900/30 p-6 rounded-lg border border-red-700">
-                    <h2 class="text-2xl font-semibold mb-4">⚠️ WICHTIG: Plattform-Richtlinien & Regeln</h2>
+                <section class="bg-eerie-black p-6 rounded-lg border border-gray-700">
+                    <h2 class="text-2xl font-semibold mb-4 text-red-400">⚠️ WICHTIG: Plattform-Richtlinien & Regeln</h2>
                     <p class="text-gray-200 mb-6">
                         Bevor du mit dem Streamen beginnst, ist es <strong>absolut essentiell</strong>, dass du die Regeln und 
                         Richtlinien der Streaming-Plattformen kennst und einhältst. Verstöße können zu Verwarnungen, Sperren 
@@ -890,7 +890,7 @@
 
                     <div class="space-y-6">
                         <!-- Twitch -->
-                        <div class="bg-purple-900/30 border border-purple-600 p-5 rounded-lg">
+                        <div class="bg-gray-800/50 border border-gray-600 p-5 rounded-lg">
                             <h3 class="text-xl font-semibold mb-3 flex items-center gap-2">
                                 <span class="text-purple-400">📺 Twitch</span>
                             </h3>
@@ -932,9 +932,9 @@
                                     </ul>
                                 </div>
                                 
-                                <div class="bg-red-900/30 border border-red-600 p-3 rounded">
-                                    <p class="text-red-200 font-semibold mb-2">🚨 Häufige Verstöße auf Twitch:</p>
-                                    <ul class="space-y-1 list-disc list-inside">
+                                <div class="bg-gray-700/30 border-l-4 border-red-500 p-3 rounded">
+                                    <p class="text-red-400 font-semibold mb-2">🚨 Häufige Verstöße auf Twitch:</p>
+                                    <ul class="space-y-1 list-disc list-inside text-gray-300">
                                         <li>Hassrede, Diskriminierung oder Belästigung</li>
                                         <li>Urheberrechtlich geschützte Musik (DMCA)</li>
                                         <li>Streamen von "Adults Only" (AO) bewerteten Spielen</li>
@@ -947,7 +947,7 @@
                         </div>
 
                         <!-- YouTube -->
-                        <div class="bg-red-900/30 border border-red-600 p-5 rounded-lg">
+                        <div class="bg-gray-800/50 border border-gray-600 p-5 rounded-lg">
                             <h3 class="text-xl font-semibold mb-3 flex items-center gap-2">
                                 <span class="text-red-400">▶️ YouTube</span>
                             </h3>
@@ -989,9 +989,9 @@
                                     </ul>
                                 </div>
                                 
-                                <div class="bg-red-900/30 border border-red-600 p-3 rounded">
-                                    <p class="text-red-200 font-semibold mb-2">🚨 Häufige Verstöße auf YouTube:</p>
-                                    <ul class="space-y-1 list-disc list-inside">
+                                <div class="bg-gray-700/30 border-l-4 border-red-500 p-3 rounded">
+                                    <p class="text-red-400 font-semibold mb-2">🚨 Häufige Verstöße auf YouTube:</p>
+                                    <ul class="space-y-1 list-disc list-inside text-gray-300">
                                         <li>Urheberrechtsverletzungen (Musik, Videos, Bilder)</li>
                                         <li>Hassrede oder Belästigung</li>
                                         <li>Gewaltdarstellung oder schockierende Inhalte</li>
@@ -1002,9 +1002,9 @@
                                     </ul>
                                 </div>
                                 
-                                <div class="bg-yellow-900/30 border border-yellow-600 p-3 rounded">
-                                    <p class="text-yellow-200 text-xs">
-                                        <strong>⚠️ YouTube Strike-System:</strong> Bei Verstößen erhältst du "Strikes" (Verwarnungen). 
+                                <div class="bg-gray-700/30 border-l-4 border-yellow-500 p-3 rounded">
+                                    <p class="text-gray-300 text-xs">
+                                        <strong class="text-yellow-400">⚠️ YouTube Strike-System:</strong> Bei Verstößen erhältst du "Strikes" (Verwarnungen). 
                                         3 Strikes innerhalb von 90 Tagen = permanenter Kanalverlust!
                                     </p>
                                 </div>
@@ -1012,7 +1012,7 @@
                         </div>
 
                         <!-- Kick -->
-                        <div class="bg-green-900/30 border border-green-600 p-5 rounded-lg">
+                        <div class="bg-gray-800/50 border border-gray-600 p-5 rounded-lg">
                             <h3 class="text-xl font-semibold mb-3 flex items-center gap-2">
                                 <span class="text-green-400">🎯 Kick</span>
                             </h3>
@@ -1047,8 +1047,10 @@
                         </div>
 
                         <!-- Allgemeine Tipps -->
-                        <div class="bg-gradient-to-r from-yellow-900/30 to-orange-900/30 border border-yellow-600 p-5 rounded-lg">
-                            <h3 class="text-xl font-semibold mb-3 text-yellow-300">💡 Allgemeine Tipps für alle Plattformen</h3>
+                        <div class="bg-gray-800/50 border border-gray-600 p-5 rounded-lg">
+                            <h3 class="text-xl font-semibold mb-3 border-b border-yellow-500 pb-2">
+                                <span class="text-yellow-400">💡 Allgemeine Tipps für alle Plattformen</span>
+                            </h3>
                             <div class="space-y-3 text-gray-300 text-sm">
                                 <div>
                                     <p class="font-semibold mb-2">✅ Do's (Das solltest du tun):</p>
@@ -1076,9 +1078,9 @@
                                     </ul>
                                 </div>
 
-                                <div class="bg-blue-900/30 border border-blue-600 p-3 rounded mt-4">
-                                    <p class="text-blue-200 text-sm">
-                                        <strong>💼 Professioneller Tipp:</strong> Erstelle dir eine Checklist mit den wichtigsten Regeln 
+                                <div class="bg-gray-700/30 border-l-4 border-blue-500 p-3 rounded mt-4">
+                                    <p class="text-gray-300 text-sm">
+                                        <strong class="text-blue-400">💼 Professioneller Tipp:</strong> Erstelle dir eine Checklist mit den wichtigsten Regeln 
                                         und hänge sie neben deinen Monitor. So hast du sie immer im Blick und vermeidest versehentliche Verstöße!
                                     </p>
                                 </div>
@@ -1086,16 +1088,16 @@
                         </div>
 
                         <!-- Finale Warnung -->
-                        <div class="bg-red-900/40 border-2 border-red-500 p-6 rounded-lg">
-                            <h3 class="text-xl font-bold mb-3 text-red-300 flex items-center gap-2">
-                                🚨 ACHTUNG - Das kann deine Karriere beenden!
+                        <div class="bg-gray-800/50 border-l-4 border-red-500 p-6 rounded-lg">
+                            <h3 class="text-xl font-bold mb-3 flex items-center gap-2">
+                                <span class="text-red-400">🚨 ACHTUNG - Das kann deine Karriere beenden!</span>
                             </h3>
-                            <p class="text-gray-200 mb-3">
+                            <p class="text-gray-300 mb-3">
                                 Ein einziger schwerer Verstoß kann ausreichen, um permanent von einer Plattform gebannt zu werden. 
                                 Es gibt Fälle von Streamern, die ihre gesamte Community und jahrelange Arbeit verloren haben, 
                                 weil sie die Regeln nicht ernst genommen haben.
                             </p>
-                            <p class="text-gray-200 font-semibold">
+                            <p class="text-gray-300 font-semibold">
                                 Nimm dir die Zeit, die Richtlinien zu lesen. Es lohnt sich! 
                             </p>
                         </div>
@@ -1164,27 +1166,28 @@
                                 </a>
                             </div>
 
-                            <!-- Source Record -->
+                            <!-- Aitum Vertical -->
                             <div class="bg-gray-800/50 border border-gray-600 p-4 rounded-lg">
-                                <h4 class="font-semibold mb-2 text-gray-200">Source Record</h4>
+                                <h4 class="font-semibold mb-2 text-gray-200">Aitum Vertical</h4>
                                 <p class="text-sm text-gray-300 mb-3">
-                                    Nehme einzelne Quellen separat auf (z.B. nur Webcam oder nur Game).
+                                    Perfekt für vertikale Streams! Erstelle TikTok, YouTube Shorts und Instagram Reels direkt aus OBS.
                                 </p>
                                 <ul class="text-xs text-gray-300 space-y-1 list-disc list-inside mb-3">
-                                    <li>Separate Aufnahmen</li>
-                                    <li>Perfekt für Editing</li>
-                                    <li>Multi-Track Recording</li>
+                                    <li>9:16 Vertical Streaming</li>
+                                    <li>Perfekt für Shorts & Reels</li>
+                                    <li>Multi-Platform Support</li>
+                                    <li>Einfache Einrichtung</li>
                                 </ul>
-                                <a href="https://obsproject.com/forum/resources/source-record.1285/" target="_blank" rel="noopener noreferrer"
+                                <a href="https://aitum.tv/vertical" target="_blank" rel="noopener noreferrer"
                                    class="inline-block px-3 py-1.5 bg-gray-600 hover:bg-gray-500 rounded text-xs transition">
-                                    → OBS Forum
+                                    → aitum.tv/vertical
                                 </a>
                             </div>
                         </div>
 
-                        <div class="bg-blue-900/20 border border-blue-600 p-4 rounded mt-4">
-                            <p class="text-blue-200 text-sm">
-                                <strong>⚠️ Plugin-Installation:</strong> Plugins müssen manuell in den OBS-Ordner kopiert werden. 
+                        <div class="bg-gray-700/30 border-l-4 border-blue-500 p-4 rounded mt-4">
+                            <p class="text-gray-300 text-sm">
+                                <strong class="text-blue-400">⚠️ Plugin-Installation:</strong> Plugins müssen manuell in den OBS-Ordner kopiert werden. 
                                 Lies immer die Installations-Anleitung des jeweiligen Plugins! Mit portable_mode bleiben auch 
                                 Plugins in deinem OBS-Ordner.
                             </p>
@@ -1202,7 +1205,7 @@
                             deine komplette OBS-Konfiguration sichern - mit Datum im Dateinamen!
                         </p>
 
-                        <div class="bg-green-900/20 border border-green-600 p-4 rounded mb-4">
+                        <div class="bg-gray-800/50 border-l-4 border-green-500 p-4 rounded mb-4">
                             <h4 class="font-semibold text-green-400 mb-2">✨ Was die Scripts machen:</h4>
                             <ul class="text-sm text-gray-300 space-y-1 list-disc list-inside ml-4">
                                 <li>Finden automatisch deine OBS portable_mode Installation</li>
@@ -1259,7 +1262,7 @@
                             </div>
                         </div>
 
-                        <div class="bg-red-900/20 border border-red-600 p-4 rounded mb-4">
+                        <div class="bg-gray-800/50 border-l-4 border-red-500 p-4 rounded mb-4">
                             <h4 class="font-semibold text-red-400 mb-2">⚠️ WICHTIG: Pfad anpassen!</h4>
                             <p class="text-sm text-gray-300 mb-3">
                                 Dein OBS kann auf einer anderen Festplatte sein! Du <strong>musst den Pfad im Script anpassen</strong>:
@@ -1300,7 +1303,7 @@
                             </div>
                         </div>
 
-                        <div class="bg-yellow-900/20 border border-yellow-600 p-4 rounded mb-4">
+                        <div class="bg-gray-800/50 border-l-4 border-yellow-500 p-4 rounded mb-4">
                             <h4 class="font-semibold text-yellow-400 mb-2">📋 Nach der Anpassung - Nutzung:</h4>
                             <ol class="text-xs text-gray-300 space-y-1 list-decimal list-inside ml-4">
                                 <li><strong>Windows .bat:</strong> Einfach doppelklicken</li>
@@ -1309,7 +1312,7 @@
                             </ol>
                         </div>
 
-                        <div class="bg-blue-900/20 border border-blue-600 p-4 rounded">
+                        <div class="bg-gray-800/50 border-l-4 border-blue-500 p-4 rounded">
                             <h4 class="font-semibold text-blue-400 mb-2">💡 Wann solltest du Backups machen?</h4>
                             <ul class="text-xs text-gray-300 space-y-1 list-disc list-inside ml-4">
                                 <li><strong>VOR jedem OBS-Update</strong> - Falls das Update Probleme macht</li>

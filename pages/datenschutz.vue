@@ -130,10 +130,11 @@
                         Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:
                     </p>
                     <p class="text-gray-300 mb-4">
-                        [DEIN NAME / FIRMENNAME]<br>
-                        [DEINE STRASSE]<br>
-                        [PLZ ORT]<br>
-                        E-Mail: [DEINE E-MAIL]
+                        Arthur Kielbasa<br>
+                        Blackeyestudio<br>
+                        Richard-Wagner-Str. 38<br>
+                        46236 Bottrop<br>
+                        E-Mail: <a href="mailto:kontakt@blackeyestudio.de" class="text-blue-400 hover:text-blue-300 underline">kontakt@blackeyestudio.de</a>
                     </p>
                 </section>
 
@@ -392,13 +393,6 @@
                     </p>
                 </section>
 
-                <section class="bg-yellow-900/20 border border-yellow-600 p-4 rounded">
-                    <p class="text-yellow-200 text-sm">
-                        <strong>⚠️ WICHTIG:</strong> Bitte ersetze alle Platzhalter in [ECKIGEN KLAMMERN] mit deinen echten Daten!
-                        Diese Datenschutzerklärung ist eine Basisversion. Abhängig von weiteren Tools die du nutzt, musst du sie 
-                        eventuell erweitern.
-                    </p>
-                </section>
             </div>
 
             <div class="mt-8">

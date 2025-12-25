@@ -11,25 +11,26 @@
                     <h2 class="text-2xl font-semibold mb-4">Angaben gemäß § 5 TMG</h2>
                     <p class="text-gray-300 mb-2">
                         <strong>Betreiber:</strong><br>
-                        [DEIN NAME / FIRMENNAME]<br>
-                        [DEINE STRASSE UND HAUSNUMMER]<br>
-                        [DEINE PLZ UND STADT]
+                        Arthur Kielbasa<br>
+                        Blackeyestudio<br>
+                        Richard-Wagner-Str. 38<br>
+                        46236 Bottrop
                     </p>
                 </section>
 
                 <section>
                     <h2 class="text-2xl font-semibold mb-4">Kontakt</h2>
                     <p class="text-gray-300">
-                        <strong>E-Mail:</strong> [DEINE E-MAIL]<br>
-                        <strong>Telefon:</strong> [OPTIONAL - DEINE TELEFONNUMMER]
+                        <strong>E-Mail:</strong> <a href="mailto:kontakt@blackeyestudio.de" class="text-blue-400 hover:text-blue-300 underline">kontakt@blackeyestudio.de</a>
                     </p>
                 </section>
 
                 <section>
                     <h2 class="text-2xl font-semibold mb-4">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
                     <p class="text-gray-300">
-                        [DEIN NAME]<br>
-                        [DEINE ADRESSE]
+                        Arthur Kielbasa<br>
+                        Richard-Wagner-Str. 38<br>
+                        46236 Bottrop
                     </p>
                 </section>
 
@@ -95,11 +96,6 @@
                     </p>
                 </section>
 
-                <section class="bg-yellow-900/20 border border-yellow-600 p-4 rounded">
-                    <p class="text-yellow-200 text-sm">
-                        <strong>⚠️ WICHTIG:</strong> Bitte ersetze alle Platzhalter in [ECKIGEN KLAMMERN] mit deinen echten Daten!
-                    </p>
-                </section>
             </div>
 
             <div class="mt-8">
