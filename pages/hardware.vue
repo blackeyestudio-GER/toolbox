@@ -4,6 +4,9 @@
             <!-- Navigation -->
             <AppNavigation />
 
+            <!-- Breadcrumbs -->
+            <Breadcrumbs />
+
             <h1 class="text-2xl md:text-4xl font-bold mb-4">Streaming Hardware Guide</h1>
             <p class="text-sm md:text-base text-gray-400 mb-4">
                 Dein Upgrade-Pfad von den ersten Schritten bis zum professionellen Setup. 
@@ -1124,6 +1127,9 @@
                 </NuxtLink>
             </div>
         </div>
+        
+        <!-- Scroll to Top Button -->
+        <ScrollToTop />
     </div>
 </template>
 

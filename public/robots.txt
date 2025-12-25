@@ -1,0 +1,22 @@
+# robots.txt für blackeyestudio.de
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://blackeyestudio.de/sitemap.xml
+
+# Disallow admin/api areas (if any)
+Disallow: /api/
+Disallow: /_nuxt/
+
+# Google AdSense Bot
+User-agent: Mediapartners-Google
+Allow: /
+
+# Allow all bots to crawl
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+

@@ -1,3 +1,61 @@
+/* Dark Mode (Default) */
 body {
     @apply bg-night text-dim-gray;
+}
+
+/* Light Mode */
+.light body {
+    @apply bg-gray-50 text-gray-800;
+}
+
+.light .bg-night {
+    @apply bg-gray-50;
+}
+
+.light .bg-eerie-black {
+    @apply bg-white border-gray-200;
+}
+
+.light .bg-gray-800\/40 {
+    @apply bg-white border-gray-200;
+}
+
+.light .bg-gray-800\/50 {
+    @apply bg-white border-gray-200;
+}
+
+.light .bg-gray-800\/60 {
+    @apply bg-gray-100 border-gray-200;
+}
+
+.light .bg-gray-700\/30 {
+    @apply bg-gray-100 border-gray-200;
+}
+
+.light .text-white {
+    @apply text-gray-900;
+}
+
+.light .text-gray-300 {
+    @apply text-gray-700;
+}
+
+.light .text-gray-400 {
+    @apply text-gray-600;
+}
+
+.light .border-gray-600 {
+    @apply border-gray-300;
+}
+
+.light .border-gray-700 {
+    @apply border-gray-300;
+}
+
+.light .border-gray-500 {
+    @apply border-gray-400;
+}
+
+.light .hover\:border-gray-500:hover {
+    @apply border-gray-400;
 }

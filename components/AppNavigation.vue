@@ -1,6 +1,6 @@
 <template>
     <nav class="w-full mb-6 md:mb-8 bg-eerie-black rounded-lg p-3 md:p-4">
-        <div class="flex justify-center gap-4 md:gap-8 text-sm md:text-base flex-wrap">
+        <div class="flex justify-center gap-3 md:gap-6 text-xs md:text-base flex-wrap">
             <NuxtLink 
                 to="/" 
                 :class="isActive('/') ? 'text-white font-semibold' : 'text-gray-300 hover:text-blue-400'"
@@ -18,6 +18,18 @@
                 :class="isActive('/hardware') ? 'text-white font-semibold' : 'text-gray-300 hover:text-blue-400'"
                 class="transition font-medium">
                 🔧 Hardware
+            </NuxtLink>
+            <NuxtLink 
+                to="/software" 
+                :class="isActive('/software') ? 'text-white font-semibold' : 'text-gray-300 hover:text-blue-400'"
+                class="transition font-medium">
+                💻 Software
+            </NuxtLink>
+            <NuxtLink 
+                to="/glossar" 
+                :class="isActive('/glossar') ? 'text-white font-semibold' : 'text-gray-300 hover:text-blue-400'"
+                class="transition font-medium">
+                📚 Glossar
             </NuxtLink>
         </div>
     </nav>

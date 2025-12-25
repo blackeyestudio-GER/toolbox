@@ -3,6 +3,7 @@ const colors = require('tailwindcss/colors')
 /** @type {import('tailwindcss').Config} */
 /** https://coolors.co/3aa1bd-586667-1c1e1e-111212-1e4545 */
 export default {
+  darkMode: 'class',
   content: [
     "./components/**/*.{js,vue,ts}",
     "./layouts/**/*.vue",
@@ -10,6 +11,7 @@ export default {
     "./plugins/**/*.{js,ts}",
     "./app.vue",
     "./error.vue",
+    "./composables/**/*.{js,ts}",
   ],
   theme: {
     colors: {
