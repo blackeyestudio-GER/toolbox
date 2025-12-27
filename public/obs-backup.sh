@@ -1,8 +1,9 @@
 #!/bin/bash
 
 # ====================================================================
-# OBS Studio Portable Backup Script (Linux/Mac)
-# Erstellt ein komprimiertes Backup deiner OBS-Installation
+# OBS Studio Backup Script (Linux/Mac)
+# Erstellt ein komprimiertes Backup deiner GESAMTEN OBS-Installation
+# (Einstellungen, Szenen, Plugins, etc.)
 # ====================================================================
 #
 # WICHTIG: PASSE DIESEN PFAD AN!
@@ -76,8 +77,10 @@ echo "[INFO] Starte Backup..."
 echo "[INFO] Quelle: $OBS_PATH"
 echo "[INFO] Ziel: $BACKUP_FILE"
 echo ""
+echo "[INFO] Dies kann einige Minuten dauern, bitte warten..."
+echo ""
 
-# Erstelle komprimiertes Backup
+# Erstelle komprimiertes Backup des gesamten OBS-Ordners
 tar -czf "$BACKUP_FILE" -C "$(dirname "$OBS_PATH")" "$(basename "$OBS_PATH")"
 
 if [ $? -eq 0 ]; then

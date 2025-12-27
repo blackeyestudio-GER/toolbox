@@ -1,6 +1,7 @@
 # ====================================================================
-# OBS Studio Portable Backup Script (PowerShell)
-# Erstellt ein komprimiertes Backup deiner OBS-Installation
+# OBS Studio Backup Script (PowerShell)
+# Erstellt ein komprimiertes Backup deiner GESAMTEN OBS-Installation
+# (Einstellungen, Szenen, Plugins, etc.)
 # ====================================================================
 #
 # WICHTIG: PASSE DIESEN PFAD AN!
@@ -54,22 +55,17 @@ if (!(Test-Path $ObsPath)) {
     Write-Host "Bitte passe den ObsPath am Anfang dieser Datei an!" -ForegroundColor Yellow
     Write-Host "Rechtsklick auf diese Datei -> Bearbeiten mit -> Editor/Notepad++"
     Write-Host ""
-    Read-Host "Druecke Enter zum Beenden"
-    exit 1
-}
-
-# Pruefe ob portable_mode Ordner existiert
-if (!(Test-Path "$ObsPath\portable_mode")) {
-    Write-Host "[FEHLER] Kein 'portable_mode' Ordner gefunden in: $ObsPath" -ForegroundColor Red
-    Write-Host ""
-    Write-Host "Hast du OBS portabel gemacht?" -ForegroundColor Yellow
-    Write-Host "Erstelle einen Ordner namens 'portable_mode' im OBS-Verzeichnis."
+    Write-Host "Haeufige Pfade:" -ForegroundColor Yellow
+    Write-Host "  - C:\Program Files\obs-studio"
+    Write-Host "  - C:\Program Files (x86)\Steam\steamapps\common\OBS Studio"
+    Write-Host "  - D:\Steam\steamapps\common\OBS Studio"
     Write-Host ""
     Read-Host "Druecke Enter zum Beenden"
     exit 1
 }
 
 Write-Host "[INFO] OBS gefunden: $ObsPath" -ForegroundColor Green
+Write-Host "[INFO] Der gesamte OBS-Ordner wird gebackupt" -ForegroundColor Green
 
 # Erstelle Backup-Verzeichnis falls nicht vorhanden
 if (!(Test-Path $BackupDir)) {
@@ -82,13 +78,15 @@ $BackupFile = "$BackupDir\OBS-Backup_$BackupDate.zip"
 
 Write-Host ""
 Write-Host "[INFO] Starte Backup..."
-Write-Host "[INFO] Quelle: $ObsPath\portable_mode"
+Write-Host "[INFO] Quelle: $ObsPath"
 Write-Host "[INFO] Ziel: $BackupFile"
+Write-Host ""
+Write-Host "[INFO] Dies kann einige Minuten dauern, bitte warten..." -ForegroundColor Yellow
 Write-Host ""
 
 try {
-    # Erstelle ZIP-Backup (PowerShell 5.0+)
-    Compress-Archive -Path "$ObsPath\portable_mode\*" -DestinationPath $BackupFile -CompressionLevel Optimal -Force
+    # Erstelle ZIP-Backup des gesamten OBS-Ordners (PowerShell 5.0+)
+    Compress-Archive -Path "$ObsPath\*" -DestinationPath $BackupFile -CompressionLevel Optimal -Force
     
     Write-Host ""
     Write-Host "========================================"

@@ -2,8 +2,9 @@
 setlocal enabledelayedexpansion
 
 :: ====================================================================
-:: OBS Studio Portable Backup Script
-:: Erstellt ein komprimiertes Backup deiner OBS-Installation
+:: OBS Studio Backup Script
+:: Erstellt ein komprimiertes Backup deiner GESAMTEN OBS-Installation
+:: (Einstellungen, Szenen, Plugins, etc.)
 :: ====================================================================
 ::
 :: WICHTIG: PASSE DIESE PFADE AN!
@@ -66,28 +67,24 @@ if not exist "%SEVENZIP_PATH%" (
 )
 
 :: Pruefe ob OBS-Pfad existiert
-if not exist "%OBS_PATH%" (
+if not exist "%OBS_PATH%\." (
     echo [FEHLER] OBS-Pfad nicht gefunden: %OBS_PATH%
     echo.
     echo Bitte passe den OBS_PATH am Anfang dieser Datei an!
     echo Rechtsklick auf diese Datei -^> Bearbeiten
     echo.
-    pause
-    exit /b 1
-)
-
-:: Pruefe ob portable_mode Ordner existiert
-if not exist "%OBS_PATH%\portable_mode" (
-    echo [FEHLER] Kein "portable_mode" Ordner gefunden in: %OBS_PATH%
-    echo.
-    echo Hast du OBS portabel gemacht?
-    echo Erstelle einen Ordner namens "portable_mode" im OBS-Verzeichnis.
+    echo Haeufige Pfade:
+    echo   - C:\Program Files\obs-studio
+    echo   - C:\Program Files (x86)\Steam\steamapps\common\OBS Studio
+    echo   - D:\Steam\steamapps\common\OBS Studio
     echo.
     pause
     exit /b 1
 )
 
 echo [INFO] OBS gefunden: %OBS_PATH%
+echo [INFO] Der gesamte OBS-Ordner wird gebackupt (nicht nur portable_mode)
+echo.
 
 :: Erstelle Backup-Verzeichnis falls nicht vorhanden
 if not exist "%BACKUP_DIR%" (
@@ -100,12 +97,14 @@ set "BACKUP_FILE=%BACKUP_DIR%\OBS-Backup_%BACKUP_DATE%.7z"
 
 echo.
 echo [INFO] Starte Backup...
-echo [INFO] Quelle: %OBS_PATH%\portable_mode
+echo [INFO] Quelle: %OBS_PATH%
 echo [INFO] Ziel: %BACKUP_FILE%
 echo.
+echo [INFO] Dies kann einige Minuten dauern, bitte warten...
+echo.
 
-:: Erstelle komprimiertes Backup
-"%SEVENZIP_PATH%" a -t7z -mx=9 "%BACKUP_FILE%" "%OBS_PATH%\portable_mode\*" -r
+:: Erstelle komprimiertes Backup des gesamten OBS-Ordners
+"%SEVENZIP_PATH%" a -t7z -mx=9 "%BACKUP_FILE%" "%OBS_PATH%\*" -r
 
 if %ERRORLEVEL% EQU 0 (
     echo.
