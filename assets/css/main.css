@@ -59,3 +59,124 @@ body {
 .light .hover\:border-gray-500:hover {
     @apply border-gray-400;
 }
+
+/* Theme Toggle Button - Light Mode */
+.light .theme-toggle {
+    @apply bg-white hover:bg-gray-100 text-gray-900 border border-gray-300;
+}
+
+/* Input Fields - Light Mode */
+.light input[type="text"],
+.light input[type="number"],
+.light input[type="email"],
+.light input[type="password"],
+.light input[type="search"],
+.light textarea,
+.light select {
+    @apply bg-white text-gray-900 border-gray-300;
+}
+
+/* Override specific background classes on inputs */
+.light input.bg-eerie-black,
+.light input.bg-gray-700,
+.light input.bg-gray-800,
+.light textarea.bg-eerie-black,
+.light textarea.bg-gray-700,
+.light select.bg-eerie-black,
+.light select.bg-gray-700 {
+    @apply bg-white;
+}
+
+.light input::placeholder,
+.light textarea::placeholder {
+    @apply text-gray-500;
+}
+
+.light select option {
+    @apply bg-white text-gray-900;
+}
+
+/* Buttons - Light Mode */
+.light button {
+    color: inherit;
+}
+
+.light button.bg-gray-600,
+.light button.bg-gray-700,
+.light button.bg-gray-800,
+.light a.bg-gray-600,
+.light a.bg-gray-700,
+.light a.bg-gray-800 {
+    @apply bg-gray-200 hover:bg-gray-300 text-gray-900;
+}
+
+.light button.bg-eerie-black,
+.light a.bg-eerie-black {
+    @apply bg-white hover:bg-gray-100 text-gray-900;
+}
+
+/* Links - Light Mode */
+.light a {
+    color: inherit;
+}
+
+.light a.text-white {
+    @apply text-gray-900;
+}
+
+.light a.text-gray-300 {
+    @apply text-gray-700;
+}
+
+.light a.text-gray-400 {
+    @apply text-gray-600;
+}
+
+/* Tab Navigation - Light Mode */
+.light button.hover\:bg-gray-800:hover {
+    @apply bg-gray-200;
+}
+
+.light button.text-gray-400 {
+    @apply text-gray-600;
+}
+
+.light button.hover\:text-white:hover {
+    @apply text-gray-900;
+}
+
+/* NuxtLink Buttons - Light Mode */
+.light a.bg-gray-600:hover,
+.light button.bg-gray-600:hover {
+    @apply bg-gray-300;
+}
+
+/* Glossary Specific - Light Mode */
+/* Alphabet Navigation Buttons */
+.light button.bg-gray-700,
+.light button.hover\:bg-gray-600:hover {
+    @apply bg-gray-200 hover:bg-gray-300 text-gray-900;
+}
+
+/* Tag Badges in Glossary */
+.light .bg-blue-600\/30 {
+    @apply bg-blue-100;
+}
+
+.light .text-blue-300 {
+    @apply text-blue-700;
+}
+
+/* Glossary Headings */
+.light .text-blue-400 {
+    @apply text-blue-600;
+}
+
+/* Breadcrumbs - Light Mode */
+.light nav[aria-label="Breadcrumb"] .text-gray-600 {
+    @apply text-gray-500;
+}
+
+.light nav[aria-label="Breadcrumb"] .hover\:text-white:hover {
+    @apply text-gray-900;
+}

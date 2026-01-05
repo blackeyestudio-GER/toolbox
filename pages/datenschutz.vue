@@ -1,9 +1,6 @@
 <template>
     <div class="min-h-screen bg-night text-white p-4">
         <div class="max-w-4xl mx-auto">
-            <!-- Navigation -->
-            <AppNavigation />
-            
             <h1 class="text-4xl font-bold mb-8">Datenschutzerklärung</h1>
             
             <!-- Cookie Settings Link -->

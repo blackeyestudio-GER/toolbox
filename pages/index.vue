@@ -2,11 +2,6 @@
     <div class="min-h-screen flex bg-night text-white p-4">
         <!-- Main content taking most of the width -->
         <div class="flex-1 flex flex-col items-center">
-            <!-- Navigation -->
-            <div class="w-full max-w-5xl">
-                <AppNavigation />
-            </div>
-            
             <!-- Header with Logo and Title -->
             <div class="w-full max-w-5xl mb-8">
                 <div class="flex items-center justify-center gap-6 mb-6">

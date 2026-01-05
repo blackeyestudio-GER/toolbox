@@ -1,9 +1,6 @@
 <template>
     <div class="min-h-screen bg-night text-white p-4">
         <div class="max-w-4xl mx-auto">
-            <!-- Navigation -->
-            <AppNavigation />
-            
             <h1 class="text-4xl font-bold mb-8">Impressum</h1>
             
             <div class="bg-eerie-black p-6 rounded-lg space-y-6">

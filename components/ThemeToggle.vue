@@ -1,7 +1,7 @@
 <template>
     <button
         @click="toggleTheme"
-        class="fixed top-6 right-6 z-50 p-3 bg-gray-800 hover:bg-gray-700 dark:bg-gray-700 dark:hover:bg-gray-600 text-white rounded-full shadow-lg transition-all duration-300 hover:scale-110"
+        class="theme-toggle fixed top-6 right-6 z-50 p-3 bg-gray-800 hover:bg-gray-700 text-white rounded-full shadow-lg transition-all duration-300 hover:scale-110"
         aria-label="Theme wechseln"
         title="Theme wechseln"
     >

@@ -1,9 +1,6 @@
 <template>
     <div class="min-h-screen bg-night text-white p-4">
         <div class="max-w-6xl mx-auto">
-            <!-- Navigation -->
-            <AppNavigation />
-
             <!-- Breadcrumbs -->
             <Breadcrumbs />
 
