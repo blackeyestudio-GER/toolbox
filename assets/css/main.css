@@ -173,8 +173,8 @@ body {
 }
 
 /* Breadcrumbs - Light Mode */
-.light nav[aria-label="Breadcrumb"] .text-gray-600 {
-    @apply text-gray-500;
+.light nav[aria-label="Breadcrumb"] span.text-gray-600 {
+    color: rgb(107 114 128); /* text-gray-500 */
 }
 
 .light nav[aria-label="Breadcrumb"] .hover\:text-white:hover {
