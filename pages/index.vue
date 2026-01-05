@@ -80,11 +80,11 @@
                     class="p-4 transition duration-200 text-white border-4 relative"
                 >
                     <!-- Coming Soon Badge -->
-                    <div v-if="tool.status === 'todo'" class="absolute top-2 right-2 bg-yellow-500 text-black px-2 py-1 rounded text-xs font-bold">
+                    <div v-if="tool.status === 'todo'" class="absolute top-2 right-2 bg-yellow-500 text-black px-2 py-1 rounded text-xs font-bold z-10">
                         Bald verfügbar
                     </div>
                     
-                    <h2 class="text-xl font-bold mb-1">{{ tool.title }}</h2>
+                    <h2 class="text-xl font-bold mb-1" :class="tool.status === 'todo' ? 'pr-24' : ''">{{ tool.title }}</h2>
                     <p class="text-sm mb-2">{{ tool.description }}</p>
                     <div class="flex flex-wrap gap-1">
                         <span
@@ -308,6 +308,78 @@ const tools = [
         tags: ['Grafik', 'Ki'],
         link: 'https://sora.chatgpt.com/explore',
         category: 'Grafik',
+        status: 'done',
+    },
+    {
+        title: 'Affinity',
+        description: 'Professionelle Bildbearbeitungs-Suite mit Affinity Photo, Designer und Publisher. Einmalige Zahlung statt Abo-Modell - perfekte Alternative zu Adobe Photoshop und Illustrator für professionelle Grafik- und Design-Arbeiten.',
+        tags: ['Grafik'],
+        link: 'https://affinity.serif.com/',
+        category: 'Grafik',
+        status: 'done',
+    },
+    {
+        title: 'DaVinci Resolve',
+        description: 'Professionelle Video-Editing-Software, die in Hollywood-Produktionen verwendet wird - komplett kostenlos. Inkl. Color Grading, Audio-Editing und VFX. Meine #1 Empfehlung für Video-Editing!',
+        tags: ['Utility', 'Grafik'],
+        link: 'https://www.blackmagicdesign.com/de/products/davinciresolve',
+        category: 'Utility',
+        status: 'done',
+    },
+    {
+        title: 'CapCut',
+        description: 'Perfekt für Anfänger und Social Media Content (TikTok, Reels, Shorts). Sehr einfach zu bedienen, viele Templates und KI-Features. Optimal für vertikale Videos.',
+        tags: ['Utility', 'Grafik'],
+        link: 'https://www.capcut.com/',
+        category: 'Utility',
+        status: 'done',
+    },
+    {
+        title: 'Adobe Photoshop Elements',
+        description: 'Die oft vergessene Alternative! Einmalzahlung statt Abo. Perfekt für Thumbnails, Overlays und Social Media Grafiken. Circa 60€ für 3 Jahre Nutzung - keine Abo-Falle!',
+        tags: ['Grafik'],
+        link: 'https://www.adobe.com/de/products/photoshop-elements.html',
+        category: 'Grafik',
+        status: 'done',
+    },
+    {
+        title: 'GIMP',
+        description: 'Die kostenlose Photoshop-Alternative. Open Source Bildbearbeitung mit fast allen Features. Perfekt wenn du kein Geld ausgeben willst - sehr mächtig und für Windows, Mac & Linux.',
+        tags: ['Grafik'],
+        link: 'https://www.gimp.org/',
+        category: 'Grafik',
+        status: 'done',
+    },
+    {
+        title: 'Canva',
+        description: 'Für Nicht-Designer. Browser-basiertes Design-Tool mit tausenden Templates. Perfekt für schnelle Social Media Posts, Thumbnails und Grafiken ohne Vorkenntnisse.',
+        tags: ['Grafik'],
+        link: 'https://www.canva.com/',
+        category: 'Grafik',
+        status: 'done',
+    },
+    {
+        title: 'OBS Studio',
+        description: 'Der Standard! Open Source Streaming Software. Von 99% aller professionellen Streamer verwendet. Unbegrenzte Möglichkeiten mit Plugins. Komplett kostenlos und sehr stabil.',
+        tags: ['Utility', 'Stream-Interaktion'],
+        link: 'https://obsproject.com/',
+        category: 'Utility',
+        status: 'done',
+    },
+    {
+        title: 'Audacity',
+        description: 'Klassiker für Audio-Bearbeitung. Perfekt für Podcasts, Voiceovers und Audio-Cleaning. 100% kostenlos & Open Source mit Noise Reduction, Compressor und EQ.',
+        tags: ['Audio'],
+        link: 'https://www.audacityteam.org/',
+        category: 'Audio',
+        status: 'done',
+    },
+    {
+        title: 'REAPER',
+        description: 'Professionelle DAW (Digital Audio Workstation). Perfekt für Musik-Produktion und fortgeschrittenes Audio-Editing. Sehr günstig (60$ Lizenz, unbegrenzt nutzbar) mit 60 Tagen kostenloser Trial.',
+        tags: ['Audio'],
+        link: 'https://www.reaper.fm/',
+        category: 'Audio',
         status: 'done',
     },
     {

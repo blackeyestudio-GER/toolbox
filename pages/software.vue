@@ -224,6 +224,40 @@
                                 Kostenlos starten
                             </a>
                         </div>
+
+                        <!-- Affinity -->
+                        <div class="bg-eerie-black p-4 md:p-5 rounded-lg border border-gray-700 hover:border-gray-500 transition">
+                            <div class="flex justify-between items-start mb-3">
+                                <h3 class="text-lg md:text-xl font-semibold">Affinity</h3>
+                                <span class="bg-yellow-600 text-black px-3 py-1 rounded text-sm font-bold">~60€</span>
+                            </div>
+                            <p class="text-gray-300 mb-4 text-sm leading-relaxed">
+                                <strong class="text-white">Professionelle Adobe-Alternative!</strong> Affinity Photo, Designer und Publisher 
+                                als komplette Design-Suite. Einmalzahlung statt Abo - perfekt für professionelle Grafik- und Design-Arbeiten.
+                            </p>
+                            <div class="space-y-2 mb-4">
+                                <h4 class="text-sm font-semibold text-gray-200">✅ Vorteile:</h4>
+                                <ul class="text-sm text-gray-300 space-y-1 list-disc list-inside ml-2">
+                                    <li><strong>Keine Abo-Falle!</strong> Einmalzahlung pro App (~60€)</li>
+                                    <li>Professionelle Features (wie Photoshop/Illustrator)</li>
+                                    <li>Sehr gute Performance</li>
+                                    <li>Für Windows, Mac & iPad</li>
+                                    <li>Regelmäßige Updates inklusive</li>
+                                </ul>
+                            </div>
+                            <div class="space-y-2 mb-4">
+                                <h4 class="text-sm font-semibold text-gray-200">📊 Vergleich zu Adobe:</h4>
+                                <ul class="text-sm text-gray-300 space-y-1 list-disc list-inside ml-2">
+                                    <li>Adobe CC: 60€/Monat = 720€/Jahr</li>
+                                    <li>Affinity Suite: ~180€ einmalig (Photo + Designer + Publisher)</li>
+                                    <li><strong>Nach 3 Monaten bereits günstiger als Adobe!</strong></li>
+                                </ul>
+                            </div>
+                            <a href="https://affinity.serif.com/" target="_blank" rel="noopener noreferrer"
+                               class="block text-center px-4 py-2 bg-gray-600 hover:bg-gray-500 rounded text-sm transition">
+                                Zur Website
+                            </a>
+                        </div>
                     </div>
                 </section>
 

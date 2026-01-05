@@ -1,178 +1,699 @@
+/* CSS Custom Properties - Theme System */
+
 /* Dark Mode (Default) */
-body {
-    @apply bg-night text-dim-gray;
+:root {
+    /* Background Colors */
+    --bg-primary: #111212; /* night */
+    --bg-secondary: #1C1E1E; /* eerie-black */
+    --bg-tertiary: rgba(31, 41, 55, 0.4); /* gray-800/40 */
+    --bg-quaternary: rgba(31, 41, 55, 0.5); /* gray-800/50 */
+    --bg-quinary: rgba(31, 41, 55, 0.6); /* gray-800/60 */
+    --bg-highlight: rgba(55, 65, 81, 0.3); /* gray-700/30 */
+    --bg-code: #111827; /* gray-900 */
+    
+    /* Text Colors */
+    --text-primary: #869698; /* dim-gray */
+    --text-secondary: #ffffff;
+    --text-tertiary: #d1d5db; /* gray-300 */
+    --text-quaternary: #9ca3af; /* gray-400 */
+    
+    /* Border Colors */
+    --border-primary: #4b5563; /* gray-600 */
+    --border-secondary: #374151; /* gray-700 */
+    --border-tertiary: #6b7280; /* gray-500 */
+    
+    /* Button Colors - Dark Mode (Saturated Colors, White Text) */
+    --btn-primary-bg: #2563eb; /* blue-600 */
+    --btn-primary-hover: #1d4ed8; /* blue-700 */
+    --btn-primary-text: #ffffff;
+    
+    --btn-secondary-bg: #4b5563; /* gray-600 */
+    --btn-secondary-hover: #374151; /* gray-700 */
+    --btn-secondary-text: #ffffff;
+    
+    --btn-danger-bg: #dc2626; /* red-600 */
+    --btn-danger-hover: #b91c1c; /* red-700 */
+    --btn-danger-text: #ffffff;
+    
+    /* Badge Colors - Dark Mode */
+    --badge-green-bg: #16a34a; /* green-600 */
+    --badge-green-text: #ffffff;
+    --badge-yellow-bg: #ca8a04; /* yellow-600 */
+    --badge-yellow-text: #ffffff;
+    --badge-blue-bg: #2563eb; /* blue-600 */
+    --badge-blue-text: #ffffff;
+    --badge-gray-bg: #4b5563; /* gray-600 */
+    --badge-gray-text: #ffffff;
+    
+    /* Tool Box Colors - Dark Mode */
+    --tool-blue-bg: #2563eb; /* blue-600 */
+    --tool-blue-text: #ffffff;
+    --tool-blue-border: #2563eb;
+    
+    --tool-green-bg: #16a34a; /* green-600 */
+    --tool-green-text: #ffffff;
+    --tool-green-border: #16a34a;
+    
+    --tool-purple-bg: #9333ea; /* purple-600 */
+    --tool-purple-text: #ffffff;
+    --tool-purple-border: #9333ea;
+    
+    --tool-red-bg: #dc2626; /* red-600 */
+    --tool-red-text: #ffffff;
+    --tool-red-border: #dc2626;
+    
+    --tool-yellow-bg: #ca8a04; /* yellow-600 */
+    --tool-yellow-text: #ffffff;
+    --tool-yellow-border: #ca8a04;
+    
+    --tool-pink-bg: #db2777; /* pink-600 */
+    --tool-pink-text: #ffffff;
+    --tool-pink-border: #db2777;
+    
+    --tool-teal-bg: #0d9488; /* teal-600 */
+    --tool-teal-text: #ffffff;
+    --tool-teal-border: #0d9488;
+    
+    --tool-indigo-bg: #4f46e5; /* indigo-600 */
+    --tool-indigo-text: #ffffff;
+    --tool-indigo-border: #4f46e5;
+    
+    --tool-orange-bg: #ea580c; /* orange-600 */
+    --tool-orange-text: #ffffff;
+    --tool-orange-border: #ea580c;
+    
+    --tool-gray-bg: #1f2937; /* gray-800 */
+    --tool-gray-text: #ffffff;
+    --tool-gray-border: #4b5563;
 }
 
 /* Light Mode */
-.light body {
-    @apply bg-gray-50 text-gray-800;
+.light {
+    /* Background Colors */
+    --bg-primary: #f9fafb; /* gray-50 */
+    --bg-secondary: #ffffff; /* white */
+    --bg-tertiary: #ffffff; /* white */
+    --bg-quaternary: #ffffff; /* white */
+    --bg-quinary: #f3f4f6; /* gray-100 */
+    --bg-highlight: #f3f4f6; /* gray-100 */
+    --bg-code: #e5e7eb; /* gray-200 */
+    
+    /* Text Colors */
+    --text-primary: #1f2937; /* gray-800 */
+    --text-secondary: #111827; /* gray-900 */
+    --text-tertiary: #374151; /* gray-700 */
+    --text-quaternary: #4b5563; /* gray-600 */
+    
+    /* Border Colors */
+    --border-primary: #d1d5db; /* gray-300 */
+    --border-secondary: #d1d5db; /* gray-300 */
+    --border-tertiary: #9ca3af; /* gray-400 */
+    
+    /* Button Colors - Light Mode (Pastel Colors, Black Text) */
+    --btn-primary-bg: #bfdbfe; /* blue-300 - pastell */
+    --btn-primary-hover: #93c5fd; /* blue-400 */
+    --btn-primary-text: #1e40af; /* blue-800 - schwarzer Text */
+    
+    --btn-secondary-bg: #e5e7eb; /* gray-200 - pastell */
+    --btn-secondary-hover: #d1d5db; /* gray-300 */
+    --btn-secondary-text: #111827; /* gray-900 - schwarzer Text */
+    
+    --btn-danger-bg: #fca5a5; /* red-300 - pastell */
+    --btn-danger-hover: #f87171; /* red-400 */
+    --btn-danger-text: #991b1b; /* red-800 - schwarzer Text */
+    
+    /* Badge Colors - Light Mode (Pastel, etwas dunkler) */
+    --badge-green-bg: #86efac; /* green-400 - etwas dunkler als green-300 */
+    --badge-green-text: #166534; /* green-800 */
+    --badge-yellow-bg: #facc15; /* yellow-400 - etwas dunkler als yellow-300 */
+    --badge-yellow-text: #854d0e; /* yellow-800 */
+    --badge-blue-bg: #bfdbfe; /* blue-300 */
+    --badge-blue-text: #1e40af; /* blue-800 */
+    --badge-gray-bg: #e5e7eb; /* gray-200 */
+    --badge-gray-text: #111827; /* gray-900 */
+    
+    /* Tool Box Colors - Light Mode (Pastel) */
+    --tool-blue-bg: #bfdbfe; /* blue-300 */
+    --tool-blue-text: #1e40af; /* blue-800 */
+    --tool-blue-border: #93c5fd; /* blue-400 */
+    
+    --tool-green-bg: #86efac; /* green-400 - etwas dunkler als green-300 */
+    --tool-green-text: #166534; /* green-800 */
+    --tool-green-border: #4ade80; /* green-500 */
+    
+    --tool-purple-bg: #d8b4fe; /* purple-300 */
+    --tool-purple-text: #6b21a8; /* purple-800 */
+    --tool-purple-border: #c084fc; /* purple-400 */
+    
+    --tool-red-bg: #fca5a5; /* red-300 */
+    --tool-red-text: #991b1b; /* red-800 */
+    --tool-red-border: #f87171; /* red-400 */
+    
+    --tool-yellow-bg: #facc15; /* yellow-400 - etwas dunkler als yellow-300 */
+    --tool-yellow-text: #854d0e; /* yellow-800 */
+    --tool-yellow-border: #eab308; /* yellow-500 */
+    
+    --tool-pink-bg: #f9a8d4; /* pink-300 */
+    --tool-pink-text: #9f1859; /* pink-800 */
+    --tool-pink-border: #f472b6; /* pink-400 */
+    
+    --tool-teal-bg: #7dd3fc; /* sky-300 */
+    --tool-teal-text: #0c4a6e; /* sky-800 */
+    --tool-teal-border: #38bdf8; /* sky-400 */
+    
+    --tool-indigo-bg: #c7d2fe; /* indigo-300 */
+    --tool-indigo-text: #3730a3; /* indigo-800 */
+    --tool-indigo-border: #a5b4fc; /* indigo-400 */
+    
+    --tool-orange-bg: #fdba74; /* orange-300 */
+    --tool-orange-text: #9a3412; /* orange-800 */
+    --tool-orange-border: #fb923c; /* orange-400 */
+    
+    --tool-gray-bg: #e5e7eb; /* gray-200 */
+    --tool-gray-text: #1f2937; /* gray-800 */
+    --tool-gray-border: #d1d5db; /* gray-300 */
 }
 
-.light .bg-night {
-    @apply bg-gray-50;
+/* Base Styles */
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
 }
 
-.light .bg-eerie-black {
-    @apply bg-white border-gray-200;
+.bg-night {
+    background-color: var(--bg-primary);
 }
 
-.light .bg-gray-800\/40 {
-    @apply bg-white border-gray-200;
+/* Override Tailwind's fixed bg-eerie-black color with CSS variables */
+.bg-eerie-black {
+    background-color: var(--bg-secondary) !important;
+    border-color: var(--border-secondary);
 }
 
-.light .bg-gray-800\/50 {
-    @apply bg-white border-gray-200;
+/* Hardware page boxes with specific border classes */
+.bg-eerie-black.border-gray-700,
+div.bg-eerie-black.border-gray-700 {
+    background-color: var(--bg-secondary) !important;
+    border-color: var(--border-secondary) !important;
 }
 
-.light .bg-gray-800\/60 {
-    @apply bg-gray-100 border-gray-200;
+.bg-eerie-black.hover\:border-gray-500:hover,
+div.bg-eerie-black.hover\:border-gray-500:hover {
+    border-color: var(--border-tertiary) !important;
 }
 
-.light .bg-gray-700\/30 {
-    @apply bg-gray-100 border-gray-200;
+/* Tab Navigation - Hardware Page */
+button.bg-eerie-black {
+    background-color: var(--bg-secondary) !important;
+    color: var(--text-secondary) !important;
+    border-color: var(--border-secondary) !important;
 }
 
-.light .text-white {
-    @apply text-gray-900;
+.light button.bg-eerie-black {
+    background-color: #ffffff !important;
+    color: #111827 !important;
+    border-color: #d1d5db !important;
 }
 
-.light .text-gray-300 {
-    @apply text-gray-700;
+button.hover\:bg-gray-800:hover {
+    background-color: var(--bg-quaternary) !important;
+    color: var(--text-secondary) !important;
 }
 
-.light .text-gray-400 {
-    @apply text-gray-600;
-}
-
-.light .border-gray-600 {
-    @apply border-gray-300;
-}
-
-.light .border-gray-700 {
-    @apply border-gray-300;
-}
-
-.light .border-gray-500 {
-    @apply border-gray-400;
-}
-
-.light .hover\:border-gray-500:hover {
-    @apply border-gray-400;
-}
-
-/* Theme Toggle Button - Light Mode */
-.light .theme-toggle {
-    @apply bg-white hover:bg-gray-100 text-gray-900 border border-gray-300;
-}
-
-/* Input Fields - Light Mode */
-.light input[type="text"],
-.light input[type="number"],
-.light input[type="email"],
-.light input[type="password"],
-.light input[type="search"],
-.light textarea,
-.light select {
-    @apply bg-white text-gray-900 border-gray-300;
-}
-
-/* Override specific background classes on inputs */
-.light input.bg-eerie-black,
-.light input.bg-gray-700,
-.light input.bg-gray-800,
-.light textarea.bg-eerie-black,
-.light textarea.bg-gray-700,
-.light select.bg-eerie-black,
-.light select.bg-gray-700 {
-    @apply bg-white;
-}
-
-.light input::placeholder,
-.light textarea::placeholder {
-    @apply text-gray-500;
-}
-
-.light select option {
-    @apply bg-white text-gray-900;
-}
-
-/* Buttons - Light Mode */
-.light button {
-    color: inherit;
-}
-
-.light button.bg-gray-600,
-.light button.bg-gray-700,
-.light button.bg-gray-800,
-.light a.bg-gray-600,
-.light a.bg-gray-700,
-.light a.bg-gray-800 {
-    @apply bg-gray-200 hover:bg-gray-300 text-gray-900;
-}
-
-.light button.bg-eerie-black,
-.light a.bg-eerie-black {
-    @apply bg-white hover:bg-gray-100 text-gray-900;
-}
-
-/* Links - Light Mode */
-.light a {
-    color: inherit;
-}
-
-.light a.text-white {
-    @apply text-gray-900;
-}
-
-.light a.text-gray-300 {
-    @apply text-gray-700;
-}
-
-.light a.text-gray-400 {
-    @apply text-gray-600;
-}
-
-/* Tab Navigation - Light Mode */
 .light button.hover\:bg-gray-800:hover {
-    @apply bg-gray-200;
+    background-color: #e5e7eb !important;
+    color: #111827 !important;
+}
+
+.bg-gray-800\/40 {
+    background-color: var(--bg-tertiary);
+    border-color: var(--border-primary);
+}
+
+.bg-gray-800\/50 {
+    background-color: var(--bg-quaternary);
+    border-color: var(--border-primary);
+}
+
+.bg-gray-800\/60 {
+    background-color: var(--bg-quinary);
+    border-color: var(--border-primary);
+}
+
+.bg-gray-700\/30 {
+    background-color: var(--bg-highlight);
+    border-color: var(--border-tertiary);
+}
+
+.text-white {
+    color: var(--text-secondary);
+}
+
+.text-gray-300 {
+    color: var(--text-tertiary);
+}
+
+.text-gray-400 {
+    color: var(--text-quaternary);
+}
+
+.border-gray-600 {
+    border-color: var(--border-primary);
+}
+
+.border-gray-700 {
+    border-color: var(--border-secondary);
+}
+
+.border-gray-500 {
+    border-color: var(--border-tertiary);
+}
+
+/* Tool Boxes - Using CSS Variables */
+.bg-blue-600.text-white {
+    background-color: var(--tool-blue-bg);
+    color: var(--tool-blue-text);
+    border-color: var(--tool-blue-border);
+}
+
+.bg-green-600.text-white {
+    background-color: var(--tool-green-bg);
+    color: var(--tool-green-text);
+    border-color: var(--tool-green-border);
+}
+
+.bg-purple-600.text-white {
+    background-color: var(--tool-purple-bg);
+    color: var(--tool-purple-text);
+    border-color: var(--tool-purple-border);
+}
+
+.bg-red-600.text-white {
+    background-color: var(--tool-red-bg);
+    color: var(--tool-red-text);
+    border-color: var(--tool-red-border);
+}
+
+.bg-yellow-600.text-white {
+    background-color: var(--tool-yellow-bg);
+    color: var(--tool-yellow-text);
+    border-color: var(--tool-yellow-border);
+}
+
+.bg-pink-600.text-white {
+    background-color: var(--tool-pink-bg);
+    color: var(--tool-pink-text);
+    border-color: var(--tool-pink-border);
+}
+
+.bg-teal-600.text-white {
+    background-color: var(--tool-teal-bg);
+    color: var(--tool-teal-text);
+    border-color: var(--tool-teal-border);
+}
+
+.bg-indigo-600.text-white {
+    background-color: var(--tool-indigo-bg);
+    color: var(--tool-indigo-text);
+    border-color: var(--tool-indigo-border);
+}
+
+.bg-orange-600.text-white {
+    background-color: var(--tool-orange-bg);
+    color: var(--tool-orange-text);
+    border-color: var(--tool-orange-border);
+}
+
+.bg-gray-800.text-white {
+    background-color: var(--tool-gray-bg);
+    color: var(--tool-gray-text);
+    border-color: var(--tool-gray-border);
+}
+
+/* Tag badges in tool boxes */
+.light .bg-blue-600.text-white .bg-white\/30,
+.light .bg-green-600.text-white .bg-white\/30,
+.light .bg-purple-600.text-white .bg-white\/30,
+.light .bg-red-600.text-white .bg-white\/30,
+.light .bg-yellow-600.text-white .bg-white\/30,
+.light .bg-pink-600.text-white .bg-white\/30,
+.light .bg-teal-600.text-white .bg-white\/30,
+.light .bg-indigo-600.text-white .bg-white\/30,
+.light .bg-orange-600.text-white .bg-white\/30 {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    background-color: var(--bg-secondary);
+    color: var(--text-secondary);
+    border-color: var(--border-primary);
+}
+
+.light .theme-toggle {
+    background-color: #ffffff;
+    color: #111827;
+    border-color: #d1d5db;
+}
+
+.light .theme-toggle:hover {
+    background-color: #f3f4f6;
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+textarea,
+select {
+    background-color: var(--bg-secondary);
+    color: var(--text-secondary);
+    border-color: var(--border-primary);
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--text-quaternary);
+}
+
+select option {
+    background-color: var(--bg-secondary);
+    color: var(--text-secondary);
+}
+
+/* Legacy Gray Button Support (for bg-gray-800) */
+button.bg-gray-800,
+a.bg-gray-800 {
+    background-color: var(--btn-secondary-bg) !important;
+    color: var(--btn-secondary-text) !important;
+}
+
+button.bg-gray-800:hover,
+a.bg-gray-800:hover {
+    background-color: var(--btn-secondary-hover) !important;
+}
+
+/* Links */
+a.text-white {
+    color: var(--text-secondary);
+}
+
+a.text-gray-300 {
+    color: var(--text-tertiary);
+}
+
+a.text-gray-400 {
+    color: var(--text-quaternary);
+}
+
+/* Tab Navigation */
+.border-b.border-gray-700 {
+    border-color: var(--border-secondary);
+}
+
+.light .border-b.border-gray-700 {
+    border-color: #d1d5db;
+}
+
+button.hover\:bg-gray-800:hover {
+    background-color: var(--bg-quaternary) !important;
+}
+
+.light button.hover\:bg-gray-800:hover {
+    background-color: #e5e7eb !important;
+}
+
+button.text-gray-400 {
+    color: var(--text-quaternary);
 }
 
 .light button.text-gray-400 {
-    @apply text-gray-600;
+    color: #6b7280 !important;
+}
+
+button.hover\:text-white:hover {
+    color: var(--text-secondary) !important;
 }
 
 .light button.hover\:text-white:hover {
-    @apply text-gray-900;
+    color: #111827 !important;
 }
 
-/* NuxtLink Buttons - Light Mode */
-.light a.bg-gray-600:hover,
-.light button.bg-gray-600:hover {
-    @apply bg-gray-300;
+/* Tab Navigation Active State */
+button.bg-eerie-black.text-white {
+    background-color: var(--bg-secondary) !important;
+    color: var(--text-secondary) !important;
 }
 
-/* Glossary Specific - Light Mode */
-/* Alphabet Navigation Buttons */
-.light button.bg-gray-700,
-.light button.hover\:bg-gray-600:hover {
-    @apply bg-gray-200 hover:bg-gray-300 text-gray-900;
+.light button.bg-eerie-black.text-white {
+    background-color: #ffffff !important;
+    color: #111827 !important;
 }
 
-/* Tag Badges in Glossary */
+/* Text colors in hardware boxes */
+.bg-eerie-black .text-white,
+div.bg-eerie-black .text-white {
+    color: var(--text-secondary) !important;
+}
+
+.light .bg-eerie-black .text-white,
+.light div.bg-eerie-black .text-white {
+    color: #111827 !important;
+}
+
+.bg-eerie-black .text-gray-300,
+div.bg-eerie-black .text-gray-300 {
+    color: var(--text-tertiary) !important;
+}
+
+.light .bg-eerie-black .text-gray-300,
+.light div.bg-eerie-black .text-gray-300 {
+    color: #374151 !important;
+}
+
+.bg-eerie-black .text-gray-400,
+div.bg-eerie-black .text-gray-400 {
+    color: var(--text-quaternary) !important;
+}
+
+.light .bg-eerie-black .text-gray-400,
+.light div.bg-eerie-black .text-gray-400 {
+    color: #6b7280 !important;
+}
+
+/* Unified Button System */
+/* Primary Buttons (Blue) */
+.bg-blue-600,
+button.bg-blue-600,
+a.bg-blue-600,
+.btn-primary {
+    background-color: var(--btn-primary-bg) !important;
+    color: var(--btn-primary-text) !important;
+}
+
+.bg-blue-600:hover,
+button.bg-blue-600:hover,
+a.bg-blue-600:hover,
+.hover\:bg-blue-700:hover,
+.btn-primary:hover {
+    background-color: var(--btn-primary-hover) !important;
+}
+
+/* Secondary Buttons (Gray) */
+.bg-gray-600,
+.bg-gray-700,
+button.bg-gray-600,
+button.bg-gray-700,
+a.bg-gray-600,
+a.bg-gray-700,
+.btn-secondary {
+    background-color: var(--btn-secondary-bg) !important;
+    color: var(--btn-secondary-text) !important;
+}
+
+.bg-gray-600:hover,
+.bg-gray-700:hover,
+button.bg-gray-600:hover,
+button.bg-gray-700:hover,
+a.bg-gray-600:hover,
+a.bg-gray-700:hover,
+.hover\:bg-gray-500:hover,
+.hover\:bg-gray-600:hover,
+.btn-secondary:hover {
+    background-color: var(--btn-secondary-hover) !important;
+}
+
+/* Danger Buttons (Red) */
+.bg-red-600,
+button.bg-red-600,
+a.bg-red-600,
+.btn-danger {
+    background-color: var(--btn-danger-bg) !important;
+    color: var(--btn-danger-text) !important;
+}
+
+.bg-red-600:hover,
+button.bg-red-600:hover,
+a.bg-red-600:hover,
+.hover\:bg-red-700:hover,
+.btn-danger:hover {
+    background-color: var(--btn-danger-hover) !important;
+}
+
+/* Badges - Only apply to span elements with specific classes (not tool boxes or buttons) */
+span.bg-green-600 {
+    background-color: var(--badge-green-bg) !important;
+    color: var(--badge-green-text) !important;
+}
+
+span.bg-yellow-600,
+span.bg-yellow-500 {
+    background-color: var(--badge-yellow-bg) !important;
+    color: var(--badge-yellow-text) !important;
+}
+
+span.bg-blue-600:not(.btn-primary) {
+    background-color: var(--badge-blue-bg) !important;
+    color: var(--badge-blue-text) !important;
+}
+
+span.bg-gray-600:not(.btn-secondary) {
+    background-color: var(--badge-gray-bg) !important;
+    color: var(--badge-gray-text) !important;
+}
+
+/* Glossary Specific */
+.bg-blue-600\/30 {
+    background-color: rgba(37, 99, 235, 0.3);
+}
+
 .light .bg-blue-600\/30 {
-    @apply bg-blue-100;
+    background-color: #dbeafe;
+}
+
+.text-blue-300 {
+    color: #93c5fd;
 }
 
 .light .text-blue-300 {
-    @apply text-blue-700;
+    color: #1e40af;
 }
 
-/* Glossary Headings */
+.text-blue-400 {
+    color: #60a5fa;
+}
+
 .light .text-blue-400 {
-    @apply text-blue-600;
+    color: #2563eb;
 }
 
-/* Breadcrumbs - Light Mode */
+/* Breadcrumbs */
+nav[aria-label="Breadcrumb"] .hover\:text-white:hover {
+    color: var(--text-secondary);
+}
+
 .light nav[aria-label="Breadcrumb"] .hover\:text-white:hover {
-    @apply text-gray-900;
+    color: #111827;
+}
+
+/* Cookie Banner */
+.fixed.bottom-0 {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.95), rgba(17, 24, 39, 0.8), transparent);
+}
+
+.light .fixed.bottom-0 {
+    background: linear-gradient(to top, rgba(249, 250, 251, 0.95), rgba(243, 244, 246, 0.8), transparent);
+}
+
+.fixed.bottom-0 .bg-eerie-black {
+    background-color: var(--bg-secondary);
+    border-color: var(--border-secondary);
+}
+
+.fixed.bottom-0 .text-white {
+    color: var(--text-secondary);
+}
+
+.fixed.bottom-0 .text-gray-300 {
+    color: var(--text-tertiary);
+}
+
+.fixed.bottom-0 .text-gray-400 {
+    color: var(--text-quaternary);
+}
+
+.fixed.bottom-0 .border-gray-700 {
+    border-color: var(--border-secondary);
+}
+
+.fixed.bottom-0 button.bg-gray-700,
+.fixed.bottom-0 button.hover\:bg-gray-600:hover {
+    background-color: var(--bg-quinary);
+    color: var(--text-secondary);
+}
+
+.light .fixed.bottom-0 button.bg-gray-700,
+.light .fixed.bottom-0 button.hover\:bg-gray-600:hover {
+    background-color: #e5e7eb;
+    color: #111827;
+}
+
+.fixed.bottom-0 input[type="checkbox"] {
+    background-color: var(--bg-quinary);
+    border-color: var(--border-primary);
+}
+
+.light .fixed.bottom-0 input[type="checkbox"] {
+    background-color: #ffffff;
+    border-color: #9ca3af;
+}
+
+.fixed.bottom-0 input[type="checkbox"]:checked {
+    background-color: #2563eb;
+    border-color: #2563eb;
+}
+
+.fixed.bottom-0 .text-blue-400 {
+    color: #60a5fa;
+}
+
+.light .fixed.bottom-0 .text-blue-400 {
+    color: #2563eb;
+}
+
+.fixed.bottom-0 .hover\:text-blue-300:hover {
+    color: #93c5fd;
+}
+
+.light .fixed.bottom-0 .hover\:text-blue-300:hover {
+    color: #1e40af;
+}
+
+/* Code Elements */
+code.bg-gray-900 {
+    background-color: var(--bg-code);
+    color: var(--text-secondary);
+}
+
+.light code.bg-gray-900 {
+    background-color: var(--bg-code);
+    color: var(--text-primary);
+}
+
+/* Additional Light Mode Specific */
+.light .text-gray-200 {
+    color: #1f2937;
+}
+
+.light button.bg-gray-700,
+.light button.hover\:bg-gray-600:hover {
+    background-color: #e5e7eb;
+    color: #111827;
+}
+
+.light button.bg-gray-700:hover,
+.light button.hover\:bg-gray-600:hover {
+    background-color: #d1d5db;
 }
