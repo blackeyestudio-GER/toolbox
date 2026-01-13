@@ -21,9 +21,13 @@
                     <div class="bg-gray-700/30 border border-gray-500 p-4 rounded">
                         <p class="text-gray-300 leading-relaxed">
                             <strong>⚠️ Wichtig:</strong> Viele Anfänger geben hunderte Euro für Premiere Pro oder Final Cut aus - 
-                            dabei gibt es <strong>kostenlose oder günstige Alternativen</strong>, die für 90% aller Content Creator vollkommen ausreichen!
+                            dabei gibt es <strong>kostenlose oder günstige Alternativen</strong>, die für die meisten Content Creator vollkommen ausreichen!
                         </p>
                     </div>
+                    <p class="text-sm text-gray-400 italic">
+                        <strong>Hinweis:</strong> Diese Empfehlungen basieren auf Erfahrungen von Content Creators und werden regelmäßig aktualisiert. 
+                        Verantwortlich für den Inhalt: <NuxtLink to="/impressum" class="text-blue-400 underline">siehe Impressum</NuxtLink>.
+                    </p>
                 </div>
             </div>
 
@@ -44,7 +48,7 @@
                                 <span class="bg-green-600 text-white px-3 py-1 rounded text-sm font-bold">KOSTENLOS</span>
                             </div>
                             <p class="text-gray-300 mb-4 text-sm leading-relaxed">
-                                <strong class="text-white">Meine #1 Empfehlung!</strong> Professionelle Video-Editing-Software, die in Hollywood-Produktionen 
+                                <strong class="text-white">Top-Empfehlung für professionelles Video-Editing!</strong> Professionelle Video-Editing-Software, die in Hollywood-Produktionen 
                                 verwendet wird - komplett kostenlos. Inkl. Color Grading, Audio-Editing und VFX.
                             </p>
                             <div class="space-y-2 mb-4">
@@ -112,8 +116,8 @@
 
                     <div class="mt-6 p-4 bg-gray-700/30 border border-gray-500 rounded">
                         <p class="text-sm text-gray-300">
-                            <strong>💰 Warum NICHT Adobe Premiere Pro?</strong> Premiere kostet 24€/Monat (288€/Jahr). 
-                            DaVinci Resolve ist kostenlos und kann 95% der gleichen Dinge - nur eben ohne Abo-Falle!
+                            <strong>💰 Kostenvergleich:</strong> Adobe Premiere Pro kostet 24€/Monat (288€/Jahr). 
+                            DaVinci Resolve bietet ähnliche Funktionen für professionelles Video-Editing - komplett kostenlos und ohne monatliche Kosten!
                         </p>
                     </div>
                 </section>
@@ -139,7 +143,7 @@
                             <div class="space-y-2 mb-4">
                                 <h4 class="text-sm font-semibold text-gray-200">✅ Vorteile:</h4>
                                 <ul class="text-sm text-gray-300 space-y-1 list-disc list-inside ml-2">
-                                    <li><strong>Keine Abo-Falle!</strong> Einmalzahlung (ca. 60€)</li>
+                                    <li><strong>Einmalzahlung statt Abo!</strong> Einmalzahlung (ca. 60€)</li>
                                     <li>Einfacher als Photoshop CC</li>
                                     <li>Perfekt für Thumbnails & Overlays</li>
                                     <li>Geführte Edits für Anfänger</li>
@@ -238,7 +242,7 @@
                             <div class="space-y-2 mb-4">
                                 <h4 class="text-sm font-semibold text-gray-200">✅ Vorteile:</h4>
                                 <ul class="text-sm text-gray-300 space-y-1 list-disc list-inside ml-2">
-                                    <li><strong>Keine Abo-Falle!</strong> Einmalzahlung pro App (~60€)</li>
+                                    <li><strong>Einmalzahlung statt Abo!</strong> Einmalzahlung pro App (~60€)</li>
                                     <li>Professionelle Features (wie Photoshop/Illustrator)</li>
                                     <li>Sehr gute Performance</li>
                                     <li>Für Windows, Mac & iPad</li>
@@ -277,7 +281,7 @@
                             </div>
                             <p class="text-gray-300 mb-4 text-sm leading-relaxed">
                                 <strong class="text-white">Der Standard!</strong> Open Source Streaming Software. 
-                                Von 99% aller professionellen Streamer verwendet. Unbegrenzte Möglichkeiten mit Plugins.
+                                Weit verbreitet bei professionellen Streamern. Unbegrenzte Möglichkeiten mit Plugins.
                             </p>
                             <ul class="text-sm text-gray-300 space-y-1 list-disc list-inside ml-2 mb-4">
                                 <li>Komplett kostenlos & Open Source</li>
@@ -304,8 +308,8 @@
                                 <span class="bg-gray-600 text-white px-3 py-1 rounded text-sm font-bold">INFO</span>
                             </div>
                             <p class="text-gray-300 mb-4 text-sm leading-relaxed">
-                                Es gibt weitere Streaming-Software, aber <strong class="text-white">keine davon wird von mir empfohlen.</strong> 
-                                OBS Studio ist und bleibt die beste Wahl. Nur zur Vollständigkeit:
+                                Es gibt weitere Streaming-Software-Alternativen, aber <strong class="text-white">OBS Studio ist die am weitesten verbreitete und empfohlene Lösung.</strong> 
+                                Nur zur Vollständigkeit werden hier weitere Optionen aufgeführt:
                             </p>
                             
                             <div class="space-y-3 text-sm text-gray-300">
@@ -327,9 +331,9 @@
                             
                             <div class="mt-4 p-3 bg-gray-700/30 rounded border border-gray-600">
                                 <p class="text-xs text-gray-300">
-                                    <strong class="text-yellow-400">⚠️ Meine Meinung:</strong> 
-                                    Nutze OBS Studio + StreamElements/Streamlabs Browser Sources. 
-                                    Das ist kostenlos, mächtig und der Industrie-Standard. Die anderen Optionen bieten keinen echten Vorteil.
+                                    <strong class="text-yellow-400">⚠️ Empfehlung:</strong> 
+                                    OBS Studio in Kombination mit StreamElements oder Streamlabs Browser Sources ist die Standard-Lösung. 
+                                    Diese Kombination ist kostenlos, mächtig und der Industrie-Standard. Die anderen Optionen bieten in der Regel keine zusätzlichen Vorteile.
                                 </p>
                             </div>
                         </div>
@@ -394,10 +398,10 @@
                 <h3 class="text-lg md:text-xl font-bold mb-4">💡 Finale Tipps zur Software-Wahl</h3>
                 <div class="space-y-3 text-sm text-gray-300">
                     <p>
-                        <strong>1. Fang mit Kostenlos an:</strong> DaVinci Resolve, OBS Studio und GIMP sind kostenlos und reichen für 95% aller Creator.
+                        <strong>1. Fang mit Kostenlos an:</strong> DaVinci Resolve, OBS Studio und GIMP sind kostenlos und reichen für die meisten Creator.
                     </p>
                     <p>
-                        <strong>2. Vermeide Abo-Fallen:</strong> Adobe Creative Cloud kostet 60€/Monat = 720€/Jahr. Das ist ein Auto nach 5 Jahren!
+                        <strong>2. Prüfe Kostenmodelle:</strong> Adobe Creative Cloud kostet 60€/Monat = 720€/Jahr. Überlege dir, ob Einmalzahlungen oder kostenlose Alternativen für dich sinnvoller sind.
                     </p>
                     <p>
                         <strong>3. Nutze Tutorials:</strong> Alle empfohlenen Tools haben tausende kostenlose Tutorials auf YouTube.

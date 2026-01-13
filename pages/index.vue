@@ -16,13 +16,13 @@
                 <div class="bg-eerie-black text-white p-6 rounded-lg shadow-lg mb-6">
                     <h2 class="text-2xl font-semibold mb-4 text-center">Willkommen bei deiner Tool-Sammlung!</h2>
                     <div class="space-y-4 text-gray-300 leading-relaxed">
-                        <p>Hey! Ich weiß aus eigener Erfahrung, wie frustrierend es sein kann, als Content Creator die richtigen Tools zu finden. Oft sind sie versteckt, unübersichtlich oder einfach viel zu teuer. Deshalb habe ich diese Seite ins Leben gerufen – aus Überzeugung und Leidenschaft für unsere kreative Community.</p>
+                        <p>Als Content Creator kann es frustrierend sein, die richtigen Tools zu finden. Oft sind sie versteckt, unübersichtlich oder einfach viel zu teuer. Diese Seite wurde ins Leben gerufen, um Content Creators eine zentrale Anlaufstelle für nützliche Tools zu bieten.</p>
                         
                         <p>Hier findest du eine stetig wachsende Sammlung nützlicher Helferlein – egal ob du gerade streamst, YouTube-Videos schneidest, Social-Media-Inhalte vorbereitest oder einfach nur deinen Workflow optimieren willst. Alle Tools sind komplett kostenlos und bleiben es auch. Keine versteckten Kosten, keine Premium-Tricks.</p>
                         
-                        <p>Mein Ziel ist es, dir das Leben ein kleines bisschen leichter zu machen. Damit du weniger Zeit mit Suchen und mehr Zeit mit deinem eigentlichen Content verbringst. Schau dich um, probier die Tools aus – und wenn du Feedback oder Wünsche hast, melde dich gern. Diese Plattform ist für uns alle.</p>
+                        <p>Das Ziel dieser Plattform ist es, Content Creators das Leben ein kleines bisschen leichter zu machen. Damit du weniger Zeit mit Suchen und mehr Zeit mit deinem eigentlichen Content verbringst. Schau dich um, probier die Tools aus – und wenn du Feedback oder Wünsche hast, melde dich gern. Diese Plattform ist für uns alle.</p>
                         
-                        <p class="text-sm text-gray-400 italic mt-6">Alle hier aufgelisteten Tools wurden sorgfältig ausgewählt und getestet. Die Sammlung wird regelmäßig aktualisiert und erweitert, um dir stets die besten kostenlosen Ressourcen zur Verfügung zu stellen.</p>
+                        <p class="text-sm text-gray-400 italic mt-6">Alle hier aufgelisteten Tools wurden sorgfältig ausgewählt und getestet. Die Sammlung wird regelmäßig aktualisiert und erweitert, um dir stets die besten kostenlosen Ressourcen zur Verfügung zu stellen. <NuxtLink to="/impressum" class="text-blue-400 underline">Verantwortlich für den Inhalt: siehe Impressum</NuxtLink>.</p>
                     </div>
                 </div>
             </div>
@@ -104,7 +104,7 @@
                 <div class="space-y-4 text-gray-300 text-sm leading-relaxed">
                     <p>
                         Als Content Creator verbringt man oft mehr Zeit damit, nach den richtigen Tools zu suchen, als tatsächlich Content zu erstellen. 
-                        Diese Sammlung soll dir genau diese Zeit sparen. Jedes Tool wurde persönlich getestet und wird von Content Creators aktiv genutzt.
+                        Diese Sammlung soll dir genau diese Zeit sparen. Alle Tools wurden sorgfältig ausgewählt und werden von Content Creators aktiv genutzt.
                     </p>
                     <p>
                         Ob du gerade erst anfängst oder bereits etabliert bist - die richtigen Tools können deinen Workflow massiv verbessern. 
@@ -144,11 +144,11 @@
 <script setup>
 import { ref, computed } from 'vue';
 
-const descriptionText = `Hey! Ich weiß aus eigener Erfahrung, wie frustrierend es sein kann, als Content Creator die richtigen Tools zu finden. Oft sind sie versteckt, unübersichtlich oder einfach viel zu teuer. Deshalb habe ich diese Seite ins Leben gerufen – aus Überzeugung und Leidenschaft für unsere kreative Community.
+const descriptionText = `Als Content Creator kann es frustrierend sein, die richtigen Tools zu finden. Oft sind sie versteckt, unübersichtlich oder einfach viel zu teuer. Diese Seite wurde ins Leben gerufen, um Content Creators eine zentrale Anlaufstelle für nützliche Tools zu bieten.
 
 Hier findest du eine stetig wachsende Sammlung nützlicher Helferlein – egal ob du gerade streamst, YouTube-Videos schneidest, Social-Media-Inhalte vorbereitest oder einfach nur deinen Workflow optimieren willst. Alle Tools sind komplett kostenlos und bleiben es auch. Keine versteckten Kosten, keine Premium-Tricks.
 
-Mein Ziel ist es, dir das Leben ein kleines bisschen leichter zu machen. Damit du weniger Zeit mit Suchen und mehr Zeit mit deinem eigentlichen Content verbringst. Schau dich um, probier die Tools aus – und wenn du Feedback oder Wünsche hast, melde dich gern. Diese Plattform ist für uns alle.`;
+Das Ziel dieser Plattform ist es, Content Creators das Leben ein kleines bisschen leichter zu machen. Damit du weniger Zeit mit Suchen und mehr Zeit mit deinem eigentlichen Content verbringst. Schau dich um, probier die Tools aus – und wenn du Feedback oder Wünsche hast, melde dich gern. Diese Plattform ist für uns alle.`;
 const showModal = ref(false);
 const searchQuery = ref('');
 const selectedTag = ref('');
@@ -288,7 +288,7 @@ const tools = [
     },
     {
         title: 'Game Finder',
-        description: 'Das beste Tool zum Entdecken neuer Spiele für deinen Stream oder Kanal. Filtere nach Genre, Plattform und Popularität um das perfekte Game für deinen Content zu finden.',
+        description: 'Tool zum Entdecken neuer Spiele für deinen Stream oder Kanal. Filtere nach Genre, Plattform und Popularität um passende Games für deinen Content zu finden.',
         tags: ['Organisation', 'Games'],
         link: 'https://game-finder.app/',
         category: 'Games',
@@ -320,7 +320,7 @@ const tools = [
     },
     {
         title: 'DaVinci Resolve',
-        description: 'Professionelle Video-Editing-Software, die in Hollywood-Produktionen verwendet wird - komplett kostenlos. Inkl. Color Grading, Audio-Editing und VFX. Meine #1 Empfehlung für Video-Editing!',
+        description: 'Professionelle Video-Editing-Software, die in Hollywood-Produktionen verwendet wird - komplett kostenlos. Inkl. Color Grading, Audio-Editing und VFX. Top-Empfehlung für professionelles Video-Editing!',
         tags: ['Utility', 'Grafik'],
         link: 'https://www.blackmagicdesign.com/de/products/davinciresolve',
         category: 'Utility',
@@ -336,7 +336,7 @@ const tools = [
     },
     {
         title: 'Adobe Photoshop Elements',
-        description: 'Die oft vergessene Alternative! Einmalzahlung statt Abo. Perfekt für Thumbnails, Overlays und Social Media Grafiken. Circa 60€ für 3 Jahre Nutzung - keine Abo-Falle!',
+        description: 'Die oft vergessene Alternative! Einmalzahlung statt Abo. Perfekt für Thumbnails, Overlays und Social Media Grafiken. Circa 60€ für 3 Jahre Nutzung - ohne monatliche Kosten!',
         tags: ['Grafik'],
         link: 'https://www.adobe.com/de/products/photoshop-elements.html',
         category: 'Grafik',
@@ -360,7 +360,7 @@ const tools = [
     },
     {
         title: 'OBS Studio',
-        description: 'Der Standard! Open Source Streaming Software. Von 99% aller professionellen Streamer verwendet. Unbegrenzte Möglichkeiten mit Plugins. Komplett kostenlos und sehr stabil.',
+        description: 'Der Standard! Open Source Streaming Software. Weit verbreitet bei professionellen Streamern. Unbegrenzte Möglichkeiten mit Plugins. Komplett kostenlos und sehr stabil.',
         tags: ['Utility', 'Stream-Interaktion'],
         link: 'https://obsproject.com/',
         category: 'Utility',
@@ -368,7 +368,7 @@ const tools = [
     },
     {
         title: 'Audacity',
-        description: 'Klassiker für Audio-Bearbeitung. Perfekt für Podcasts, Voiceovers und Audio-Cleaning. 100% kostenlos & Open Source mit Noise Reduction, Compressor und EQ.',
+        description: 'Klassiker für Audio-Bearbeitung. Perfekt für Podcasts, Voiceovers und Audio-Cleaning. Kostenlos & Open Source mit Noise Reduction, Compressor und EQ.',
         tags: ['Audio'],
         link: 'https://www.audacityteam.org/',
         category: 'Audio',

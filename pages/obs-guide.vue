@@ -37,7 +37,7 @@
                         Mit OBS kannst du professionelle Streams erstellen, ohne einen Cent auszugeben.
                     </p>
                     <p class="text-gray-300 mb-4">
-                        In diesem Guide zeige ich dir Schritt für Schritt, wie du OBS einrichtest und deinen ersten Stream startest. 
+                        In diesem Guide findest du Schritt für Schritt Anleitungen, wie du OBS einrichtest und deinen ersten Stream startest. 
                         Keine Vorkenntnisse nötig - wir fangen bei Null an!
                     </p>
                     <div class="bg-gray-700/30 border border-gray-500 p-4 rounded mt-4">
@@ -61,7 +61,7 @@
                             
                             <div class="bg-gray-700/30 border border-gray-500 p-4 rounded mb-6">
                                 <p class="text-gray-300 text-sm">
-                                    <strong>💡 Meine Empfehlung:</strong> Nutze die <strong>Steam-Version</strong>, wenn du Steam bereits installiert hast. 
+                                    <strong>💡 Empfehlung:</strong> Nutze die <strong>Steam-Version</strong>, wenn du Steam bereits installiert hast. 
                                     Du bleibst automatisch auf dem neuesten Stand. <strong>Mache deine Installation dann portabel</strong> 
                                     (siehe Anleitung in den Tabs) - so hast du das Beste aus beiden Welten!
                                 </p>
@@ -483,7 +483,7 @@
                                         <ul class="space-y-1 list-disc list-inside ml-2 text-gray-300">
                                             <li>Zu wenig Bitrate für die hohe Auflösung</li>
                                             <li>Artefakte und Verpixelung bei schnellen Bewegungen</li>
-                                            <li>Besonders schlecht bei Action-Spielen</li>
+                                            <li>Besonders bei Action-Spielen mit schnellen Bewegungen sichtbar</li>
                                             <li>Zuschauer sehen ein matschiges Bild</li>
                                         </ul>
                                     </div>
@@ -641,7 +641,7 @@
                                 </div>
 
                                 <div class="bg-gray-800/50 border border-gray-600 p-4 rounded">
-                                    <h4 class="font-semibold mb-2 text-red-400 border-b border-red-500 pb-2">🖥️ 3. Display Capture (Bildschirmaufnahme) - SCHLECHTESTE Performance</h4>
+                                    <h4 class="font-semibold mb-2 text-red-400 border-b border-red-500 pb-2">🖥️ 3. Display Capture (Bildschirmaufnahme) - Niedrigste Performance</h4>
                                     <p class="text-sm text-gray-300 mb-2">
                                         <strong>Nutze dies nur als letzte Option:</strong> Wenn Game & Window Capture nicht funktionieren
                                     </p>
@@ -706,8 +706,8 @@
                     
                     <div class="space-y-4">
                         <p class="text-gray-300">
-                            Audio ist einer der wichtigsten Aspekte deines Streams. Schlechtes Audio vertreibt Zuschauer schneller 
-                            als schlechte Video-Qualität!
+                            Audio ist einer der wichtigsten Aspekte deines Streams. Gute Audio-Qualität ist für Zuschauer oft wichtiger 
+                            als perfekte Video-Qualität.
                         </p>
 
                         <div>
@@ -905,7 +905,7 @@
                 <section id="richtlinien" class="bg-gray-800/40 border border-gray-600 p-4 md:p-6 rounded-lg scroll-mt-4">
                     <h2 class="text-2xl font-semibold mb-4 text-red-400">⚠️ WICHTIG: Plattform-Richtlinien & Regeln</h2>
                     <p class="text-gray-200 mb-6">
-                        Bevor du mit dem Streamen beginnst, ist es <strong>absolut essentiell</strong>, dass du die Regeln und 
+                        Bevor du mit dem Streamen beginnst, ist es <strong>sehr wichtig</strong>, dass du die Regeln und 
                         Richtlinien der Streaming-Plattformen kennst und einhältst. Verstöße können zu Verwarnungen, Sperren 
                         oder permanenten Bans führen - und damit das Ende deiner Streaming-Karriere bedeuten!
                     </p>
@@ -1132,15 +1132,15 @@
                     
                     <div class="space-y-4">
                         <p class="text-gray-300 mb-4">
-                            OBS lässt sich mit Plugins massiv erweitern. Hier sind meine persönlichen Empfehlungen:
+                            OBS lässt sich mit Plugins massiv erweitern. Hier sind empfehlenswerte Plugins:
                         </p>
 
                         <div class="grid md:grid-cols-2 gap-4">
                             <!-- StreamUp Tips -->
                             <div class="bg-gray-700/30 border border-gray-500 p-4 rounded-lg">
-                                <h4 class="font-semibold mb-2 text-blue-400">⭐ StreamUp.tips (Meine Wahl!)</h4>
+                                <h4 class="font-semibold mb-2 text-blue-400">⭐ StreamUp.tips (Empfohlen)</h4>
                                 <p class="text-sm text-gray-300 mb-3">
-                                    Das Plugin das ich selbst nutze! Perfekt für Alerts, Overlays und Stream-Interaktionen.
+                                    Beliebte Plugin-Lösung! Perfekt für Alerts, Overlays und Stream-Interaktionen.
                                 </p>
                                 <ul class="text-xs text-gray-300 space-y-1 list-disc list-inside mb-3">
                                     <li>Einfache Integration in OBS</li>

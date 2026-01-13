@@ -14,8 +14,9 @@
             <div class="bg-gray-800/50 border border-gray-600 p-4 rounded-lg mb-8">
                 <p class="text-gray-300 text-sm">
                     <strong>💙 Transparenz-Hinweis:</strong> Die Links auf dieser Seite sind Amazon Affiliate Links. 
-                    Wenn du über diese Links einkaufst, erhalte ich eine kleine Provision - ohne dass du mehr bezahlst! 
-                    Dies hilft mir, diese Wissensdatenbank weiter auszubauen und zu pflegen. Vielen Dank für deine Unterstützung! 🙏
+                    Wenn du über diese Links einkaufst, erhalten wir eine kleine Provision - ohne dass du mehr bezahlst! 
+                    Dies hilft uns, diese Wissensdatenbank weiter auszubauen und zu pflegen. Vielen Dank für deine Unterstützung! 🙏
+                    <NuxtLink to="/impressum" class="text-blue-400 underline block mt-2">Verantwortlich für den Inhalt: siehe Impressum</NuxtLink>
                 </p>
             </div>
 
@@ -25,16 +26,16 @@
                 
                 <div class="space-y-4 text-gray-300">
                     <p class="leading-relaxed">
-                        Die folgenden Hardware-Empfehlungen basieren auf meiner eigenen Erfahrung als Streamer und sind darauf 
+                        Die folgenden Hardware-Empfehlungen basieren auf praktischer Erfahrung als Streamer und sind darauf 
                         ausgelegt, dir das <strong class="text-blue-400">beste Preis-Leistungs-Verhältnis</strong> zu bieten. 
-                        Keine Über-Engineering, keine unnötigen Ausgaben – nur das, was du wirklich brauchst.
+                        Keine Über-Engineering, keine überflüssigen Ausgaben – nur das, was du wirklich brauchst.
                     </p>
                     
                     <div class="bg-gray-700/30 border border-gray-500 p-4 rounded">
                         <p class="text-gray-300 leading-relaxed">
                             <strong>⚠️ Reality Check:</strong> Viele Streamer geben für ihre Hardware wesentlich mehr aus, als sie 
                             <strong>eigentlich sollten</strong>. Es ist verlockend, sofort mit dem teuersten Setup zu starten – aber 
-                            das ist selten sinnvoll! Meine Empfehlungen dienen dazu, dich zu orientieren, was 
+                            das ist selten sinnvoll! Diese Empfehlungen dienen dazu, dich zu orientieren, was 
                             <strong>kosteneffizient UND qualitativ hochwertig</strong> ist.
                         </p>
                     </div>
