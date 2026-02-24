@@ -16,13 +16,17 @@
                 <div class="bg-eerie-black text-white p-6 rounded-lg shadow-lg mb-6">
                     <h2 class="text-2xl font-semibold mb-4 text-center">Willkommen bei deiner Tool-Sammlung!</h2>
                     <div class="space-y-4 text-gray-300 leading-relaxed">
-                        <p>Als Content Creator kann es frustrierend sein, die richtigen Tools zu finden. Oft sind sie versteckt, unübersichtlich oder einfach viel zu teuer. Diese Seite wurde ins Leben gerufen, um Content Creators eine zentrale Anlaufstelle für nützliche Tools zu bieten.</p>
+                        <p>Hey! Ich weiß genau, wie frustrierend es sein kann, als Content Creator die richtigen Tools zu finden. Entweder sind sie irgendwo versteckt, total unübersichtlich oder einfach viel zu teuer. Genau deshalb habe ich diese Seite gemacht – damit du nicht mehr stundenlang suchen musst.</p>
                         
-                        <p>Hier findest du eine stetig wachsende Sammlung nützlicher Helferlein – egal ob du gerade streamst, YouTube-Videos schneidest, Social-Media-Inhalte vorbereitest oder einfach nur deinen Workflow optimieren willst. Alle Tools sind komplett kostenlos und bleiben es auch. Keine versteckten Kosten, keine Premium-Tricks.</p>
+                        <p>Hier findest du meine persönliche Sammlung an Tools, die ich selbst nutze – egal ob du gerade streamst, YouTube-Videos schneidest, Social-Media-Inhalte vorbereitest oder einfach nur deinen Workflow optimieren willst. Alle Tools sind komplett kostenlos und bleiben es auch. Keine versteckten Kosten, keine Premium-Tricks, versprochen.</p>
                         
-                        <p>Das Ziel dieser Plattform ist es, Content Creators das Leben ein kleines bisschen leichter zu machen. Damit du weniger Zeit mit Suchen und mehr Zeit mit deinem eigentlichen Content verbringst. Schau dich um, probier die Tools aus – und wenn du Feedback oder Wünsche hast, melde dich gern. Diese Plattform ist für uns alle.</p>
+                        <p>Mein Ziel ist es, dir das Leben als Content Creator ein bisschen leichter zu machen. Damit du weniger Zeit mit Suchen verbringst und mehr Zeit mit deinem eigentlichen Content. Schau dich einfach um, probier die Tools aus – und wenn du Feedback oder Wünsche hast, schreib mir einfach. Diese Seite ist für uns alle da.</p>
                         
-                        <p class="text-sm text-gray-400 italic mt-6">Alle hier aufgelisteten Tools wurden sorgfältig ausgewählt und getestet. Die Sammlung wird regelmäßig aktualisiert und erweitert, um dir stets die besten kostenlosen Ressourcen zur Verfügung zu stellen. <NuxtLink to="/impressum" class="text-blue-400 underline">Verantwortlich für den Inhalt: siehe Impressum</NuxtLink>.</p>
+                        <p class="text-sm text-gray-400 italic mt-6">
+                            Alle Tools hier habe ich selbst getestet und nutze sie auch. Ich aktualisiere die Sammlung regelmäßig und füge neue Tools hinzu, wenn ich welche finde, die wirklich helfen. 
+                            <NuxtLink to="/impressum" class="text-blue-400 underline">Rechtliches findest du im Impressum</NuxtLink>. 
+                            Wenn du mehr über mich und die Seite wissen willst, schau gerne auf <NuxtLink to="/ueber-uns" class="text-blue-400 underline">Über uns</NuxtLink> vorbei.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -41,11 +45,6 @@
                 </select>
             </div>
             
-            <!-- Info about upcoming tools -->
-            <div class="w-full max-w-5xl mb-4 text-sm text-gray-400 flex items-center gap-2">
-                <span class="bg-yellow-500 text-black px-2 py-1 rounded text-xs font-bold">Bald verfügbar</span>
-                <span>= Tool ist noch in Entwicklung und wird bald hinzugefügt</span>
-            </div>
 
             <!-- Category Guide -->
             <div class="w-full max-w-5xl mb-8 bg-eerie-black p-6 rounded-lg">
@@ -69,9 +68,8 @@
                 <component
                     v-for="tool in filteredTools"
                     :key="tool.title"
-                    :is="tool.status === 'todo' ? 'div' : 'a'"
-                    :href="tool.status !== 'todo' ? tool.link : undefined"
-                    :target="tool.status !== 'todo' ? '_blank' : undefined"
+                    :is="tool.status === 'todo' ? 'div' : 'NuxtLink'"
+                    :to="tool.status !== 'todo' ? `/tools/${tool.slug || generateSlug(tool.title)}` : undefined"
                     :class="[
                         categoryStyles[tool.category]?.bg || 'bg-gray-800',
                         categoryStyles[tool.category]?.border || 'border-gray-600',
@@ -103,12 +101,12 @@
                 <h3 class="text-2xl font-semibold text-white mb-4">Warum diese Tool-Sammlung?</h3>
                 <div class="space-y-4 text-gray-300 text-sm leading-relaxed">
                     <p>
-                        Als Content Creator verbringt man oft mehr Zeit damit, nach den richtigen Tools zu suchen, als tatsächlich Content zu erstellen. 
-                        Diese Sammlung soll dir genau diese Zeit sparen. Alle Tools wurden sorgfältig ausgewählt und werden von Content Creators aktiv genutzt.
+                        Ich kenne das Problem nur zu gut: Du verbringst mehr Zeit damit, nach den richtigen Tools zu suchen, als tatsächlich Content zu erstellen. 
+                        Diese Sammlung soll dir genau diese Zeit sparen. Alle Tools hier nutze ich selbst oder habe sie zumindest ausgiebig getestet.
                     </p>
                     <p>
-                        Ob du gerade erst anfängst oder bereits etabliert bist - die richtigen Tools können deinen Workflow massiv verbessern. 
-                        Von der Content-Planung über die Produktion bis hin zur Monetarisierung findest du hier kostenlose Lösungen für jeden Schritt.
+                        Egal ob du gerade erst anfängst oder schon länger dabei bist – die richtigen Tools können deinen Workflow richtig verbessern. 
+                        Von der Content-Planung über die Produktion bis hin zur Monetarisierung findest du hier kostenlose Lösungen für jeden Schritt deines Workflows.
                     </p>
                     <div class="grid md:grid-cols-3 gap-4 mt-6 pt-4 border-t border-gray-700">
                         <div>
@@ -133,6 +131,160 @@
                 </div>
             </div>
 
+            <!-- Content Creator Workflow Guide -->
+            <div class="w-full max-w-5xl mt-8 mb-8 bg-eerie-black p-6 rounded-lg">
+                <h3 class="text-2xl font-semibold text-white mb-4">📝 Der Content Creator Workflow</h3>
+                <div class="space-y-4 text-gray-300 text-sm leading-relaxed">
+                    <p>
+                        Wenn du Content erstellst, durchläufst du verschiedene Phasen. Ich zeige dir hier, welche Tools in welcher Phase besonders hilfreich sind:
+                    </p>
+                    <div class="grid md:grid-cols-2 gap-4 mt-4">
+                        <div class="bg-gray-800/40 border border-gray-600 p-4 rounded">
+                            <h4 class="font-semibold text-white mb-2">1. Planung & Ideenfindung</h4>
+                            <p class="text-xs text-gray-400 mb-2">
+                                Bevor du loslegst, brauchst du erstmal Ideen und einen Plan. Ich nutze Todoist für meine Content-Planung – 
+                                super übersichtlich und hilft mir, den Überblick zu behalten. ChatGPT nutze ich manchmal für Brainstorming, 
+                                wenn mir mal nichts einfällt.
+                            </p>
+                            <p class="text-xs text-gray-500 italic">
+                                Meine Favoriten: Todoist, ChatGPT, Game Finder
+                            </p>
+                        </div>
+                        <div class="bg-gray-800/40 border border-gray-600 p-4 rounded">
+                            <h4 class="font-semibold text-white mb-2">2. Content-Produktion</h4>
+                            <p class="text-xs text-gray-400 mb-2">
+                                Hier geht's ans Eingemachte: Videos schneiden, Bilder bearbeiten, Audio aufnehmen. 
+                                Du musst nicht hunderte Euro für Software ausgeben – ich zeige dir kostenlose Alternativen, 
+                                die genauso gut sind.
+                            </p>
+                            <p class="text-xs text-gray-500 italic">
+                                Meine Favoriten: DaVinci Resolve, GIMP, OBS Studio, Audacity
+                            </p>
+                        </div>
+                        <div class="bg-gray-800/40 border border-gray-600 p-4 rounded">
+                            <h4 class="font-semibold text-white mb-2">3. Optimierung & Design</h4>
+                            <p class="text-xs text-gray-400 mb-2">
+                                Thumbnails, Overlays, Social Media Grafiken – das Design macht echt den Unterschied. 
+                                Mit den richtigen Tools kannst du auch ohne Design-Studium professionelle Sachen erstellen. 
+                                Ich zeige dir wie.
+                            </p>
+                            <p class="text-xs text-gray-500 italic">
+                                Meine Favoriten: Canva, Thumbnail Previewer, Affinity, Photoshop Elements
+                            </p>
+                        </div>
+                        <div class="bg-gray-800/40 border border-gray-600 p-4 rounded">
+                            <h4 class="font-semibold text-white mb-2">4. Veröffentlichung & Wachstum</h4>
+                            <p class="text-xs text-gray-400 mb-2">
+                                Wenn der Content fertig ist, kommt der nächste Schritt: Veröffentlichung und Community-Aufbau. 
+                                Tools für Stream-Interaktion, Community-Management und Monetarisierung helfen dir dabei, 
+                                richtig durchzustarten.
+                            </p>
+                            <p class="text-xs text-gray-500 italic">
+                                Meine Favoriten: Crowd Control, DiscoHook, Sub Calculator, Shopify
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tips & Best Practices -->
+            <div class="w-full max-w-5xl mt-8 mb-8 bg-eerie-black p-6 rounded-lg">
+                <h3 class="text-2xl font-semibold text-white mb-4">💡 Tipps für Content Creator</h3>
+                <div class="space-y-4 text-gray-300 text-sm leading-relaxed">
+                    <div class="bg-gray-800/40 border border-gray-600 p-4 rounded">
+                        <h4 class="font-semibold text-white mb-2">Starte mit kostenlosen Tools</h4>
+                        <p class="text-xs text-gray-400">
+                            Du musst nicht sofort hunderte Euro für Software ausgeben. Ich habe jahrelang nur mit kostenlosen 
+                            Tools gearbeitet und es hat super funktioniert. Upgrade erst, wenn du wirklich an die Grenzen stößt.
+                        </p>
+                    </div>
+                    <div class="bg-gray-800/40 border border-gray-600 p-4 rounded">
+                        <h4 class="font-semibold text-white mb-2">Lerne ein Tool richtig</h4>
+                        <p class="text-xs text-gray-400">
+                            Statt ständig neue Tools zu testen, nimm dir die Zeit, ein Tool richtig zu lernen. 
+                            Ich habe die Erfahrung gemacht, dass die meisten Tools viel mehr können, als man denkt – 
+                            man muss nur die Features entdecken.
+                        </p>
+                    </div>
+                    <div class="bg-gray-800/40 border border-gray-600 p-4 rounded">
+                        <h4 class="font-semibold text-white mb-2">Automatisiere wo möglich</h4>
+                        <p class="text-xs text-gray-400">
+                            Wiederkehrende Aufgaben kannst du super automatisieren. Ich nutze zum Beispiel DiscoHook für 
+                            Discord-Webhooks und Todoist für wiederkehrende Aufgaben. Das spart mir echt viel Zeit.
+                        </p>
+                    </div>
+                    <div class="bg-gray-800/40 border border-gray-600 p-4 rounded">
+                        <h4 class="font-semibold text-white mb-2">Nutze Templates und Vorlagen</h4>
+                        <p class="text-xs text-gray-400">
+                            Viele Tools bieten Templates an – nutze sie ruhig! Ich mache das auch und es spart mir 
+                            jede Menge Zeit. Professionelle Ergebnisse auch ohne Design-Erfahrung.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Getting Started Guide -->
+            <div class="w-full max-w-5xl mt-8 mb-8 bg-eerie-black p-6 rounded-lg">
+                <h3 class="text-2xl font-semibold text-white mb-4">🚀 Erste Schritte</h3>
+                <div class="space-y-4 text-gray-300 text-sm leading-relaxed">
+                    <p>
+                        Du bist neu im Content Creation? Kein Problem! Hier ist mein kurzer Guide, wie du mit dieser Toolbox startest:
+                    </p>
+                    <ol class="list-decimal list-inside ml-2 space-y-3">
+                        <li>
+                            <strong class="text-white">Definiere dein Ziel:</strong> Was willst du eigentlich erstellen? 
+                            Videos, Streams, Social Media Content? Je nachdem brauchst du unterschiedliche Tools. 
+                            Fang nicht alles auf einmal an.
+                        </li>
+                        <li>
+                            <strong class="text-white">Starte mit den Basics:</strong> Für Video-Editing empfehle ich DaVinci Resolve. 
+                            Für Bildbearbeitung: GIMP oder Canva. Für Streaming: OBS Studio. 
+                            Diese drei Tools decken eigentlich alle Grundbedürfnisse ab.
+                        </li>
+                        <li>
+                            <strong class="text-white">Nutze meine Guides:</strong> Ich habe ausführliche Guides geschrieben, 
+                            z.B. für <NuxtLink to="/obs-guide" class="text-blue-400 underline">OBS Studio</NuxtLink>. 
+                            Die helfen dir, schnell loszulegen ohne stundenlang zu googeln.
+                        </li>
+                        <li>
+                            <strong class="text-white">Erweitere schrittweise:</strong> Wenn du mit den Basics klar kommst, 
+                            kannst du weitere Tools hinzufügen. Aber bitte: Nicht alles auf einmal! Lerne ein Tool richtig, 
+                            bevor du das nächste testest. Sonst verlierst du schnell den Überblick.
+                        </li>
+                        <li>
+                            <strong class="text-white">Hilfe holen:</strong> Wenn du Fragen hast, schau in mein 
+                            <NuxtLink to="/glossar" class="text-blue-400 underline">Glossar</NuxtLink> oder 
+                            <NuxtLink to="/kontakt" class="text-blue-400 underline">schreib mir einfach</NuxtLink>. 
+                            Ich helfe gerne weiter!
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- Author & Credibility Section -->
+            <div class="w-full max-w-5xl mt-8 mb-8 bg-eerie-black p-6 rounded-lg border border-gray-700">
+                <h3 class="text-xl font-semibold text-white mb-4">Über diese Seite</h3>
+                <div class="space-y-3 text-gray-300 text-sm leading-relaxed">
+                    <p>
+                        Diese Toolbox betreibe ich unter <strong class="text-white">Blackeye Studio</strong> – 
+                        ich bin selbst Content Creator und kenne die täglichen Herausforderungen aus eigener Erfahrung.
+                    </p>
+                    <p>
+                        Alle Tools hier habe ich persönlich getestet und nutze sie auch selbst. 
+                        Ich empfehle nur Tools, die ich wirklich nutze und die mir helfen. 
+                        Meine Empfehlungen werden nicht durch Zahlungen beeinflusst – versprochen.
+                    </p>
+                    <div class="flex flex-wrap gap-3 mt-4">
+                        <NuxtLink to="/ueber-uns" class="px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded text-sm transition">
+                            Mehr über uns erfahren
+                        </NuxtLink>
+                        <NuxtLink to="/kontakt" class="px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded text-sm transition">
+                            Kontakt aufnehmen
+                        </NuxtLink>
+                    </div>
+                </div>
+            </div>
+
             <!-- Bottom Ad Banner -->
             <div class="mt-8 max-w-5xl w-full">
                 <AdBannerBottom />
@@ -143,6 +295,7 @@
 
 <script setup>
 import { ref, computed } from 'vue';
+import { getAllTools, generateSlug } from '~/composables/useTools';
 
 const descriptionText = `Als Content Creator kann es frustrierend sein, die richtigen Tools zu finden. Oft sind sie versteckt, unübersichtlich oder einfach viel zu teuer. Diese Seite wurde ins Leben gerufen, um Content Creators eine zentrale Anlaufstelle für nützliche Tools zu bieten.
 
@@ -213,232 +366,8 @@ const categoryInfo = {
     'Stream-Interaktion': 'Community-Engagement und interaktive Features',
 };
 
-const tools = [
-    {
-        title: 'ChallengePicker',
-        description: 'Innovatives Tool für Streamer um spannende, von der Community getriebene Challenges in deinen Stream zu integrieren - ganz ohne PC-Installation. Biete deinen Zuschauern ein einmaliges interaktives Erlebnis und fordere andere Streamer heraus.',
-        tags: ['Stream-Interaktion', 'Games'],
-        link: '#',
-        category: 'Stream-Interaktion',
-        status: 'todo',
-    },
-    {
-        title: 'Questify',
-        description: 'Ermögliche deiner Community gegeneinander zu spielen, auch in Spielen ohne direkte Ziele oder Quests. Als Gamehost wählst du aus verschiedenen Quests oder erstellst eigene. Verschiedene Modi machen jedes Spiel zum Wettbewerb - perfekt auch für Streamer-Battles.',
-        tags: ['Stream-Interaktion', 'Games'],
-        link: '#',
-        category: 'Stream-Interaktion',
-        status: 'todo',
-    },
-    {
-        title: 'Crowd Control',
-        description: 'Alternative zu ChallengePicker: Lass deine Zuschauer direkt ins Spielgeschehen eingreifen. Die Community kann durch verschiedene Aktionen deinen Stream beeinflussen und für chaotische oder hilfreiche Momente sorgen.',
-        tags: ['Stream-Interaktion', 'Games'],
-        link: 'https://crowdcontrol.live/',
-        category: 'Stream-Interaktion',
-        status: 'done',
-    },
-    {
-        title: 'Merlin Image Converter',
-        description: 'Konvertiere deine Bilder schnell und einfach in verschiedene Formate wie PNG, JPG, WEBP oder SVG. Perfekt für die Optimierung von Thumbnails und Social Media Grafiken.',
-        tags: ['Grafik', 'Utility'],
-        link: 'https://example.com/converter',
-        category: 'Grafik',
-        status: 'done',
-    },
-    {
-        title: 'Thumbnail Previewer',
-        description: 'Sieh dir an, wie dein YouTube-Thumbnail im direkten Vergleich zu anderen Videos aussieht. Teste verschiedene Designs und optimiere die Klickrate deiner Videos bevor du sie hochlädst.',
-        tags: ['Grafik', 'Utility'],
-        link: 'https://thumbnail-preview.tebbe.dev/',
-        category: 'Grafik',
-        status: 'done',
-    },
-    {
-        title: 'Todoist',
-        description: 'Eine übersichtliche und benutzerfreundliche To-Do-Listen App. Perfekt um deine Content-Planung, Upload-Zeitpläne und Stream-Vorbereitung zu organisieren. Funktioniert auf allen Geräten.',
-        tags: ['Organisation'],
-        link: 'https://www.todoist.com/de',
-        category: 'Organisation',
-        status: 'done',
-    },
-    {
-        title: 'Sound Resource',
-        description: 'Umfangreiche Bibliothek mit kostenlosen Soundeffekten und Musik aus Videospielen. Ideal für Streamer und YouTuber die nach lizenzfreien und einzigartigen Audio-Elementen suchen.',
-        tags: ['Audio'],
-        link: 'https://www.sounds-resource.com/',
-        category: 'Audio',
-        status: 'done',
-    },
-    {
-        title: 'Sub Calculator',
-        description: 'Berechne deine Twitch-Einnahmen basierend auf Subs, Bits und Donations. Ein praktisches Tool um deine monatlichen Einnahmen zu planen und deine Ziele zu verfolgen.',
-        tags: ['Finanzen', 'Organisation'],
-        link: 'https://subcalculator.blackeyestudio.de/',
-        category: 'Finanzen',
-        status: 'done',
-    },
-    {
-        title: 'Suno',
-        description: 'KI-gestützte Musik-Generierung für lizenzfreie Hintergrundmusik. Erstelle einzigartige Tracks für deine Streams, Videos oder Intros - perfekt abgestimmt auf deine Inhalte und Stimmung.',
-        tags: ['Organisation', 'Audio', 'Ki'],
-        link: 'https://suno.com/',
-        category: 'Audio',
-        status: 'done',
-    },
-    {
-        title: 'Game Finder',
-        description: 'Tool zum Entdecken neuer Spiele für deinen Stream oder Kanal. Filtere nach Genre, Plattform und Popularität um passende Games für deinen Content zu finden.',
-        tags: ['Organisation', 'Games'],
-        link: 'https://game-finder.app/',
-        category: 'Games',
-        status: 'done',
-    },
-    {
-        title: 'Pixabay',
-        description: 'Riesige Sammlung an kostenlosen, lizenzfreien Bildern, Videos und Musik. Über 4 Millionen Assets die du ohne Anmeldung in deinen Videos und auf Social Media nutzen kannst.',
-        tags: ['Organisation', 'Audio'],
-        link: 'https://pixabay.com/de/',
-        category: 'Audio',
-        status: 'done',
-    },
-    {
-        title: 'Sora',
-        description: 'OpenAIs KI-Tool zur Bild- und Video-Generierung. Ideal für kreative Shorts, Video-Intros oder um schnell visuelle Ideen für deinen Content zu entwickeln und zu testen.',
-        tags: ['Grafik', 'Ki'],
-        link: 'https://sora.chatgpt.com/explore',
-        category: 'Grafik',
-        status: 'done',
-    },
-    {
-        title: 'Affinity',
-        description: 'Professionelle Bildbearbeitungs-Suite mit Affinity Photo, Designer und Publisher. Einmalige Zahlung statt Abo-Modell - perfekte Alternative zu Adobe Photoshop und Illustrator für professionelle Grafik- und Design-Arbeiten.',
-        tags: ['Grafik'],
-        link: 'https://affinity.serif.com/',
-        category: 'Grafik',
-        status: 'done',
-    },
-    {
-        title: 'DaVinci Resolve',
-        description: 'Professionelle Video-Editing-Software, die in Hollywood-Produktionen verwendet wird - komplett kostenlos. Inkl. Color Grading, Audio-Editing und VFX. Top-Empfehlung für professionelles Video-Editing!',
-        tags: ['Utility', 'Grafik'],
-        link: 'https://www.blackmagicdesign.com/de/products/davinciresolve',
-        category: 'Utility',
-        status: 'done',
-    },
-    {
-        title: 'CapCut',
-        description: 'Perfekt für Anfänger und Social Media Content (TikTok, Reels, Shorts). Sehr einfach zu bedienen, viele Templates und KI-Features. Optimal für vertikale Videos.',
-        tags: ['Utility', 'Grafik'],
-        link: 'https://www.capcut.com/',
-        category: 'Utility',
-        status: 'done',
-    },
-    {
-        title: 'Adobe Photoshop Elements',
-        description: 'Die oft vergessene Alternative! Einmalzahlung statt Abo. Perfekt für Thumbnails, Overlays und Social Media Grafiken. Circa 60€ für 3 Jahre Nutzung - ohne monatliche Kosten!',
-        tags: ['Grafik'],
-        link: 'https://www.adobe.com/de/products/photoshop-elements.html',
-        category: 'Grafik',
-        status: 'done',
-    },
-    {
-        title: 'GIMP',
-        description: 'Die kostenlose Photoshop-Alternative. Open Source Bildbearbeitung mit fast allen Features. Perfekt wenn du kein Geld ausgeben willst - sehr mächtig und für Windows, Mac & Linux.',
-        tags: ['Grafik'],
-        link: 'https://www.gimp.org/',
-        category: 'Grafik',
-        status: 'done',
-    },
-    {
-        title: 'Canva',
-        description: 'Für Nicht-Designer. Browser-basiertes Design-Tool mit tausenden Templates. Perfekt für schnelle Social Media Posts, Thumbnails und Grafiken ohne Vorkenntnisse.',
-        tags: ['Grafik'],
-        link: 'https://www.canva.com/',
-        category: 'Grafik',
-        status: 'done',
-    },
-    {
-        title: 'OBS Studio',
-        description: 'Der Standard! Open Source Streaming Software. Weit verbreitet bei professionellen Streamern. Unbegrenzte Möglichkeiten mit Plugins. Komplett kostenlos und sehr stabil.',
-        tags: ['Utility', 'Stream-Interaktion'],
-        link: 'https://obsproject.com/',
-        category: 'Utility',
-        status: 'done',
-    },
-    {
-        title: 'Audacity',
-        description: 'Klassiker für Audio-Bearbeitung. Perfekt für Podcasts, Voiceovers und Audio-Cleaning. Kostenlos & Open Source mit Noise Reduction, Compressor und EQ.',
-        tags: ['Audio'],
-        link: 'https://www.audacityteam.org/',
-        category: 'Audio',
-        status: 'done',
-    },
-    {
-        title: 'REAPER',
-        description: 'Professionelle DAW (Digital Audio Workstation). Perfekt für Musik-Produktion und fortgeschrittenes Audio-Editing. Sehr günstig (60$ Lizenz, unbegrenzt nutzbar) mit 60 Tagen kostenloser Trial.',
-        tags: ['Audio'],
-        link: 'https://www.reaper.fm/',
-        category: 'Audio',
-        status: 'done',
-    },
-    {
-        title: '101Soundboards',
-        description: 'Riesige Sammlung an Soundboards mit tausenden Sounds aus Filmen, Serien und Memes. Alle Sounds können direkt abgespielt oder heruntergeladen werden für deinen Stream.',
-        tags: ['Audio'],
-        link: 'https://www.101soundboards.com/',
-        category: 'Audio',
-        status: 'done',
-    },
-    {
-        title: 'DiscoHook',
-        description: 'Erstelle und verwalte Discord Webhooks ganz einfach im Browser. Perfekt um Benachrichtigungen für neue Uploads, Streams oder Community-Updates automatisch zu versenden.',
-        tags: ['Organisation'],
-        link: 'https://discohook.org/',
-        category: 'Organisation',
-        status: 'done',
-    },
-    {
-        title: 'Amazon Affiliate Partnerseite',
-        description: 'Das offizielle Amazon PartnerNet Dashboard. Verwalte deine Affiliate-Links, tracke deine Einnahmen und erstelle Werbelinks für Produkte die du in deinen Videos oder Streams empfiehlst.',
-        tags: ['Organisation', 'Finanzen'],
-        link: 'https://partnernet.amazon.de/home',
-        category: 'Finanzen',
-        status: 'done',
-    },
-    {
-        title: 'Shopify',
-        description: 'Professionelle E-Commerce Plattform für deinen eigenen Merch-Shop. Einfacher Einstieg mit Templates, Payment-Integration und Versandmanagement. Ideal für den Start ins Merch-Business.',
-        tags: ['Organisation', 'Finanzen', 'Merch'],
-        link: 'https://www.shopify.com/',
-        category: 'Merch',
-        status: 'done',
-    },
-    {
-        title: 'MyInstants',
-        description: 'Beliebte Soundboard-Plattform mit Sounds aus Internet-Kultur, Memes und populären Medien. Alle Sounds können sofort abgespielt oder für deinen Stream heruntergeladen werden.',
-        tags: ['Audio'],
-        link: 'https://www.myinstants.com/',
-        category: 'Audio',
-        status: 'done',
-    },
-    {
-        title: 'ChatGPT',
-        description: 'KI-Assistent von OpenAI für Brainstorming, Content-Planung und Recherche. Nutze es für Video-Ideen, Script-Entwürfe oder Social Media Posts - aber überprüfe immer die Fakten.',
-        tags: ['Organisation', 'Ki'],
-        link: 'https://chatgpt.com/',
-        category: 'Ki',
-        status: 'done',
-    },
-    {
-        title: 'Discords',
-        description: 'Große Sammlung an kostenlosen Discord-Emotes und Emojis. Perfekt um deinen Community-Server aufzuwerten und ihm eine persönliche Note zu geben.',
-        tags: ['Organisation'],
-        link: 'https://discords.com/',
-        category: 'Organisation',
-        status: 'done',
-    },
-];
+// Get all tools from composable
+const tools = getAllTools();
 
 const uniqueTags = computed(() => {
     const tagSet = new Set();

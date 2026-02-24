@@ -55,6 +55,12 @@
             <NuxtLink to="/hardware" class="text-gray-400 hover:text-white transition">
               Hardware
             </NuxtLink>
+            <NuxtLink to="/ueber-uns" class="text-gray-400 hover:text-white transition">
+              Über uns
+            </NuxtLink>
+            <NuxtLink to="/kontakt" class="text-gray-400 hover:text-white transition">
+              Kontakt
+            </NuxtLink>
             <NuxtLink to="/impressum" class="text-gray-400 hover:text-white transition">
               Impressum
             </NuxtLink>

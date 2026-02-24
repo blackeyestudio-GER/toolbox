@@ -129,8 +129,8 @@
                     <p class="text-gray-300 mb-4">
                         Arthur Kielbasa<br>
                         Blackeyestudio<br>
-                        Richard-Wagner-Str. 38<br>
-                        46236 Bottrop<br>
+                        Hafenstr. 71<br>
+                        46242 Bottrop<br>
                         E-Mail: <a href="mailto:kontakt@blackeyestudio.de" class="text-blue-400 hover:text-blue-300 underline">kontakt@blackeyestudio.de</a>
                     </p>
                 </section>

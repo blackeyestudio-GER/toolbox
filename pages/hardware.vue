@@ -12,12 +12,12 @@
             
             <!-- Affiliate Disclaimer -->
             <div class="bg-gray-800/50 border border-gray-600 p-4 rounded-lg mb-8">
-                <p class="text-gray-300 text-sm">
-                    <strong>💙 Transparenz-Hinweis:</strong> Die Links auf dieser Seite sind Amazon Affiliate Links. 
-                    Wenn du über diese Links einkaufst, erhalten wir eine kleine Provision - ohne dass du mehr bezahlst! 
-                    Dies hilft uns, diese Wissensdatenbank weiter auszubauen und zu pflegen. Vielen Dank für deine Unterstützung! 🙏
-                    <NuxtLink to="/impressum" class="text-blue-400 underline block mt-2">Verantwortlich für den Inhalt: siehe Impressum</NuxtLink>
-                </p>
+                    <p class="text-gray-300 text-sm">
+                        <strong>💙 Transparenz-Hinweis:</strong> Die Links auf dieser Seite sind Amazon Affiliate Links. 
+                        Wenn du über diese Links einkaufst, erhalte ich eine kleine Provision – ohne dass du mehr bezahlst! 
+                        Das hilft mir, diese Wissensdatenbank weiter auszubauen und zu pflegen. Vielen Dank für deine Unterstützung! 🙏
+                        <NuxtLink to="/impressum" class="text-blue-400 underline block mt-2">Rechtliches findest du im Impressum</NuxtLink>
+                    </p>
             </div>
 
             <!-- Intro Text -->
@@ -26,9 +26,9 @@
                 
                 <div class="space-y-4 text-gray-300">
                     <p class="leading-relaxed">
-                        Die folgenden Hardware-Empfehlungen basieren auf praktischer Erfahrung als Streamer und sind darauf 
+                        Die folgenden Hardware-Empfehlungen basieren auf meiner praktischen Erfahrung als Streamer und sind darauf 
                         ausgelegt, dir das <strong class="text-blue-400">beste Preis-Leistungs-Verhältnis</strong> zu bieten. 
-                        Keine Über-Engineering, keine überflüssigen Ausgaben – nur das, was du wirklich brauchst.
+                        Kein Über-Engineering, keine überflüssigen Ausgaben – nur das, was du wirklich brauchst.
                     </p>
                     
                     <div class="bg-gray-700/30 border border-gray-500 p-4 rounded">
@@ -60,11 +60,12 @@
                     <p class="leading-relaxed">
                         Dieser Guide zeigt dir den <strong class="text-gray-200">optimalen Upgrade-Pfad</strong> – von deinem 
                         ersten Stream bis zum professionellen Setup. Jede Stufe baut auf der vorherigen auf, und du kannst in 
-                        deinem eigenen Tempo voranschreiten. 
+                        deinem eigenen Tempo voranschreiten. Ich habe das selbst so gemacht.
                     </p>
 
                     <p class="text-sm text-gray-400 italic">
-                        Die Preise sind Richtwerte und können variieren. Schau nach Angeboten und vergleiche immer mehrere Händler!
+                        Die Preise sind Richtwerte und können variieren. Ich schaue selbst regelmäßig nach Angeboten – 
+                        du solltest das auch tun und immer mehrere Händler vergleichen!
                     </p>
                 </div>
             </div>
@@ -997,20 +998,6 @@
                     </div>
                 </div>
                 
-                <!-- Mein Setup Placeholder -->
-                <div v-if="activeTab === 'my-setup'" class="space-y-6">
-                    <div class="bg-gray-800/40 border border-gray-600 p-4 md:p-6 rounded-lg text-center">
-                        <p class="text-white mb-3 text-2xl font-semibold">
-                            🔧 Mein persönliches Setup
-                        </p>
-                        <p class="text-gray-300 text-lg mb-4">
-                            Hier findest du bald eine Übersicht über mein aktuelles Streaming-Setup...
-                        </p>
-                        <p class="text-gray-400 text-sm mb-6">
-                            💡 Coming Soon: Diese Sektion wird in Kürze mit meiner echten Hardware-Liste befüllt.
-                        </p>
-                    </div>
-                </div>
             </div>
 
             <!-- Konsolen-Streaming Equipment -->
@@ -1150,7 +1137,6 @@ const tabs = [
   { id: 'established', name: 'Etabliert', budget: '~440€' },
   { id: 'semi-pro', name: 'Semi-Pro', budget: '~730€' },
   { id: 'professional', name: 'Professional', budget: '~2.700€' },
-  { id: 'my-setup', name: 'Mein Setup', budget: 'Zum Vergleich' },
 ];
 </script>
 

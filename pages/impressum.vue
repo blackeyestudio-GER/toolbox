@@ -10,8 +10,8 @@
                         <strong>Betreiber:</strong><br>
                         Arthur Kielbasa<br>
                         Blackeyestudio<br>
-                        Richard-Wagner-Str. 38<br>
-                        46236 Bottrop
+                        Hafenstr. 71<br>
+                        46242 Bottrop
                     </p>
                 </section>
 
@@ -26,8 +26,8 @@
                     <h2 class="text-2xl font-semibold mb-4">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
                     <p class="text-gray-300">
                         Arthur Kielbasa<br>
-                        Richard-Wagner-Str. 38<br>
-                        46236 Bottrop
+                        Hafenstr. 71<br>
+                        46242 Bottrop
                     </p>
                 </section>
 

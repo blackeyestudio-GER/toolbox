@@ -15,18 +15,19 @@
                 <div class="space-y-4 text-gray-300">
                     <p class="leading-relaxed">
                         Als Content Creator brauchst du verlässliche Tools, die deinen Workflow unterstützen ohne dein Budget zu sprengen. 
-                        Diese Liste fokussiert sich auf <strong class="text-blue-400">kosteneffiziente</strong> und <strong class="text-blue-400">professionelle</strong> Software, 
-                        die von tausenden Content Creators weltweit genutzt wird.
+                        Diese Liste zeigt dir <strong class="text-blue-400">kosteneffiziente</strong> und <strong class="text-blue-400">professionelle</strong> Software, 
+                        die ich selbst nutze und die von tausenden Content Creators weltweit verwendet wird.
                     </p>
                     <div class="bg-gray-700/30 border border-gray-500 p-4 rounded">
                         <p class="text-gray-300 leading-relaxed">
-                            <strong>⚠️ Wichtig:</strong> Viele Anfänger geben hunderte Euro für Premiere Pro oder Final Cut aus - 
-                            dabei gibt es <strong>kostenlose oder günstige Alternativen</strong>, die für die meisten Content Creator vollkommen ausreichen!
+                            <strong>⚠️ Wichtig:</strong> Viele Anfänger geben hunderte Euro für Premiere Pro oder Final Cut aus – 
+                            dabei gibt es <strong>kostenlose oder günstige Alternativen</strong>, die für die meisten Content Creator vollkommen ausreichen! 
+                            Ich zeige dir, welche das sind.
                         </p>
                     </div>
                     <p class="text-sm text-gray-400 italic">
-                        <strong>Hinweis:</strong> Diese Empfehlungen basieren auf Erfahrungen von Content Creators und werden regelmäßig aktualisiert. 
-                        Verantwortlich für den Inhalt: <NuxtLink to="/impressum" class="text-blue-400 underline">siehe Impressum</NuxtLink>.
+                        <strong>Hinweis:</strong> Diese Empfehlungen basieren auf meinen eigenen Erfahrungen und werden regelmäßig aktualisiert. 
+                        Rechtliches findest du im <NuxtLink to="/impressum" class="text-blue-400 underline">Impressum</NuxtLink>.
                     </p>
                 </div>
             </div>

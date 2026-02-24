@@ -8,6 +8,12 @@
                 🏠 Home
             </NuxtLink>
             <NuxtLink 
+                to="/" 
+                :class="isActive('/') || isActive('/tools/') ? 'text-white font-semibold' : 'text-gray-300 hover:text-blue-400'"
+                class="transition font-medium">
+                🛠️ Tools
+            </NuxtLink>
+            <NuxtLink 
                 to="/obs-guide" 
                 :class="isActive('/obs-guide') ? 'text-white font-semibold' : 'text-gray-300 hover:text-blue-400'"
                 class="transition font-medium">
@@ -30,6 +36,18 @@
                 :class="isActive('/glossar') ? 'text-white font-semibold' : 'text-gray-300 hover:text-blue-400'"
                 class="transition font-medium">
                 📚 Glossar
+            </NuxtLink>
+            <NuxtLink 
+                to="/ueber-uns" 
+                :class="isActive('/ueber-uns') ? 'text-white font-semibold' : 'text-gray-300 hover:text-blue-400'"
+                class="transition font-medium">
+                ℹ️ Über uns
+            </NuxtLink>
+            <NuxtLink 
+                to="/kontakt" 
+                :class="isActive('/kontakt') ? 'text-white font-semibold' : 'text-gray-300 hover:text-blue-400'"
+                class="transition font-medium">
+                📧 Kontakt
             </NuxtLink>
         </div>
     </nav>
